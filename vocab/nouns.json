@@ -1,0 +1,1912 @@
+[
+ {
+  "article": "der",
+  "singular": "Tisch",
+  "plural": "Tische",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Stuhl",
+  "plural": "Stühle",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Bett",
+  "plural": "Betten",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Schrank",
+  "plural": "Schränke",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Lampe",
+  "plural": "Lampen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Teppich",
+  "plural": "Teppiche",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Fenster",
+  "plural": "Fenster",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Tür",
+  "plural": "Türen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Wand",
+  "plural": "Wände",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Boden",
+  "plural": "Böden",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Treppe",
+  "plural": "Treppen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Aufzug",
+  "plural": "Aufzüge",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Schlüssel",
+  "plural": "Schlüssel",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Wohnung",
+  "plural": "Wohnungen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Haus",
+  "plural": "Häuser",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Garten",
+  "plural": "Gärten",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Küche",
+  "plural": "Küchen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Zimmer",
+  "plural": "Zimmer",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Bad",
+  "plural": "Bäder",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Miete",
+  "plural": "Mieten",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Nachbar",
+  "plural": "Nachbarn",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Nachbarin",
+  "plural": "Nachbarinnen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Vermieter",
+  "plural": "Vermieter",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Heizung",
+  "plural": "Heizungen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Spiegel",
+  "plural": "Spiegel",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Regal",
+  "plural": "Regale",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Herd",
+  "plural": "Herde",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Kühlschrank",
+  "plural": "Kühlschränke",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Waschmaschine",
+  "plural": "Waschmaschinen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Staubsauger",
+  "plural": "Staubsauger",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Teller",
+  "plural": "Teller",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Glas",
+  "plural": "Gläser",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Tasse",
+  "plural": "Tassen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Löffel",
+  "plural": "Löffel",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Gabel",
+  "plural": "Gabeln",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Messer",
+  "plural": "Messer",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Flasche",
+  "plural": "Flaschen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Topf",
+  "plural": "Töpfe",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Pfanne",
+  "plural": "Pfannen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Brot",
+  "plural": "Brote",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Brötchen",
+  "plural": "Brötchen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Ei",
+  "plural": "Eier",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Fisch",
+  "plural": "Fische",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Apfel",
+  "plural": "Äpfel",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Banane",
+  "plural": "Bananen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Tomate",
+  "plural": "Tomaten",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Kartoffel",
+  "plural": "Kartoffeln",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Zwiebel",
+  "plural": "Zwiebeln",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Kuchen",
+  "plural": "Kuchen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Suppe",
+  "plural": "Suppen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Salat",
+  "plural": "Salate",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Mahlzeit",
+  "plural": "Mahlzeiten",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Getränk",
+  "plural": "Getränke",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Rezept",
+  "plural": "Rezepte",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Speisekarte",
+  "plural": "Speisekarten",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Rechnung",
+  "plural": "Rechnungen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Kellner",
+  "plural": "Kellner",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Zutat",
+  "plural": "Zutaten",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Körper",
+  "plural": "Körper",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Kopf",
+  "plural": "Köpfe",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Auge",
+  "plural": "Augen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Ohr",
+  "plural": "Ohren",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Nase",
+  "plural": "Nasen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Mund",
+  "plural": "Münder",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Zahn",
+  "plural": "Zähne",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Hals",
+  "plural": "Hälse",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Schulter",
+  "plural": "Schultern",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Arm",
+  "plural": "Arme",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Hand",
+  "plural": "Hände",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Finger",
+  "plural": "Finger",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Bein",
+  "plural": "Beine",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Fuß",
+  "plural": "Füße",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Herz",
+  "plural": "Herzen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Magen",
+  "plural": "Mägen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Rücken",
+  "plural": "Rücken",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Haut",
+  "plural": "Häute",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Arzt",
+  "plural": "Ärzte",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Ärztin",
+  "plural": "Ärztinnen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Krankenhaus",
+  "plural": "Krankenhäuser",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Krankheit",
+  "plural": "Krankheiten",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Medikament",
+  "plural": "Medikamente",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Tablette",
+  "plural": "Tabletten",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Schmerz",
+  "plural": "Schmerzen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Erkältung",
+  "plural": "Erkältungen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Verletzung",
+  "plural": "Verletzungen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Unfall",
+  "plural": "Unfälle",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Apotheke",
+  "plural": "Apotheken",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Termin",
+  "plural": "Termine",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Untersuchung",
+  "plural": "Untersuchungen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Arbeit",
+  "plural": "Arbeiten",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Beruf",
+  "plural": "Berufe",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Job",
+  "plural": "Jobs",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Stelle",
+  "plural": "Stellen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Unternehmen",
+  "plural": "Unternehmen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Firma",
+  "plural": "Firmen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Büro",
+  "plural": "Büros",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Chef",
+  "plural": "Chefs",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Chefin",
+  "plural": "Chefinnen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Kollege",
+  "plural": "Kollegen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Kollegin",
+  "plural": "Kolleginnen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Mitarbeiter",
+  "plural": "Mitarbeiter",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Besprechung",
+  "plural": "Besprechungen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Bewerbung",
+  "plural": "Bewerbungen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Lebenslauf",
+  "plural": "Lebensläufe",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Gehalt",
+  "plural": "Gehälter",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Lohn",
+  "plural": "Löhne",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Vertrag",
+  "plural": "Verträge",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Kündigung",
+  "plural": "Kündigungen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Erfahrung",
+  "plural": "Erfahrungen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Aufgabe",
+  "plural": "Aufgaben",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Projekt",
+  "plural": "Projekte",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Pause",
+  "plural": "Pausen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Kunde",
+  "plural": "Kunden",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Kundin",
+  "plural": "Kundinnen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Verkäufer",
+  "plural": "Verkäufer",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Handwerker",
+  "plural": "Handwerker",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Ausbildung",
+  "plural": "Ausbildungen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Fähigkeit",
+  "plural": "Fähigkeiten",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Erfolg",
+  "plural": "Erfolge",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Ziel",
+  "plural": "Ziele",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Ergebnis",
+  "plural": "Ergebnisse",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Lösung",
+  "plural": "Lösungen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Problem",
+  "plural": "Probleme",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Entscheidung",
+  "plural": "Entscheidungen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Möglichkeit",
+  "plural": "Möglichkeiten",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Vorschlag",
+  "plural": "Vorschläge",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Idee",
+  "plural": "Ideen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Plan",
+  "plural": "Pläne",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Schule",
+  "plural": "Schulen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Universität",
+  "plural": "Universitäten",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Studium",
+  "plural": "Studien",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Student",
+  "plural": "Studenten",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Studentin",
+  "plural": "Studentinnen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Lehrer",
+  "plural": "Lehrer",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Lehrerin",
+  "plural": "Lehrerinnen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Schüler",
+  "plural": "Schüler",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Klasse",
+  "plural": "Klassen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Prüfung",
+  "plural": "Prüfungen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Note",
+  "plural": "Noten",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Fach",
+  "plural": "Fächer",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Vorlesung",
+  "plural": "Vorlesungen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Seminar",
+  "plural": "Seminare",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Zeugnis",
+  "plural": "Zeugnisse",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Bibliothek",
+  "plural": "Bibliotheken",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Buch",
+  "plural": "Bücher",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Zeitung",
+  "plural": "Zeitungen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Zeitschrift",
+  "plural": "Zeitschriften",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Artikel",
+  "plural": "Artikel",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Text",
+  "plural": "Texte",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Übung",
+  "plural": "Übungen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Frage",
+  "plural": "Fragen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Antwort",
+  "plural": "Antworten",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Satz",
+  "plural": "Sätze",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Sprache",
+  "plural": "Sprachen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Grammatik",
+  "plural": "Grammatiken",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Thema",
+  "plural": "Themen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Meinung",
+  "plural": "Meinungen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Beispiel",
+  "plural": "Beispiele",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Unterschied",
+  "plural": "Unterschiede",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Grund",
+  "plural": "Gründe",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Information",
+  "plural": "Informationen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Forschung",
+  "plural": "Forschungen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Wissenschaft",
+  "plural": "Wissenschaften",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Auto",
+  "plural": "Autos",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Wagen",
+  "plural": "Wagen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Bus",
+  "plural": "Busse",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Zug",
+  "plural": "Züge",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Straßenbahn",
+  "plural": "Straßenbahnen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "U-Bahn",
+  "plural": "U-Bahnen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Fahrrad",
+  "plural": "Fahrräder",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Flugzeug",
+  "plural": "Flugzeuge",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Flughafen",
+  "plural": "Flughäfen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Bahnhof",
+  "plural": "Bahnhöfe",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Haltestelle",
+  "plural": "Haltestellen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Fahrkarte",
+  "plural": "Fahrkarten",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Fahrplan",
+  "plural": "Fahrpläne",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Reise",
+  "plural": "Reisen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Hotel",
+  "plural": "Hotels",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Koffer",
+  "plural": "Koffer",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Ausweis",
+  "plural": "Ausweise",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Pass",
+  "plural": "Pässe",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Grenze",
+  "plural": "Grenzen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Verspätung",
+  "plural": "Verspätungen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Straße",
+  "plural": "Straßen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Weg",
+  "plural": "Wege",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Ampel",
+  "plural": "Ampeln",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Kreuzung",
+  "plural": "Kreuzungen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Brücke",
+  "plural": "Brücken",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Stau",
+  "plural": "Staus",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Reparatur",
+  "plural": "Reparaturen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Führerschein",
+  "plural": "Führerscheine",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Stadt",
+  "plural": "Städte",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Dorf",
+  "plural": "Dörfer",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Land",
+  "plural": "Länder",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Gegend",
+  "plural": "Gegenden",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Zentrum",
+  "plural": "Zentren",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Platz",
+  "plural": "Plätze",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Geschäft",
+  "plural": "Geschäfte",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Supermarkt",
+  "plural": "Supermärkte",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Markt",
+  "plural": "Märkte",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Museum",
+  "plural": "Museen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Theater",
+  "plural": "Theater",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Kino",
+  "plural": "Kinos",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Konzert",
+  "plural": "Konzerte",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Kirche",
+  "plural": "Kirchen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Park",
+  "plural": "Parks",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Berg",
+  "plural": "Berge",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Wald",
+  "plural": "Wälder",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "See",
+  "plural": "Seen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Meer",
+  "plural": "Meere",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Fluss",
+  "plural": "Flüsse",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Strand",
+  "plural": "Strände",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Insel",
+  "plural": "Inseln",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Landschaft",
+  "plural": "Landschaften",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Wind",
+  "plural": "Winde",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Tier",
+  "plural": "Tiere",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Hund",
+  "plural": "Hunde",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Katze",
+  "plural": "Katzen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Vogel",
+  "plural": "Vögel",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Blume",
+  "plural": "Blumen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Baum",
+  "plural": "Bäume",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Gesellschaft",
+  "plural": "Gesellschaften",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Regierung",
+  "plural": "Regierungen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Wahl",
+  "plural": "Wahlen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Gesetz",
+  "plural": "Gesetze",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Recht",
+  "plural": "Rechte",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Staat",
+  "plural": "Staaten",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Familie",
+  "plural": "Familien",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Kind",
+  "plural": "Kinder",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Vater",
+  "plural": "Väter",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Mutter",
+  "plural": "Mütter",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Bruder",
+  "plural": "Brüder",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Schwester",
+  "plural": "Schwestern",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Sohn",
+  "plural": "Söhne",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Tochter",
+  "plural": "Töchter",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Freund",
+  "plural": "Freunde",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Freundin",
+  "plural": "Freundinnen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Mensch",
+  "plural": "Menschen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Mann",
+  "plural": "Männer",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Frau",
+  "plural": "Frauen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Mädchen",
+  "plural": "Mädchen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Junge",
+  "plural": "Jungen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Person",
+  "plural": "Personen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Leben",
+  "plural": "Leben",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Beziehung",
+  "plural": "Beziehungen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Hochzeit",
+  "plural": "Hochzeiten",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Fest",
+  "plural": "Feste",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Feier",
+  "plural": "Feiern",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Geschenk",
+  "plural": "Geschenke",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Einladung",
+  "plural": "Einladungen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Gast",
+  "plural": "Gäste",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Verein",
+  "plural": "Vereine",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Moment",
+  "plural": "Momente",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Woche",
+  "plural": "Wochen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Monat",
+  "plural": "Monate",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Jahr",
+  "plural": "Jahre",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Tag",
+  "plural": "Tage",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Stunde",
+  "plural": "Stunden",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Minute",
+  "plural": "Minuten",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Zeit",
+  "plural": "Zeiten",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Ende",
+  "plural": "Enden",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Anfang",
+  "plural": "Anfänge",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Gefahr",
+  "plural": "Gefahren",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Angst",
+  "plural": "Ängste",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Gefühl",
+  "plural": "Gefühle",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Wunsch",
+  "plural": "Wünsche",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Hoffnung",
+  "plural": "Hoffnungen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Traum",
+  "plural": "Träume",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Erinnerung",
+  "plural": "Erinnerungen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Überraschung",
+  "plural": "Überraschungen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Fehler",
+  "plural": "Fehler",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Versuch",
+  "plural": "Versuche",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Chance",
+  "plural": "Chancen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Risiko",
+  "plural": "Risiken",
+  "alsoValidPlurals": [
+   "Risikos"
+  ]
+ },
+ {
+  "article": "der",
+  "singular": "Vorteil",
+  "plural": "Vorteile",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Nachteil",
+  "plural": "Nachteile",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Eindruck",
+  "plural": "Eindrücke",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Charakter",
+  "plural": "Charaktere",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Eigenschaft",
+  "plural": "Eigenschaften",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Situation",
+  "plural": "Situationen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Bedingung",
+  "plural": "Bedingungen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Veränderung",
+  "plural": "Veränderungen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Entwicklung",
+  "plural": "Entwicklungen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Zweck",
+  "plural": "Zwecke",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Art",
+  "plural": "Arten",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Seite",
+  "plural": "Seiten",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Zahl",
+  "plural": "Zahlen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Nummer",
+  "plural": "Nummern",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Menge",
+  "plural": "Mengen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Preis",
+  "plural": "Preise",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Betrag",
+  "plural": "Beträge",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Steuer",
+  "plural": "Steuern",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Versicherung",
+  "plural": "Versicherungen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Technik",
+  "plural": "Techniken",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Computer",
+  "plural": "Computer",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Handy",
+  "plural": "Handys",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "E-Mail",
+  "plural": "E-Mails",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Brief",
+  "plural": "Briefe",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Paket",
+  "plural": "Pakete",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Foto",
+  "plural": "Fotos",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Bild",
+  "plural": "Bilder",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Film",
+  "plural": "Filme",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Lied",
+  "plural": "Lieder",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Spiel",
+  "plural": "Spiele",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Mannschaft",
+  "plural": "Mannschaften",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Hobby",
+  "plural": "Hobbys",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Gerät",
+  "plural": "Geräte",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Maschine",
+  "plural": "Maschinen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Werkzeug",
+  "plural": "Werkzeuge",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Material",
+  "plural": "Materialien",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Produkt",
+  "plural": "Produkte",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Hose",
+  "plural": "Hosen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Hemd",
+  "plural": "Hemden",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Mantel",
+  "plural": "Mäntel",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Schuh",
+  "plural": "Schuhe",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Tasche",
+  "plural": "Taschen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Brille",
+  "plural": "Brillen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Uhr",
+  "plural": "Uhren",
+  "alsoValidPlurals": []
+ }
+]
