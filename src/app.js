@@ -2,7 +2,7 @@
 import { buildDeck } from './content.js';
 import { StudyController } from './controller.js';
 import { createLocalStore } from './store.js';
-import { heatColorCss, HEAT_FULL_ANSWERS, MIN_DAILY_GOAL, MAX_DAILY_GOAL, DAILY_GOAL_STEP, MODES } from './domain.js';
+import { screenScaleFor, heatColorCss, HEAT_FULL_ANSWERS, MIN_DAILY_GOAL, MAX_DAILY_GOAL, DAILY_GOAL_STEP, MODES } from './domain.js';
 
 const AUTO_ADVANCE_MILLIS = 500;
 const MAX_RESULTS = 40;
@@ -93,7 +93,7 @@ function studyHtml() {
       <span class="row"><button class="link" data-action="quit">Quit</button>
         <span class="menu"><button class="link dots" data-action="menu" ${answer ? 'disabled' : ''} aria-label="More">⋮</button>${menu}</span></span>
     </div>
-    <div class="study col" style="display:flex;flex-direction:column;gap:12px">
+    <div class="study col" style="display:flex;flex-direction:column;gap:calc(12px * var(--layout))">
       <h1 class="prompt">${esc(card.prompt)}</h1>
       ${card.hint ? `<p class="hint">Hint: ${esc(card.hint)}</p>` : ''}
       ${card.context ? `<p class="context">${esc(card.context)}</p>` : ''}
@@ -257,14 +257,23 @@ root.addEventListener('input', (e) => {
 
 // ---- boot ------------------------------------------------------------------------------------
 
+// Sets --layout / --text, the factors style.css multiplies its sizes by.
+function applyScreenScale() {
+  const { layout, text } = screenScaleFor(window.innerHeight);
+  document.documentElement.style.setProperty('--layout', layout);
+  document.documentElement.style.setProperty('--text', text);
+}
+
 async function boot() {
+  applyScreenScale();
+  window.addEventListener('resize', applyScreenScale);
   applyTheme(store.loadTheme());
   try {
-    const [nouns, preps] = await Promise.all(['vocab/nouns.json', 'vocab/prepositions.json'].map((u) => fetch(u).then((r) => {
+    const [nouns, preps, verbs] = await Promise.all(['vocab/nouns.json', 'vocab/prepositions.json', 'vocab/verbs.json'].map((u) => fetch(u).then((r) => {
       if (!r.ok) throw new Error(`${u}: ${r.status}`);
       return r.json();
     })));
-    controller = new StudyController(buildDeck(nouns, preps), store);
+    controller = new StudyController(buildDeck(nouns, preps, verbs), store);
   } catch (err) { console.error('failed to initialise', err); }
   render();
   navigator.storage?.persist?.().catch(() => {});

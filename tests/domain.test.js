@@ -1,3 +1,4 @@
+import { screenScaleFor } from '../src/domain.js';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {
@@ -177,4 +178,13 @@ test('plusAnswer and dailyProgress', () => {
 test('epochDayOf follows the local calendar date', () => {
   const d = new Date(2026, 9, 18, 23, 59).getTime();
   assert.equal(epochDayOf(d), Math.floor(Date.UTC(2026, 9, 18) / DAY_MILLIS));
+});
+
+test('screen scale is proportional inside its caps and text never shrinks', () => {
+  assert.equal(screenScaleFor(880).layout, 1);
+  assert.ok(Math.abs(screenScaleFor(792).layout - 0.9) < 1e-9);
+  assert.equal(screenScaleFor(300).layout, 0.8);
+  assert.equal(screenScaleFor(3000).layout, 1.2);
+  assert.equal(screenScaleFor(3000).text, 1.15);
+  [300, 592, 740, 880, 1200].forEach((h) => assert.ok(screenScaleFor(h).text >= 1));
 });

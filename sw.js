@@ -1,10 +1,10 @@
 // Offline cache. Bump VERSION when any cached file changes so installed copies pick it up.
-const VERSION = 'v1';
+const VERSION = 'v2';
 const CACHE = `german-quiz-${VERSION}`;
 const FILES = [
   './', 'index.html', 'style.css', 'manifest.webmanifest',
   'src/app.js', 'src/domain.js', 'src/content.js', 'src/controller.js', 'src/store.js',
-  'vocab/nouns.json', 'vocab/prepositions.json',
+  'vocab/nouns.json', 'vocab/prepositions.json', 'vocab/verbs.json',
   'icons/icon-192.png', 'icons/icon-512.png', 'icons/apple-touch-icon.png',
 ];
 

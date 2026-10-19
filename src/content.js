@@ -42,6 +42,27 @@ export function pluralDistractors(noun, count = 3) {
   return [...ordered, ...extra].slice(0, count);
 }
 
+/** The form a learner would build by treating the verb as regular: gehen -> gehte, finden -> findete. */
+export function weakPreterite(infinitive) {
+  const stem = infinitive.endsWith('en') ? infinitive.slice(0, -2) : infinitive.slice(0, -1);
+  const last = stem[stem.length - 1];
+  const before = stem[stem.length - 2] ?? '';
+  const needsE = 'td'.includes(last) || (stem.length > 1 && 'mn'.includes(last) && before !== last && !'aeiouäöülrh'.includes(before));
+  return stem + (needsE ? 'ete' : 'te');
+}
+
+/**
+ * Wrong Präteritum forms a learner might produce: the regularised weak form first (the typical mistake),
+ * then other forms of the same verb. "ge" + Partizip II fills the gap when forms coincide (telefoniert).
+ */
+export function preteriteDistractors(verb, count = 3) {
+  const participle = verb.perfect.slice(verb.perfect.indexOf(' ') + 1);
+  const others = seededShuffle(
+    [...new Set([participle, verb.present, verb.infinitive])].filter((f) => f !== verb.preterite), `preterite:${verb.infinitive}`);
+  const weak = weakPreterite(verb.infinitive);
+  return [...new Set([...(weak !== verb.preterite ? [weak] : []), ...others, `ge${participle}`])].slice(0, count);
+}
+
 function makeCard(card) {
   if (!card.choices.includes(card.correctChoice)) {
     throw new Error(`Card ${card.id}: correct choice '${card.correctChoice}' not in ${card.choices}`);
@@ -88,8 +109,20 @@ export function prepositionCard(entry) {
   });
 }
 
-export const buildDeck = (nouns, prepositions) => ({
+export const preteriteCard = (verb) => makeCard({
+  id: `preterite:${verb.infinitive}`,
+  mode: 'preterite',
+  prompt: verb.infinitive,
+  context: 'Präteritum: er/sie/es ___',
+  choices: seededShuffle([verb.preterite, ...preteriteDistractors(verb)], `preterite-order:${verb.infinitive}`),
+  correctChoice: verb.preterite,
+  explanation: `${verb.infinitive}  –  ${verb.preterite}  –  ${verb.perfect}`,
+  shuffleChoices: true,
+});
+
+export const buildDeck = (nouns, prepositions, verbs = []) => ({
   article: nouns.map(articleCard),
   plural: nouns.map(pluralCard),
   preposition: prepositions.map(prepositionCard),
+  preterite: verbs.map(preteriteCard),
 });

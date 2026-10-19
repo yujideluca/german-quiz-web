@@ -7,7 +7,20 @@ export const MODES = [
   { id: 'article', title: 'Der · Die · Das', instruction: 'Choose the correct article' },
   { id: 'preposition', title: 'Prepositions', instruction: 'Fill in the missing preposition' },
   { id: 'plural', title: 'Plural forms', instruction: 'Choose the correct plural form' },
+  { id: 'preterite', title: 'Präteritum', instruction: 'Choose the correct Präteritum form' },
 ];
+
+/**
+ * Scale factors for a screen of the given height (px): layout follows the height proportionally, text
+ * never drops below its normal size, and both are capped. Mirrors ScreenScale.kt in the Android app.
+ */
+export const SCREEN_SCALE = { referenceHeight: 880, minLayout: 0.8, maxLayout: 1.2, minText: 1, maxText: 1.15 };
+export function screenScaleFor(heightPx) {
+  const { referenceHeight, minLayout, maxLayout, minText, maxText } = SCREEN_SCALE;
+  const ratio = heightPx / referenceHeight;
+  const clamp = (v, lo, hi) => Math.min(hi, Math.max(lo, v));
+  return { layout: clamp(ratio, minLayout, maxLayout), text: clamp(ratio, minText, maxText) };
+}
 
 export const SCHEDULER = {
   learningStepsMinutes: [1, 10],

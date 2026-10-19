@@ -1,7 +1,7 @@
 # German Quiz (web)
 
-iPhone-friendly web version of the German B2 vocabulary quiz: three modes (der/die/das, prepositions,
-plural forms), Anki-style spaced repetition, daily goal, streak calendar, offline.
+iPhone-friendly web version of the German B2 vocabulary quiz: four modes (der/die/das, prepositions,
+plural forms, Präteritum), Anki-style spaced repetition, daily goal, streak calendar, offline.
 
 No build step and no dependencies: plain ES modules.
 
