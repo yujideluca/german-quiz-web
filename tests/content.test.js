@@ -8,9 +8,9 @@ const preps = JSON.parse(readFileSync(new URL('../vocab/prepositions.json', impo
 const verbs = JSON.parse(readFileSync(new URL('../vocab/verbs.json', import.meta.url)));
 const deck = buildDeck(nouns, preps, verbs);
 
-test('deck sizes match the Android app (318 nouns, 175 prepositions)', () => {
-  assert.equal(deck.article.length, 318); assert.equal(deck.plural.length, 318); assert.equal(deck.preposition.length, 175);
-  assert.equal(deck.preterite.length, 136);
+test('deck sizes match the Android app (484 nouns, 309 prepositions, 253 verbs)', () => {
+  assert.equal(deck.article.length, 484); assert.equal(deck.plural.length, 484); assert.equal(deck.preposition.length, 309);
+  assert.equal(deck.preterite.length, 253);
 });
 test('card ids are unique across the deck', () => {
   const ids = Object.values(deck).flat().map((c) => c.id);

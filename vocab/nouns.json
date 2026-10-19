@@ -1908,5 +1908,1001 @@
   "singular": "Uhr",
   "plural": "Uhren",
   "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Argument",
+  "plural": "Argumente",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Aspekt",
+  "plural": "Aspekte",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Absicht",
+  "plural": "Absichten",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Auswirkung",
+  "plural": "Auswirkungen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Ansicht",
+  "plural": "Ansichten",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Anforderung",
+  "plural": "Anforderungen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Abschnitt",
+  "plural": "Abschnitte",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Anlass",
+  "plural": "Anlässe",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Angebot",
+  "plural": "Angebote",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Anzeige",
+  "plural": "Anzeigen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Ausnahme",
+  "plural": "Ausnahmen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Bereich",
+  "plural": "Bereiche",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Bericht",
+  "plural": "Berichte",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Bedeutung",
+  "plural": "Bedeutungen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Behörde",
+  "plural": "Behörden",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Beitrag",
+  "plural": "Beiträge",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Bewegung",
+  "plural": "Bewegungen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Besucher",
+  "plural": "Besucher",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Betrieb",
+  "plural": "Betriebe",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Branche",
+  "plural": "Branchen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Debatte",
+  "plural": "Debatten",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Diskussion",
+  "plural": "Diskussionen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Ebene",
+  "plural": "Ebenen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Einrichtung",
+  "plural": "Einrichtungen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Einwohner",
+  "plural": "Einwohner",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Empfehlung",
+  "plural": "Empfehlungen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Entfernung",
+  "plural": "Entfernungen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Entschuldigung",
+  "plural": "Entschuldigungen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Erfindung",
+  "plural": "Erfindungen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Erkenntnis",
+  "plural": "Erkenntnisse",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Erklärung",
+  "plural": "Erklärungen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Erwartung",
+  "plural": "Erwartungen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Faktor",
+  "plural": "Faktoren",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Folge",
+  "plural": "Folgen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Forderung",
+  "plural": "Forderungen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Fortschritt",
+  "plural": "Fortschritte",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Gelegenheit",
+  "plural": "Gelegenheiten",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Gerücht",
+  "plural": "Gerüchte",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Geschwindigkeit",
+  "plural": "Geschwindigkeiten",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Gewohnheit",
+  "plural": "Gewohnheiten",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Grundlage",
+  "plural": "Grundlagen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Gruppe",
+  "plural": "Gruppen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Haltung",
+  "plural": "Haltungen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Hinweis",
+  "plural": "Hinweise",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Hintergrund",
+  "plural": "Hintergründe",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Inhalt",
+  "plural": "Inhalte",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Interesse",
+  "plural": "Interessen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Konflikt",
+  "plural": "Konflikte",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Kontakt",
+  "plural": "Kontakte",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Kultur",
+  "plural": "Kulturen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Lage",
+  "plural": "Lagen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Leistung",
+  "plural": "Leistungen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Maßnahme",
+  "plural": "Maßnahmen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Mehrheit",
+  "plural": "Mehrheiten",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Methode",
+  "plural": "Methoden",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Mitteilung",
+  "plural": "Mitteilungen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Mittel",
+  "plural": "Mittel",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Nachricht",
+  "plural": "Nachrichten",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Ereignis",
+  "plural": "Ereignisse",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Verfahren",
+  "plural": "Verfahren",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Verhältnis",
+  "plural": "Verhältnisse",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Vorgang",
+  "plural": "Vorgänge",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Voraussetzung",
+  "plural": "Voraussetzungen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Vorstellung",
+  "plural": "Vorstellungen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Vorurteil",
+  "plural": "Vorurteile",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Wirkung",
+  "plural": "Wirkungen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Zusammenhang",
+  "plural": "Zusammenhänge",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Zustand",
+  "plural": "Zustände",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Umfrage",
+  "plural": "Umfragen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Umgebung",
+  "plural": "Umgebungen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Verbindung",
+  "plural": "Verbindungen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Verbesserung",
+  "plural": "Verbesserungen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Veranstaltung",
+  "plural": "Veranstaltungen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Vereinbarung",
+  "plural": "Vereinbarungen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Vergleich",
+  "plural": "Vergleiche",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Verpflichtung",
+  "plural": "Verpflichtungen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Verlust",
+  "plural": "Verluste",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Vermutung",
+  "plural": "Vermutungen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Missverständnis",
+  "plural": "Missverständnisse",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Besuch",
+  "plural": "Besuche",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Ausstellung",
+  "plural": "Ausstellungen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Behandlung",
+  "plural": "Behandlungen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Befund",
+  "plural": "Befunde",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Diagnose",
+  "plural": "Diagnosen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Therapie",
+  "plural": "Therapien",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Patient",
+  "plural": "Patienten",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Patientin",
+  "plural": "Patientinnen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Krankenkasse",
+  "plural": "Krankenkassen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Impfung",
+  "plural": "Impfungen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Operation",
+  "plural": "Operationen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Symptom",
+  "plural": "Symptome",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Nebenwirkung",
+  "plural": "Nebenwirkungen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Allergie",
+  "plural": "Allergien",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Wunde",
+  "plural": "Wunden",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Knochen",
+  "plural": "Knochen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Muskel",
+  "plural": "Muskeln",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Lunge",
+  "plural": "Lungen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Leber",
+  "plural": "Lebern",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Niere",
+  "plural": "Nieren",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Notfall",
+  "plural": "Notfälle",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Arbeitgeber",
+  "plural": "Arbeitgeber",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Arbeitnehmer",
+  "plural": "Arbeitnehmer",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Überstunde",
+  "plural": "Überstunden",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Urlaub",
+  "plural": "Urlaube",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Verhandlung",
+  "plural": "Verhandlungen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Kenntnis",
+  "plural": "Kenntnisse",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Qualifikation",
+  "plural": "Qualifikationen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Fortbildung",
+  "plural": "Fortbildungen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Abteilung",
+  "plural": "Abteilungen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Antrag",
+  "plural": "Anträge",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Formular",
+  "plural": "Formulare",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Genehmigung",
+  "plural": "Genehmigungen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Frist",
+  "plural": "Fristen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Gebühr",
+  "plural": "Gebühren",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Beleg",
+  "plural": "Belege",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Quittung",
+  "plural": "Quittungen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Dokument",
+  "plural": "Dokumente",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Unterschrift",
+  "plural": "Unterschriften",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Abfall",
+  "plural": "Abfälle",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Ressource",
+  "plural": "Ressourcen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Überschwemmung",
+  "plural": "Überschwemmungen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Sturm",
+  "plural": "Stürme",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Gewitter",
+  "plural": "Gewitter",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Dürre",
+  "plural": "Dürren",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Journalist",
+  "plural": "Journalisten",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Sendung",
+  "plural": "Sendungen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Schlagzeile",
+  "plural": "Schlagzeilen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Interview",
+  "plural": "Interviews",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Quelle",
+  "plural": "Quellen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Behauptung",
+  "plural": "Behauptungen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Politiker",
+  "plural": "Politiker",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Partei",
+  "plural": "Parteien",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Bürger",
+  "plural": "Bürger",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Demokratie",
+  "plural": "Demokratien",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Verfassung",
+  "plural": "Verfassungen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Freiheit",
+  "plural": "Freiheiten",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Täter",
+  "plural": "Täter",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Opfer",
+  "plural": "Opfer",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Zeuge",
+  "plural": "Zeugen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Gericht",
+  "plural": "Gerichte",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Richter",
+  "plural": "Richter",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Anwalt",
+  "plural": "Anwälte",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Urteil",
+  "plural": "Urteile",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Strafe",
+  "plural": "Strafen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Generation",
+  "plural": "Generationen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Gemeinschaft",
+  "plural": "Gemeinschaften",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Tradition",
+  "plural": "Traditionen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Religion",
+  "plural": "Religionen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Industrie",
+  "plural": "Industrien",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Technologie",
+  "plural": "Technologien",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Datei",
+  "plural": "Dateien",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Passwort",
+  "plural": "Passwörter",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Bildschirm",
+  "plural": "Bildschirme",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Anwendung",
+  "plural": "Anwendungen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Nutzer",
+  "plural": "Nutzer",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Gegenstand",
+  "plural": "Gegenstände",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Mitglied",
+  "plural": "Mitglieder",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Organisation",
+  "plural": "Organisationen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Verband",
+  "plural": "Verbände",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Stärke",
+  "plural": "Stärken",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Schwäche",
+  "plural": "Schwächen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Enttäuschung",
+  "plural": "Enttäuschungen",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Sehnsucht",
+  "plural": "Sehnsüchte",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "das",
+  "singular": "Ehepaar",
+  "plural": "Ehepaare",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "der",
+  "singular": "Ehemann",
+  "plural": "Ehemänner",
+  "alsoValidPlurals": []
+ },
+ {
+  "article": "die",
+  "singular": "Ehefrau",
+  "plural": "Ehefrauen",
+  "alsoValidPlurals": []
  }
 ]

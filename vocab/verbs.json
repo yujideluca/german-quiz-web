@@ -814,5 +814,707 @@
   "preterite": "bezahlte",
   "perfect": "hat bezahlt",
   "present": "bezahlt"
+ },
+ {
+  "infinitive": "befehlen",
+  "preterite": "befahl",
+  "perfect": "hat befohlen",
+  "present": "befiehlt"
+ },
+ {
+  "infinitive": "begreifen",
+  "preterite": "begriff",
+  "perfect": "hat begriffen",
+  "present": "begreift"
+ },
+ {
+  "infinitive": "beraten",
+  "preterite": "beriet",
+  "perfect": "hat beraten",
+  "present": "berät"
+ },
+ {
+  "infinitive": "beschließen",
+  "preterite": "beschloss",
+  "perfect": "hat beschlossen",
+  "present": "beschließt"
+ },
+ {
+  "infinitive": "besprechen",
+  "preterite": "besprach",
+  "perfect": "hat besprochen",
+  "present": "bespricht"
+ },
+ {
+  "infinitive": "bestreiten",
+  "preterite": "bestritt",
+  "perfect": "hat bestritten",
+  "present": "bestreitet"
+ },
+ {
+  "infinitive": "betreffen",
+  "preterite": "betraf",
+  "perfect": "hat betroffen",
+  "present": "betrifft"
+ },
+ {
+  "infinitive": "betrügen",
+  "preterite": "betrog",
+  "perfect": "hat betrogen",
+  "present": "betrügt"
+ },
+ {
+  "infinitive": "erfahren",
+  "preterite": "erfuhr",
+  "perfect": "hat erfahren",
+  "present": "erfährt"
+ },
+ {
+  "infinitive": "erkennen",
+  "preterite": "erkannte",
+  "perfect": "hat erkannt",
+  "present": "erkennt"
+ },
+ {
+  "infinitive": "ernennen",
+  "preterite": "ernannte",
+  "perfect": "hat ernannt",
+  "present": "ernennt"
+ },
+ {
+  "infinitive": "benennen",
+  "preterite": "benannte",
+  "perfect": "hat benannt",
+  "present": "benennt"
+ },
+ {
+  "infinitive": "bekennen",
+  "preterite": "bekannte",
+  "perfect": "hat bekannt",
+  "present": "bekennt"
+ },
+ {
+  "infinitive": "verbrennen",
+  "preterite": "verbrannte",
+  "perfect": "hat verbrannt",
+  "present": "verbrennt"
+ },
+ {
+  "infinitive": "ertragen",
+  "preterite": "ertrug",
+  "perfect": "hat ertragen",
+  "present": "erträgt"
+ },
+ {
+  "infinitive": "erwerben",
+  "preterite": "erwarb",
+  "perfect": "hat erworben",
+  "present": "erwirbt"
+ },
+ {
+  "infinitive": "erziehen",
+  "preterite": "erzog",
+  "perfect": "hat erzogen",
+  "present": "erzieht"
+ },
+ {
+  "infinitive": "gestehen",
+  "preterite": "gestand",
+  "perfect": "hat gestanden",
+  "present": "gesteht"
+ },
+ {
+  "infinitive": "misslingen",
+  "preterite": "misslang",
+  "perfect": "ist misslungen",
+  "present": "misslingt"
+ },
+ {
+  "infinitive": "übernehmen",
+  "preterite": "übernahm",
+  "perfect": "hat übernommen",
+  "present": "übernimmt"
+ },
+ {
+  "infinitive": "überschreiten",
+  "preterite": "überschritt",
+  "perfect": "hat überschritten",
+  "present": "überschreitet"
+ },
+ {
+  "infinitive": "übersehen",
+  "preterite": "übersah",
+  "perfect": "hat übersehen",
+  "present": "übersieht"
+ },
+ {
+  "infinitive": "überweisen",
+  "preterite": "überwies",
+  "perfect": "hat überwiesen",
+  "present": "überweist"
+ },
+ {
+  "infinitive": "unterbrechen",
+  "preterite": "unterbrach",
+  "perfect": "hat unterbrochen",
+  "present": "unterbricht"
+ },
+ {
+  "infinitive": "unterhalten",
+  "preterite": "unterhielt",
+  "perfect": "hat unterhalten",
+  "present": "unterhält"
+ },
+ {
+  "infinitive": "unternehmen",
+  "preterite": "unternahm",
+  "perfect": "hat unternommen",
+  "present": "unternimmt"
+ },
+ {
+  "infinitive": "unterscheiden",
+  "preterite": "unterschied",
+  "perfect": "hat unterschieden",
+  "present": "unterscheidet"
+ },
+ {
+  "infinitive": "unterschreiben",
+  "preterite": "unterschrieb",
+  "perfect": "hat unterschrieben",
+  "present": "unterschreibt"
+ },
+ {
+  "infinitive": "unterstreichen",
+  "preterite": "unterstrich",
+  "perfect": "hat unterstrichen",
+  "present": "unterstreicht"
+ },
+ {
+  "infinitive": "verbergen",
+  "preterite": "verbarg",
+  "perfect": "hat verborgen",
+  "present": "verbirgt"
+ },
+ {
+  "infinitive": "vergeben",
+  "preterite": "vergab",
+  "perfect": "hat vergeben",
+  "present": "vergibt"
+ },
+ {
+  "infinitive": "vergehen",
+  "preterite": "verging",
+  "perfect": "ist vergangen",
+  "present": "vergeht"
+ },
+ {
+  "infinitive": "verlassen",
+  "preterite": "verließ",
+  "perfect": "hat verlassen",
+  "present": "verlässt"
+ },
+ {
+  "infinitive": "verlaufen",
+  "preterite": "verlief",
+  "perfect": "ist verlaufen",
+  "present": "verläuft"
+ },
+ {
+  "infinitive": "verleihen",
+  "preterite": "verlieh",
+  "perfect": "hat verliehen",
+  "present": "verleiht"
+ },
+ {
+  "infinitive": "verraten",
+  "preterite": "verriet",
+  "perfect": "hat verraten",
+  "present": "verrät"
+ },
+ {
+  "infinitive": "versprechen",
+  "preterite": "versprach",
+  "perfect": "hat versprochen",
+  "present": "verspricht"
+ },
+ {
+  "infinitive": "verschieben",
+  "preterite": "verschob",
+  "perfect": "hat verschoben",
+  "present": "verschiebt"
+ },
+ {
+  "infinitive": "verschlafen",
+  "preterite": "verschlief",
+  "perfect": "hat verschlafen",
+  "present": "verschläft"
+ },
+ {
+  "infinitive": "verschreiben",
+  "preterite": "verschrieb",
+  "perfect": "hat verschrieben",
+  "present": "verschreibt"
+ },
+ {
+  "infinitive": "versinken",
+  "preterite": "versank",
+  "perfect": "ist versunken",
+  "present": "versinkt"
+ },
+ {
+  "infinitive": "verstoßen",
+  "preterite": "verstieß",
+  "perfect": "hat verstoßen",
+  "present": "verstößt"
+ },
+ {
+  "infinitive": "vertreten",
+  "preterite": "vertrat",
+  "perfect": "hat vertreten",
+  "present": "vertritt"
+ },
+ {
+  "infinitive": "verweisen",
+  "preterite": "verwies",
+  "perfect": "hat verwiesen",
+  "present": "verweist"
+ },
+ {
+  "infinitive": "widersprechen",
+  "preterite": "widersprach",
+  "perfect": "hat widersprochen",
+  "present": "widerspricht"
+ },
+ {
+  "infinitive": "entlassen",
+  "preterite": "entließ",
+  "perfect": "hat entlassen",
+  "present": "entlässt"
+ },
+ {
+  "infinitive": "entgehen",
+  "preterite": "entging",
+  "perfect": "ist entgangen",
+  "present": "entgeht"
+ },
+ {
+  "infinitive": "entkommen",
+  "preterite": "entkam",
+  "perfect": "ist entkommen",
+  "present": "entkommt"
+ },
+ {
+  "infinitive": "entnehmen",
+  "preterite": "entnahm",
+  "perfect": "hat entnommen",
+  "present": "entnimmt"
+ },
+ {
+  "infinitive": "entsprechen",
+  "preterite": "entsprach",
+  "perfect": "hat entsprochen",
+  "present": "entspricht"
+ },
+ {
+  "infinitive": "entschließen",
+  "preterite": "entschloss",
+  "perfect": "hat entschlossen",
+  "present": "entschließt"
+ },
+ {
+  "infinitive": "empfangen",
+  "preterite": "empfing",
+  "perfect": "hat empfangen",
+  "present": "empfängt"
+ },
+ {
+  "infinitive": "empfinden",
+  "preterite": "empfand",
+  "perfect": "hat empfunden",
+  "present": "empfindet"
+ },
+ {
+  "infinitive": "ergreifen",
+  "preterite": "ergriff",
+  "perfect": "hat ergriffen",
+  "present": "ergreift"
+ },
+ {
+  "infinitive": "ertrinken",
+  "preterite": "ertrank",
+  "perfect": "ist ertrunken",
+  "present": "ertrinkt"
+ },
+ {
+  "infinitive": "geraten",
+  "preterite": "geriet",
+  "perfect": "ist geraten",
+  "present": "gerät"
+ },
+ {
+  "infinitive": "genesen",
+  "preterite": "genas",
+  "perfect": "ist genesen",
+  "present": "genest"
+ },
+ {
+  "infinitive": "beißen",
+  "preterite": "biss",
+  "perfect": "hat gebissen",
+  "present": "beißt"
+ },
+ {
+  "infinitive": "blasen",
+  "preterite": "blies",
+  "perfect": "hat geblasen",
+  "present": "bläst"
+ },
+ {
+  "infinitive": "braten",
+  "preterite": "briet",
+  "perfect": "hat gebraten",
+  "present": "brät"
+ },
+ {
+  "infinitive": "dringen",
+  "preterite": "drang",
+  "perfect": "ist gedrungen",
+  "present": "dringt"
+ },
+ {
+  "infinitive": "fließen",
+  "preterite": "floss",
+  "perfect": "ist geflossen",
+  "present": "fließt"
+ },
+ {
+  "infinitive": "fressen",
+  "preterite": "fraß",
+  "perfect": "hat gefressen",
+  "present": "frisst"
+ },
+ {
+  "infinitive": "gleichen",
+  "preterite": "glich",
+  "perfect": "hat geglichen",
+  "present": "gleicht"
+ },
+ {
+  "infinitive": "gleiten",
+  "preterite": "glitt",
+  "perfect": "ist geglitten",
+  "present": "gleitet"
+ },
+ {
+  "infinitive": "graben",
+  "preterite": "grub",
+  "perfect": "hat gegraben",
+  "present": "gräbt"
+ },
+ {
+  "infinitive": "heben",
+  "preterite": "hob",
+  "perfect": "hat gehoben",
+  "present": "hebt"
+ },
+ {
+  "infinitive": "kriechen",
+  "preterite": "kroch",
+  "perfect": "ist gekrochen",
+  "present": "kriecht"
+ },
+ {
+  "infinitive": "leiden",
+  "preterite": "litt",
+  "perfect": "hat gelitten",
+  "present": "leidet"
+ },
+ {
+  "infinitive": "meiden",
+  "preterite": "mied",
+  "perfect": "hat gemieden",
+  "present": "meidet"
+ },
+ {
+  "infinitive": "pfeifen",
+  "preterite": "pfiff",
+  "perfect": "hat gepfiffen",
+  "present": "pfeift"
+ },
+ {
+  "infinitive": "schleichen",
+  "preterite": "schlich",
+  "perfect": "ist geschlichen",
+  "present": "schleicht"
+ },
+ {
+  "infinitive": "schmeißen",
+  "preterite": "schmiss",
+  "perfect": "hat geschmissen",
+  "present": "schmeißt"
+ },
+ {
+  "infinitive": "schwellen",
+  "preterite": "schwoll",
+  "perfect": "ist geschwollen",
+  "present": "schwillt"
+ },
+ {
+  "infinitive": "schwören",
+  "preterite": "schwor",
+  "perfect": "hat geschworen",
+  "present": "schwört"
+ },
+ {
+  "infinitive": "sinken",
+  "preterite": "sank",
+  "perfect": "ist gesunken",
+  "present": "sinkt"
+ },
+ {
+  "infinitive": "stechen",
+  "preterite": "stach",
+  "perfect": "hat gestochen",
+  "present": "sticht"
+ },
+ {
+  "infinitive": "stinken",
+  "preterite": "stank",
+  "perfect": "hat gestunken",
+  "present": "stinkt"
+ },
+ {
+  "infinitive": "stoßen",
+  "preterite": "stieß",
+  "perfect": "hat gestoßen",
+  "present": "stößt"
+ },
+ {
+  "infinitive": "streichen",
+  "preterite": "strich",
+  "perfect": "hat gestrichen",
+  "present": "streicht"
+ },
+ {
+  "infinitive": "werben",
+  "preterite": "warb",
+  "perfect": "hat geworben",
+  "present": "wirbt"
+ },
+ {
+  "infinitive": "weisen",
+  "preterite": "wies",
+  "perfect": "hat gewiesen",
+  "present": "weist"
+ },
+ {
+  "infinitive": "behaupten",
+  "preterite": "behauptete",
+  "perfect": "hat behauptet",
+  "present": "behauptet"
+ },
+ {
+  "infinitive": "bemerken",
+  "preterite": "bemerkte",
+  "perfect": "hat bemerkt",
+  "present": "bemerkt"
+ },
+ {
+  "infinitive": "beobachten",
+  "preterite": "beobachtete",
+  "perfect": "hat beobachtet",
+  "present": "beobachtet"
+ },
+ {
+  "infinitive": "berichten",
+  "preterite": "berichtete",
+  "perfect": "hat berichtet",
+  "present": "berichtet"
+ },
+ {
+  "infinitive": "bestellen",
+  "preterite": "bestellte",
+  "perfect": "hat bestellt",
+  "present": "bestellt"
+ },
+ {
+  "infinitive": "bedeuten",
+  "preterite": "bedeutete",
+  "perfect": "hat bedeutet",
+  "present": "bedeutet"
+ },
+ {
+  "infinitive": "beantragen",
+  "preterite": "beantragte",
+  "perfect": "hat beantragt",
+  "present": "beantragt"
+ },
+ {
+  "infinitive": "beantworten",
+  "preterite": "beantwortete",
+  "perfect": "hat beantwortet",
+  "present": "beantwortet"
+ },
+ {
+  "infinitive": "beeinflussen",
+  "preterite": "beeinflusste",
+  "perfect": "hat beeinflusst",
+  "present": "beeinflusst"
+ },
+ {
+  "infinitive": "beschäftigen",
+  "preterite": "beschäftigte",
+  "perfect": "hat beschäftigt",
+  "present": "beschäftigt"
+ },
+ {
+  "infinitive": "benutzen",
+  "preterite": "benutzte",
+  "perfect": "hat benutzt",
+  "present": "benutzt"
+ },
+ {
+  "infinitive": "entdecken",
+  "preterite": "entdeckte",
+  "perfect": "hat entdeckt",
+  "present": "entdeckt"
+ },
+ {
+  "infinitive": "erreichen",
+  "preterite": "erreichte",
+  "perfect": "hat erreicht",
+  "present": "erreicht"
+ },
+ {
+  "infinitive": "erwarten",
+  "preterite": "erwartete",
+  "perfect": "hat erwartet",
+  "present": "erwartet"
+ },
+ {
+  "infinitive": "erleben",
+  "preterite": "erlebte",
+  "perfect": "hat erlebt",
+  "present": "erlebt"
+ },
+ {
+  "infinitive": "erfüllen",
+  "preterite": "erfüllte",
+  "perfect": "hat erfüllt",
+  "present": "erfüllt"
+ },
+ {
+  "infinitive": "ermöglichen",
+  "preterite": "ermöglichte",
+  "perfect": "hat ermöglicht",
+  "present": "ermöglicht"
+ },
+ {
+  "infinitive": "gründen",
+  "preterite": "gründete",
+  "perfect": "hat gegründet",
+  "present": "gründet"
+ },
+ {
+  "infinitive": "planen",
+  "preterite": "plante",
+  "perfect": "hat geplant",
+  "present": "plant"
+ },
+ {
+  "infinitive": "schützen",
+  "preterite": "schützte",
+  "perfect": "hat geschützt",
+  "present": "schützt"
+ },
+ {
+  "infinitive": "scheitern",
+  "preterite": "scheiterte",
+  "perfect": "ist gescheitert",
+  "present": "scheitert"
+ },
+ {
+  "infinitive": "überraschen",
+  "preterite": "überraschte",
+  "perfect": "hat überrascht",
+  "present": "überrascht"
+ },
+ {
+  "infinitive": "überzeugen",
+  "preterite": "überzeugte",
+  "perfect": "hat überzeugt",
+  "present": "überzeugt"
+ },
+ {
+  "infinitive": "unterstützen",
+  "preterite": "unterstützte",
+  "perfect": "hat unterstützt",
+  "present": "unterstützt"
+ },
+ {
+  "infinitive": "untersuchen",
+  "preterite": "untersuchte",
+  "perfect": "hat untersucht",
+  "present": "untersucht"
+ },
+ {
+  "infinitive": "verdienen",
+  "preterite": "verdiente",
+  "perfect": "hat verdient",
+  "present": "verdient"
+ },
+ {
+  "infinitive": "verfolgen",
+  "preterite": "verfolgte",
+  "perfect": "hat verfolgt",
+  "present": "verfolgt"
+ },
+ {
+  "infinitive": "verlangen",
+  "preterite": "verlangte",
+  "perfect": "hat verlangt",
+  "present": "verlangt"
+ },
+ {
+  "infinitive": "vermissen",
+  "preterite": "vermisste",
+  "perfect": "hat vermisst",
+  "present": "vermisst"
+ },
+ {
+  "infinitive": "vermuten",
+  "preterite": "vermutete",
+  "perfect": "hat vermutet",
+  "present": "vermutet"
+ },
+ {
+  "infinitive": "verpassen",
+  "preterite": "verpasste",
+  "perfect": "hat verpasst",
+  "present": "verpasst"
+ },
+ {
+  "infinitive": "versuchen",
+  "preterite": "versuchte",
+  "perfect": "hat versucht",
+  "present": "versucht"
+ },
+ {
+  "infinitive": "verursachen",
+  "preterite": "verursachte",
+  "perfect": "hat verursacht",
+  "present": "verursacht"
+ },
+ {
+  "infinitive": "verzichten",
+  "preterite": "verzichtete",
+  "perfect": "hat verzichtet",
+  "present": "verzichtet"
+ },
+ {
+  "infinitive": "zerstören",
+  "preterite": "zerstörte",
+  "perfect": "hat zerstört",
+  "present": "zerstört"
  }
 ]
