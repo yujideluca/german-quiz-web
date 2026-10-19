@@ -15,4 +15,5 @@ Run tests: `npm test` (Node 22+). Run locally: `python3 -m http.server` and open
 Install on iPhone: open the page in Safari, Share, "Add to Home Screen". Progress lives in the browser's
 storage on that device; use Settings > Backup to save or restore it. It is separate from the Android app.
 
-When a cached file changes, bump `VERSION` in `sw.js` so installed copies update.
+When a cached file changes, bump `VERSION` in `sw.js` so installed copies update. The service worker is network first (cache only
+as the offline fallback) and the page reloads once when a new worker takes over, so a deploy shows up on the next open, not the one after.

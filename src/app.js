@@ -281,7 +281,17 @@ async function boot() {
   } catch (err) { console.error('failed to initialise', err); }
   render();
   navigator.storage?.persist?.().catch(() => {});
-  if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(() => {});
+  if ('serviceWorker' in navigator) {
+    // A new service worker takes over (skipWaiting + claim) while the page is still the old one: reload once so the
+    // player sees the new version right away. The first install has no controller yet and must not reload.
+    const hadController = !!navigator.serviceWorker.controller;
+    let reloading = false;
+    navigator.serviceWorker.addEventListener('controllerchange', () => {
+      if (!hadController || reloading || view.name === 'study') return;
+      reloading = true; location.reload();
+    });
+    navigator.serviceWorker.register('sw.js').catch(() => {});
+  }
 }
 
 // Coming back to the app on a new day (or after minutes in learning) refreshes counts.
