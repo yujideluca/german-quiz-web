@@ -78,10 +78,11 @@ function studyHtml() {
   const answer = session.lastAnswer;
   const daily = controller.dailyProgress();
   const mode = MODES.find((m) => m.id === session.mode);
+  const errorSpot = mode.id === 'errors';
   const choices = controller.choices(session).map((option) => {
     let cls = '';
     if (answer) cls = option === card.correctChoice ? ' correct' : option === answer.chosen ? ' wrong' : ' dim';
-    return `<button class="choice${cls}" data-action="choose" data-choice="${esc(option)}" ${answer ? 'disabled' : ''}>${esc(option)}</button>`;
+    return `<button class="${errorSpot ? 'chunk' : 'choice'}${cls}" data-action="choose" data-choice="${esc(option)}" ${answer ? 'disabled' : ''}>${esc(option)}</button>`;
   }).join('');
   const menu = menuOpen && !answer ? `<div class="menu-pop">
       <button data-action="suspend" data-duration="ONE_WEEK">Remove for 1 week</button>
@@ -94,11 +95,13 @@ function studyHtml() {
         <span class="menu"><button class="link dots" data-action="menu" ${answer ? 'disabled' : ''} aria-label="More">⋮</button>${menu}</span></span>
     </div>
     <div class="study col" style="display:flex;flex-direction:column;gap:calc(12px * var(--layout))">
-      <h1 class="prompt">${esc(card.prompt)}</h1>
+      <h1 class="prompt${errorSpot ? ' prompt-small' : ''}">${esc(card.prompt)}</h1>
+      ${errorSpot ? '<p class="hint">Tap the part that is wrong</p>' : ''}
       ${card.hint ? `<p class="hint">Hint: ${esc(card.hint)}</p>` : ''}
-      ${card.context ? `<p class="context">${esc(card.context)}</p>` : ''}
-      ${choices}
+      ${card.context && !errorSpot ? `<p class="context">${esc(card.context)}</p>` : ''}
+      ${errorSpot ? `<div class="chunks">${choices}</div>` : choices}
       ${answer ? `<p class="explanation">${esc(card.explanation)}</p>` : ''}
+      ${answer && !mode.autoAdvances ? '<button class="btn next" data-action="next">Next</button>' : ''}
     </div>`;
 }
 
@@ -178,7 +181,7 @@ function render() {
     const input = document.getElementById('search');
     input.focus(); input.setSelectionRange(input.value.length, input.value.length);
   }
-  if (view.name === 'study' && session.lastAnswer) advanceTimer = setTimeout(next, AUTO_ADVANCE_MILLIS);
+  if (view.name === 'study' && session.lastAnswer && MODES.find((m) => m.id === session.mode).autoAdvances !== false) advanceTimer = setTimeout(next, AUTO_ADVANCE_MILLIS);
 }
 
 function show(name) { view = { name }; menuOpen = false; render(); window.scrollTo(0, 0); }
@@ -199,6 +202,7 @@ function toast(text) {
 const actions = {
   study(el) { session = controller.startSession(el.dataset.mode); show('study'); },
   choose(el) { session = controller.answer(session, el.dataset.choice); render(); },
+  next() { next(); },
   menu() { menuOpen = !menuOpen; render(); },
   suspend(el) { session = controller.suspendCurrentCard(session, el.dataset.duration); menuOpen = false; render(); },
   quit() { clearTimeout(advanceTimer); calendarMonth = null; show('home'); },
@@ -269,11 +273,11 @@ async function boot() {
   window.addEventListener('resize', applyScreenScale);
   applyTheme(store.loadTheme());
   try {
-    const [nouns, preps, verbs] = await Promise.all(['vocab/nouns.json', 'vocab/prepositions.json', 'vocab/verbs.json'].map((u) => fetch(u).then((r) => {
+    const [nouns, preps, verbs, errors] = await Promise.all(['vocab/nouns.json', 'vocab/prepositions.json', 'vocab/verbs.json', 'vocab/errors.json'].map((u) => fetch(u).then((r) => {
       if (!r.ok) throw new Error(`${u}: ${r.status}`);
       return r.json();
     })));
-    controller = new StudyController(buildDeck(nouns, preps, verbs), store);
+    controller = new StudyController(buildDeck(nouns, preps, verbs, errors), store);
   } catch (err) { console.error('failed to initialise', err); }
   render();
   navigator.storage?.persist?.().catch(() => {});

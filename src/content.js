@@ -120,9 +120,27 @@ export const preteriteCard = (verb) => makeCard({
   shuffleChoices: true,
 });
 
-export const buildDeck = (nouns, prepositions, verbs = []) => ({
+/** A forum-post or formal-e-mail sentence split into chunks; the player taps the one chunk that is wrong. */
+export function errorCard(entry) {
+  const wrong = entry.segments[entry.errorIndex];
+  const corrected = entry.segments.map((chunk, i) => (i === entry.errorIndex ? entry.fix : chunk));
+  return makeCard({
+    id: `error:${entry.id}`,
+    mode: 'errors',
+    prompt: entry.register,
+    context: entry.segments.join(' '),
+    choices: entry.segments,
+    correctChoice: wrong,
+    explanation: `✓ ${corrected.join(' ')}\n\n${entry.errorType}: ${entry.rule}\nRedemittel: ${entry.expression}`,
+    shuffleChoices: false,
+  });
+}
+
+export const buildDeck = (nouns, prepositions, verbs = [], errorSentences = []) => ({
   article: nouns.map(articleCard),
   plural: nouns.map(pluralCard),
   preposition: prepositions.map(prepositionCard),
   preterite: verbs.map(preteriteCard),
+  // Shuffled once with a fixed seed so new sentences do not arrive grouped by error type or register.
+  errors: seededShuffle(errorSentences, 'errors-deck').map(errorCard),
 });

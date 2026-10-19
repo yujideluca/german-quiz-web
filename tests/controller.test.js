@@ -5,13 +5,13 @@ import { createLocalStore } from '../src/store.js';
 import { DAY_MILLIS } from '../src/domain.js';
 
 const card = (id, mode = 'article') => ({ id, mode, prompt: id, context: null, choices: ['a', 'b'], correctChoice: 'a', explanation: '', shuffleChoices: false, hint: null });
-const deck = { article: [card('a1'), card('a2'), card('a3')], preposition: [card('p1', 'preposition')], plural: [card('l1', 'plural')], preterite: [card('v1', 'preterite')] };
+const deck = { article: [card('a1'), card('a2'), card('a3')], preposition: [card('p1', 'preposition')], plural: [card('l1', 'plural')], preterite: [card('v1', 'preterite')], errors: [card('e1', 'errors')] };
 const T0 = new Date(2026, 9, 18, 10, 0).getTime();
 const make = (store = createMemoryStore(), clock = { t: T0 }) => ({ c: new StudyController(deck, store, () => clock.t), store, clock });
 
 test('overview lists every mode with new cards', () => {
   const { c } = make();
-  assert.deepEqual(c.overview().map((o) => o.stats.newAvailable), [3, 1, 1, 1]);
+  assert.deepEqual(c.overview().map((o) => o.stats.newAvailable), [3, 1, 1, 1, 1]);
 });
 test('answers persist and survive a restart', () => {
   const { c, store, clock } = make();

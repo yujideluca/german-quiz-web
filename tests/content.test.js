@@ -1,12 +1,14 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { buildDeck, pluralDistractors, prepositionDistractors, preteriteDistractors, weakPreterite, withUmlaut } from '../src/content.js';
+import { MODES } from '../src/domain.js';
+import { buildDeck, errorCard, pluralDistractors, prepositionDistractors, preteriteDistractors, weakPreterite, withUmlaut } from '../src/content.js';
 
 const nouns = JSON.parse(readFileSync(new URL('../vocab/nouns.json', import.meta.url)));
 const preps = JSON.parse(readFileSync(new URL('../vocab/prepositions.json', import.meta.url)));
 const verbs = JSON.parse(readFileSync(new URL('../vocab/verbs.json', import.meta.url)));
-const deck = buildDeck(nouns, preps, verbs);
+const errors = JSON.parse(readFileSync(new URL('../vocab/errors.json', import.meta.url)));
+const deck = buildDeck(nouns, preps, verbs, errors);
 
 test('deck sizes match the Android app (484 nouns, 309 prepositions, 253 verbs)', () => {
   assert.equal(deck.article.length, 484); assert.equal(deck.plural.length, 484); assert.equal(deck.preposition.length, 309);
@@ -60,4 +62,26 @@ test('weak preterite follows the regular pattern', () => {
   assert.equal(weakPreterite('gehen'), 'gehte'); assert.equal(weakPreterite('finden'), 'findete');
   assert.equal(weakPreterite('arbeiten'), 'arbeitete'); assert.equal(weakPreterite('nehmen'), 'nehmte');
   assert.equal(weakPreterite('kommen'), 'kommte'); assert.equal(weakPreterite('machen'), 'machte');
+});
+
+test('Fehler finden: 121 sentences, chunks stay in order and the wrong chunk is the answer', () => {
+  assert.equal(deck.errors.length, 121);
+  deck.errors.forEach((c) => {
+    const entry = errors.find((e) => `error:${e.id}` === c.id);
+    assert.deepEqual(c.choices, entry.segments);
+    assert.equal(c.correctChoice, entry.segments[entry.errorIndex]);
+    assert.equal(c.shuffleChoices, false);
+  });
+});
+test('Fehler finden: explanation shows the corrected sentence, the rule and the Redemittel', () => {
+  const card = errorCard(errors.find((e) => e.id === 'F01'));
+  assert.ok(card.explanation.startsWith('✓ Meiner Ansicht nach wird Plastik heute viel zu oft benutzt'));
+  assert.ok(card.explanation.includes('Redemittel: Meiner Ansicht nach'));
+  assert.ok(!card.explanation.split('\n')[0].includes(card.correctChoice));
+});
+test('Fehler finden: new sentences are mixed (not one error type in a row) and the mode waits for a Next tap', () => {
+  const types = new Set(deck.errors.slice(0, 10).map((c) => errors.find((e) => `error:${e.id}` === c.id).errorType));
+  assert.ok(types.size >= 4, [...types].join());
+  assert.equal(MODES.find((m) => m.id === 'errors').autoAdvances, false);
+  assert.ok(MODES.filter((m) => m.id !== 'errors').every((m) => m.autoAdvances !== false));
 });

@@ -8,6 +8,8 @@ export const MODES = [
   { id: 'preposition', title: 'Prepositions', instruction: 'Fill in the missing preposition' },
   { id: 'plural', title: 'Plural forms', instruction: 'Choose the correct plural form' },
   { id: 'preterite', title: 'Präteritum', instruction: 'Choose the correct Präteritum form' },
+  // autoAdvances false: the explanation (corrected sentence + rule) needs reading time, so the player taps Next.
+  { id: 'errors', title: 'Fehler finden', instruction: 'Tap the part of the sentence that is wrong', autoAdvances: false },
 ];
 
 /**

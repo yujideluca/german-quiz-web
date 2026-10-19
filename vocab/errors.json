@@ -1,0 +1,1729 @@
+[
+ {
+  "id": "F01",
+  "register": "Forumsbeitrag",
+  "errorType": "Passive: werden, not sein",
+  "segments": [
+   "Meiner Ansicht nach",
+   "ist Plastik heute viel zu oft benutzt,",
+   "obwohl es bessere Alternativen gibt."
+  ],
+  "errorIndex": 1,
+  "fix": "wird Plastik heute viel zu oft benutzt,",
+  "rule": "An action or process takes werden + Partizip II (\"wird benutzt\"); sein + Partizip II only describes a finished state.",
+  "expression": "Meiner Ansicht nach"
+ },
+ {
+  "id": "F02",
+  "register": "Forumsbeitrag",
+  "errorType": "Passive: werden, not sein",
+  "segments": [
+   "Es stellt sich die Frage,",
+   "ob Kinder in der Schule",
+   "immer wieder zum Denken angeregt sind."
+  ],
+  "errorIndex": 2,
+  "fix": "immer wieder zum Denken angeregt werden.",
+  "rule": "Something that happens again and again is a process: werden + Partizip II (\"angeregt werden\"), with the verb at the end of the clause.",
+  "expression": "Es stellt sich die Frage, ob …"
+ },
+ {
+  "id": "F03",
+  "register": "Forumsbeitrag",
+  "errorType": "Passive: werden, not sein",
+  "segments": [
+   "Dafür spricht insbesondere, dass",
+   "Verpackungen aus Pilzen",
+   "jedes Jahr in größeren Mengen produziert sind."
+  ],
+  "errorIndex": 2,
+  "fix": "jedes Jahr in größeren Mengen produziert werden.",
+  "rule": "Something that happens repeatedly is a process: werden + Partizip II.",
+  "expression": "Dafür spricht insbesondere, dass …"
+ },
+ {
+  "id": "F04",
+  "register": "Forumsbeitrag",
+  "errorType": "Passive: werden, not sein",
+  "segments": [
+   "Die Regierung sollte Maßnahmen ergreifen,",
+   "damit",
+   "täglich weniger Plastik verbraucht ist."
+  ],
+  "errorIndex": 2,
+  "fix": "täglich weniger Plastik verbraucht wird.",
+  "rule": "\"täglich\" marks a repeated action, so the passive needs werden + Partizip II.",
+  "expression": "Maßnahmen ergreifen"
+ },
+ {
+  "id": "F05",
+  "register": "Forumsbeitrag",
+  "errorType": "Passive: werden, not sein",
+  "segments": [
+   "Ich bin der Meinung, dass",
+   "die Schüler",
+   "von den Lehrern zu selten gelobt sind."
+  ],
+  "errorIndex": 2,
+  "fix": "von den Lehrern zu selten gelobt werden.",
+  "rule": "With an agent (\"von den Lehrern\") and a frequency (\"zu selten\") the passive is werden + Partizip II.",
+  "expression": "Ich bin der Meinung, dass …"
+ },
+ {
+  "id": "F06",
+  "register": "Forumsbeitrag",
+  "errorType": "Passive: werden, not sein",
+  "segments": [
+   "Meiner Meinung nach",
+   "sind neue Materialien",
+   "von der Industrie noch viel zu selten in Betracht gezogen."
+  ],
+  "errorIndex": 1,
+  "fix": "werden neue Materialien",
+  "rule": "The passive of an action needs the auxiliary werden: \"werden … in Betracht gezogen\".",
+  "expression": "in Betracht ziehen"
+ },
+ {
+  "id": "F07",
+  "register": "Forumsbeitrag",
+  "errorType": "Word order: verb position",
+  "segments": [
+   "Trotz der Nützlichkeit",
+   "Plastikverpackungen sind",
+   "nicht besonders umweltfreundlich."
+  ],
+  "errorIndex": 1,
+  "fix": "sind Plastikverpackungen",
+  "rule": "After an introductory phrase the conjugated verb stays in position 2 and comes before the subject: \"sind Plastikverpackungen\".",
+  "expression": "Trotz + Genitiv"
+ },
+ {
+  "id": "F08",
+  "register": "Forumsbeitrag",
+  "errorType": "Word order: verb position",
+  "segments": [
+   "Was erschwert die Umstellung zusätzlich,",
+   "ist die vorhandene Struktur",
+   "der Industrie."
+  ],
+  "errorIndex": 0,
+  "fix": "Was die Umstellung zusätzlich erschwert,",
+  "rule": "A \"Was …\" clause is a subordinate clause: the verb goes to the end.",
+  "expression": "Was … erschwert, ist …"
+ },
+ {
+  "id": "F09",
+  "register": "Forumsbeitrag",
+  "errorType": "Word order: verb position",
+  "segments": [
+   "Wenn man",
+   "braucht Geschwindigkeit und Flexibilität,",
+   "ist das Fahrrad eine echte Alternative zum Auto."
+  ],
+  "errorIndex": 1,
+  "fix": "Geschwindigkeit und Flexibilität braucht,",
+  "rule": "After \"wenn\" the conjugated verb goes to the end of the clause.",
+  "expression": "eine Alternative zu …"
+ },
+ {
+  "id": "F10",
+  "register": "Forumsbeitrag",
+  "errorType": "Word order: verb position",
+  "segments": [
+   "Aus meiner Sicht ist ein Sprachkurs sinnvoll,",
+   "weil",
+   "Kinder sollten früh Fremdsprachen lernen."
+  ],
+  "errorIndex": 2,
+  "fix": "Kinder früh Fremdsprachen lernen sollten.",
+  "rule": "After \"weil\" the conjugated verb (sollten) is the last word.",
+  "expression": "Aus meiner Sicht"
+ },
+ {
+  "id": "F11",
+  "register": "Forumsbeitrag",
+  "errorType": "Word order: verb position",
+  "segments": [
+   "Deshalb",
+   "Wissenschaftler versuchen",
+   "weltweit,",
+   "neue Materialien zu entwickeln."
+  ],
+  "errorIndex": 1,
+  "fix": "versuchen Wissenschaftler",
+  "rule": "\"Deshalb\" fills position 1, so the verb must come next.",
+  "expression": "deshalb"
+ },
+ {
+  "id": "F12",
+  "register": "Forumsbeitrag",
+  "errorType": "Word order: verb position",
+  "segments": [
+   "Einerseits",
+   "Lehrer sind sehr wichtig,",
+   "andererseits dürfen sie nicht bei jeder Aufgabe helfen."
+  ],
+  "errorIndex": 1,
+  "fix": "sind Lehrer sehr wichtig,",
+  "rule": "\"Einerseits\" fills position 1, so the verb follows it directly.",
+  "expression": "Einerseits … andererseits …"
+ },
+ {
+  "id": "F13",
+  "register": "Forumsbeitrag",
+  "errorType": "Word order: verb position",
+  "segments": [
+   "Zusammenfassend lässt sich sagen,",
+   "dass Fahrräder",
+   "sind in Städten die bessere Lösung."
+  ],
+  "errorIndex": 2,
+  "fix": "in Städten die bessere Lösung sind.",
+  "rule": "After \"dass\" the conjugated verb goes to the end.",
+  "expression": "Zusammenfassend lässt sich sagen, dass …"
+ },
+ {
+  "id": "F14",
+  "register": "Forumsbeitrag",
+  "errorType": "Word order: verb position",
+  "segments": [
+   "Ich fahre oft Rad,",
+   "obwohl",
+   "es ist anstrengend."
+  ],
+  "errorIndex": 2,
+  "fix": "es anstrengend ist.",
+  "rule": "After \"obwohl\" the conjugated verb goes to the end.",
+  "expression": "obwohl …"
+ },
+ {
+  "id": "F15",
+  "register": "Forumsbeitrag",
+  "errorType": "Word order: verb position",
+  "segments": [
+   "Es stellt sich die Frage,",
+   "wer die Kosten",
+   "trägt für die Umstellung."
+  ],
+  "errorIndex": 2,
+  "fix": "für die Umstellung trägt.",
+  "rule": "In an indirect question the conjugated verb is last.",
+  "expression": "Es stellt sich die Frage, wer …"
+ },
+ {
+  "id": "F16",
+  "register": "Forumsbeitrag",
+  "errorType": "Article / adjective ending",
+  "segments": [
+   "Dagegen lässt sich anführen, dass",
+   "diese neue Möglichkeiten",
+   "noch zu teuer sind."
+  ],
+  "errorIndex": 1,
+  "fix": "diese neuen Möglichkeiten",
+  "rule": "After diese / die / alle the adjective in the plural ends in -en.",
+  "expression": "Dagegen lässt sich anführen, dass …"
+ },
+ {
+  "id": "F17",
+  "register": "Forumsbeitrag",
+  "errorType": "Article / adjective ending",
+  "segments": [
+   "Ein gutes Beispiel dafür ist",
+   "ein neu Verpackungsmaterial",
+   "aus Pilzen."
+  ],
+  "errorIndex": 1,
+  "fix": "ein neues Verpackungsmaterial",
+  "rule": "Neuter noun after \"ein\": the adjective needs -es (\"ein neues Material\").",
+  "expression": "Ein gutes Beispiel dafür ist …"
+ },
+ {
+  "id": "F18",
+  "register": "Forumsbeitrag",
+  "errorType": "Article / adjective ending",
+  "segments": [
+   "Im Gegensatz zu Autos",
+   "ist das Fahrrad",
+   "ein umweltfreundliches und günstig Verkehrsmittel."
+  ],
+  "errorIndex": 2,
+  "fix": "ein umweltfreundliches und günstiges Verkehrsmittel.",
+  "rule": "Every adjective before the noun needs an ending, also the second one in a pair.",
+  "expression": "Im Gegensatz zu …"
+ },
+ {
+  "id": "F19",
+  "register": "Forumsbeitrag",
+  "errorType": "Article / adjective ending",
+  "segments": [
+   "Zum einen bieten große Städte",
+   "ein dichtes öffentlichen Verkehrsnetz,",
+   "zum anderen gibt es dort jedoch viel Stau."
+  ],
+  "errorIndex": 1,
+  "fix": "ein dichtes öffentliches Verkehrsnetz,",
+  "rule": "Neuter Akkusativ after \"ein\": both adjectives take -es (ein dichtes öffentliches Netz).",
+  "expression": "Zum einen …, zum anderen …"
+ },
+ {
+  "id": "F20",
+  "register": "Forumsbeitrag",
+  "errorType": "Article / adjective ending",
+  "segments": [
+   "Meiner Ansicht nach",
+   "ist Bildung der wichtigste Schlüssel",
+   "für eine gut Zukunft."
+  ],
+  "errorIndex": 2,
+  "fix": "für eine gute Zukunft.",
+  "rule": "Feminine noun after \"eine\": the adjective ends in -e.",
+  "expression": "Meiner Ansicht nach"
+ },
+ {
+  "id": "F21",
+  "register": "Forumsbeitrag",
+  "errorType": "Article / adjective ending",
+  "segments": [
+   "Dem könnte man entgegenhalten, dass",
+   "nicht alle Kinder",
+   "in dem gleichen Schule lernen können."
+  ],
+  "errorIndex": 2,
+  "fix": "in der gleichen Schule lernen können.",
+  "rule": "\"Schule\" is feminine, so in + Dativ is \"in der\".",
+  "expression": "Dem könnte man entgegenhalten, dass …"
+ },
+ {
+  "id": "F22",
+  "register": "Forumsbeitrag",
+  "errorType": "Article / adjective ending",
+  "segments": [
+   "Ich bin überzeugt, dass",
+   "der Gesellschaft",
+   "Verantwortung übernehmen muss."
+  ],
+  "errorIndex": 1,
+  "fix": "die Gesellschaft",
+  "rule": "The subject is in the Nominativ: \"die Gesellschaft\". \"der\" would be Dativ or Genitiv.",
+  "expression": "Verantwortung übernehmen"
+ },
+ {
+  "id": "F23",
+  "register": "Forumsbeitrag",
+  "errorType": "Article / adjective ending",
+  "segments": [
+   "Ein weiterer Aspekt, der berücksichtigt werden sollte, ist die Kostenfrage.",
+   "Sie bleibt leider",
+   "ein ungelöst Problem."
+  ],
+  "errorIndex": 2,
+  "fix": "ein ungelöstes Problem.",
+  "rule": "Neuter noun after \"ein\": the adjective ends in -es.",
+  "expression": "Ein weiterer Aspekt, der berücksichtigt werden sollte, ist …"
+ },
+ {
+  "id": "F24",
+  "register": "Forumsbeitrag",
+  "errorType": "Preposition and case",
+  "segments": [
+   "Angesichts",
+   "dem hohen Preis",
+   "können sich nicht alle Familien ein Auto leisten."
+  ],
+  "errorIndex": 1,
+  "fix": "des hohen Preises",
+  "rule": "\"angesichts\" takes the Genitiv.",
+  "expression": "angesichts + Genitiv"
+ },
+ {
+  "id": "F25",
+  "register": "Forumsbeitrag",
+  "errorType": "Preposition and case",
+  "segments": [
+   "Ein gutes Beispiel dafür ist,",
+   "dass viele Menschen täglich",
+   "nach dem Stadtzentrum",
+   "fahren."
+  ],
+  "errorIndex": 2,
+  "fix": "ins Stadtzentrum",
+  "rule": "Direction into a place: in + Akkusativ (ins Stadtzentrum). \"nach\" is for cities, countries and compass points.",
+  "expression": "Ein gutes Beispiel dafür ist …"
+ },
+ {
+  "id": "F26",
+  "register": "Forumsbeitrag",
+  "errorType": "Preposition and case",
+  "segments": [
+   "Eltern sollten Verantwortung übernehmen",
+   "und ihre Kinder",
+   "vor negative Einflüsse",
+   "schützen."
+  ],
+  "errorIndex": 2,
+  "fix": "vor negativen Einflüssen",
+  "rule": "\"schützen vor\" takes the Dativ.",
+  "expression": "schützen vor + Dativ"
+ },
+ {
+  "id": "F27",
+  "register": "Forumsbeitrag",
+  "errorType": "Preposition and case",
+  "segments": [
+   "Es stellt sich die Frage,",
+   "warum Plastik",
+   "bei mehreren Jahrhunderten",
+   "in der Umwelt bleibt."
+  ],
+  "errorIndex": 2,
+  "fix": "über mehrere Jahrhunderte",
+  "rule": "Duration is expressed with \"über + Akkusativ\" (or \"… lang\"); \"bei\" does not.",
+  "expression": "Es stellt sich die Frage, warum …"
+ },
+ {
+  "id": "F28",
+  "register": "Forumsbeitrag",
+  "errorType": "Preposition and case",
+  "segments": [
+   "Abschließend möchte ich betonen,",
+   "dass diese Alternativen",
+   "bei den kommenden Jahren",
+   "wichtiger werden."
+  ],
+  "errorIndex": 2,
+  "fix": "in den kommenden Jahren",
+  "rule": "Periods of time take \"in\": in den kommenden Jahren.",
+  "expression": "Abschließend möchte ich betonen, dass …"
+ },
+ {
+  "id": "F29",
+  "register": "Forumsbeitrag",
+  "errorType": "Preposition and case",
+  "segments": [
+   "Man sollte bedenken, dass",
+   "frühes Sprachenlernen",
+   "für der Zukunft",
+   "der Kinder wichtig ist."
+  ],
+  "errorIndex": 2,
+  "fix": "für die Zukunft",
+  "rule": "\"für\" always takes the Akkusativ.",
+  "expression": "Man sollte bedenken, dass …"
+ },
+ {
+  "id": "F30",
+  "register": "Forumsbeitrag",
+  "errorType": "Preposition and case",
+  "segments": [
+   "Außer",
+   "die hohen Kosten",
+   "lässt sich kaum etwas gegen die Umstellung anführen."
+  ],
+  "errorIndex": 1,
+  "fix": "den hohen Kosten",
+  "rule": "\"außer\" always takes the Dativ.",
+  "expression": "lässt sich anführen"
+ },
+ {
+  "id": "F31",
+  "register": "Forumsbeitrag",
+  "errorType": "Verb or noun + preposition / case",
+  "segments": [
+   "Der Klimawandel hat",
+   "einen großen Einfluss",
+   "für die Natur."
+  ],
+  "errorIndex": 2,
+  "fix": "auf die Natur.",
+  "rule": "Einfluss haben auf + Akkusativ.",
+  "expression": "Einfluss auf etwas haben"
+ },
+ {
+  "id": "F32",
+  "register": "Forumsbeitrag",
+  "errorType": "Verb or noun + preposition / case",
+  "segments": [
+   "Eltern sollten Verantwortung übernehmen",
+   "und",
+   "sich besser für ihre Kinder kümmern."
+  ],
+  "errorIndex": 2,
+  "fix": "sich besser um ihre Kinder kümmern.",
+  "rule": "sich kümmern um + Akkusativ.",
+  "expression": "sich kümmern um"
+ },
+ {
+  "id": "F33",
+  "register": "Forumsbeitrag",
+  "errorType": "Verb or noun + preposition / case",
+  "segments": [
+   "Man sollte",
+   "an die Zukunft nachdenken,",
+   "bevor man eine Entscheidung trifft."
+  ],
+  "errorIndex": 1,
+  "fix": "über die Zukunft nachdenken,",
+  "rule": "nachdenken über + Akkusativ.",
+  "expression": "eine Entscheidung treffen"
+ },
+ {
+  "id": "F34",
+  "register": "Forumsbeitrag",
+  "errorType": "Verb or noun + preposition / case",
+  "segments": [
+   "Viele Experten",
+   "rechnen für einen weiteren Anstieg",
+   "des Verkehrs,",
+   "deshalb sollte die Stadt Maßnahmen ergreifen."
+  ],
+  "errorIndex": 1,
+  "fix": "rechnen mit einem weiteren Anstieg",
+  "rule": "rechnen mit + Dativ.",
+  "expression": "Maßnahmen ergreifen"
+ },
+ {
+  "id": "F35",
+  "register": "Forumsbeitrag",
+  "errorType": "Verb or noun + preposition / case",
+  "segments": [
+   "Viele Eltern",
+   "haben Angst für Unfälle,",
+   "deshalb ziehen sie ein Auto",
+   "in Betracht."
+  ],
+  "errorIndex": 1,
+  "fix": "haben Angst vor Unfällen,",
+  "rule": "Angst haben vor + Dativ.",
+  "expression": "in Betracht ziehen"
+ },
+ {
+  "id": "F36",
+  "register": "Forumsbeitrag",
+  "errorType": "Verb or noun + preposition / case",
+  "segments": [
+   "Die Idee finde ich großartig,",
+   "und deshalb",
+   "möchte ich die Organisatoren bedanken."
+  ],
+  "errorIndex": 2,
+  "fix": "möchte ich mich bei den Organisatoren bedanken.",
+  "rule": "sich bedanken is reflexive and takes bei + Dativ: sich bei jemandem bedanken.",
+  "expression": "Ich möchte mich bei … bedanken"
+ },
+ {
+  "id": "F37",
+  "register": "Forumsbeitrag",
+  "errorType": "Verb or noun + preposition / case",
+  "segments": [
+   "Ich würde",
+   "dem Sprachkurs empfehlen,",
+   "weil Kinder davon langfristig profitieren."
+  ],
+  "errorIndex": 1,
+  "fix": "den Sprachkurs empfehlen,",
+  "rule": "The thing recommended is the Akkusativ object: \"den Sprachkurs\".",
+  "expression": "Ich würde … empfehlen"
+ },
+ {
+  "id": "F38",
+  "register": "Forumsbeitrag",
+  "errorType": "Verb or noun + preposition / case",
+  "segments": [
+   "Die Politik",
+   "sollte",
+   "sich auf umweltfreundliche Lösungen einsetzen."
+  ],
+  "errorIndex": 2,
+  "fix": "sich für umweltfreundliche Lösungen einsetzen.",
+  "rule": "sich einsetzen für + Akkusativ.",
+  "expression": "sich einsetzen für"
+ },
+ {
+  "id": "F39",
+  "register": "Forumsbeitrag",
+  "errorType": "Capitalisation and spelling",
+  "segments": [
+   "Es gibt viele Alternativen,",
+   "zum beispiel Polymere aus Pilzen,",
+   "die biologisch abbaubar sind."
+  ],
+  "errorIndex": 1,
+  "fix": "zum Beispiel Polymere aus Pilzen,",
+  "rule": "Nouns are always capitalised: \"Beispiel\".",
+  "expression": "zum Beispiel"
+ },
+ {
+  "id": "F40",
+  "register": "Forumsbeitrag",
+  "errorType": "Capitalisation and spelling",
+  "segments": [
+   "Der Spielnachmittag ist",
+   "auf keinen fall",
+   "eine schlechte Idee."
+  ],
+  "errorIndex": 1,
+  "fix": "auf keinen Fall",
+  "rule": "The noun inside a fixed phrase stays capitalised: \"auf keinen Fall\".",
+  "expression": "auf keinen Fall"
+ },
+ {
+  "id": "F41",
+  "register": "Forumsbeitrag",
+  "errorType": "Capitalisation and spelling",
+  "segments": [
+   "Meiner Ansicht nach ist Plastik problematisch,",
+   "weil es sehr lange",
+   "in der umwelt bleibt."
+  ],
+  "errorIndex": 2,
+  "fix": "in der Umwelt bleibt.",
+  "rule": "Nouns are capitalised: \"Umwelt\".",
+  "expression": "Meiner Ansicht nach"
+ },
+ {
+  "id": "F42",
+  "register": "Forumsbeitrag",
+  "errorType": "Capitalisation and spelling",
+  "segments": [
+   "Es kommt darauf an,",
+   "dass Kinder beim",
+   "lernen",
+   "nicht überfordert werden."
+  ],
+  "errorIndex": 2,
+  "fix": "Lernen",
+  "rule": "A verb used as a noun (after \"beim\", \"zum\", an article) is capitalised: beim Lernen.",
+  "expression": "Es kommt darauf an, dass …"
+ },
+ {
+  "id": "F43",
+  "register": "Forumsbeitrag",
+  "errorType": "Capitalisation and spelling",
+  "segments": [
+   "Ich bin der Meinung,",
+   "das Kinder",
+   "früh Sprachen lernen sollten."
+  ],
+  "errorIndex": 1,
+  "fix": "dass Kinder",
+  "rule": "\"dass\" with double s opens a clause; \"das\" is an article or pronoun.",
+  "expression": "Ich bin der Meinung, dass …"
+ },
+ {
+  "id": "F44",
+  "register": "Forumsbeitrag",
+  "errorType": "Capitalisation and spelling",
+  "segments": [
+   "Dem könnte man entgegenhalten,",
+   "dass vieles auf einem",
+   "Misverständnis",
+   "beruht."
+  ],
+  "errorIndex": 2,
+  "fix": "Missverständnis",
+  "rule": "Spelling: Missverständnis, with double s.",
+  "expression": "Dem könnte man entgegenhalten, dass …"
+ },
+ {
+  "id": "F45",
+  "register": "Forumsbeitrag",
+  "errorType": "Capitalisation and spelling",
+  "segments": [
+   "Diese Verpackungen sind nicht nur",
+   "umweltfrundlicher,",
+   "sondern auch günstiger."
+  ],
+  "errorIndex": 1,
+  "fix": "umweltfreundlicher,",
+  "rule": "Spelling: umweltfreundlich (Freund + lich).",
+  "expression": "nicht nur … sondern auch …"
+ },
+ {
+  "id": "F46",
+  "register": "Forumsbeitrag",
+  "errorType": "Plural and gender",
+  "segments": [
+   "Dafür stehen heute viele",
+   "Möglichkeit",
+   "zur Verfügung."
+  ],
+  "errorIndex": 1,
+  "fix": "Möglichkeiten",
+  "rule": "Nouns ending in -keit form the plural with -keiten.",
+  "expression": "zur Verfügung stehen"
+ },
+ {
+  "id": "F47",
+  "register": "Forumsbeitrag",
+  "errorType": "Plural and gender",
+  "segments": [
+   "Man sollte bedenken, dass Plastik",
+   "mehrere",
+   "Jahrhunderts",
+   "in der Umwelt bleibt."
+  ],
+  "errorIndex": 2,
+  "fix": "Jahrhunderte",
+  "rule": "Plural of das Jahrhundert: die Jahrhunderte.",
+  "expression": "Man sollte bedenken, dass …"
+ },
+ {
+  "id": "F48",
+  "register": "Forumsbeitrag",
+  "errorType": "Plural and gender",
+  "segments": [
+   "Dafür spricht insbesondere, dass viele",
+   "Tieren",
+   "durch Plastik sterben."
+  ],
+  "errorIndex": 1,
+  "fix": "Tiere",
+  "rule": "Plural of das Tier: die Tiere. The -n appears only in the Dativ plural.",
+  "expression": "Dafür spricht insbesondere, dass …"
+ },
+ {
+  "id": "F49",
+  "register": "Forumsbeitrag",
+  "errorType": "Plural and gender",
+  "segments": [
+   "Für viele Menschen",
+   "spielt",
+   "die Auto",
+   "eine große Rolle."
+  ],
+  "errorIndex": 2,
+  "fix": "das Auto",
+  "rule": "\"Auto\" is neuter: das Auto.",
+  "expression": "eine Rolle spielen"
+ },
+ {
+  "id": "F50",
+  "register": "Forumsbeitrag",
+  "errorType": "Plural and gender",
+  "segments": [
+   "Ich kann diesem Argument nur teilweise zustimmen,",
+   "denn",
+   "das Struktur",
+   "der Industrie lässt sich nicht schnell ändern."
+  ],
+  "errorIndex": 2,
+  "fix": "die Struktur",
+  "rule": "Words ending in -ur are feminine: die Struktur.",
+  "expression": "Ich kann diesem Argument nur teilweise zustimmen"
+ },
+ {
+  "id": "F51",
+  "register": "Forumsbeitrag",
+  "errorType": "Word choice / collocation",
+  "segments": [
+   "Ein entscheidender Vorteil besteht darin,",
+   "dass diese Verpackungen aus",
+   "Materiellen",
+   "bestehen, die biologisch abbaubar sind."
+  ],
+  "errorIndex": 2,
+  "fix": "Materialien",
+  "rule": "\"materiell\" is an adjective; the noun is das Material, plural Materialien.",
+  "expression": "Ein entscheidender Vorteil besteht darin, dass …"
+ },
+ {
+  "id": "F52",
+  "register": "Forumsbeitrag",
+  "errorType": "Word choice / collocation",
+  "segments": [
+   "Ein gutes Beispiel für",
+   "Responsabilität",
+   "ist die richtige Mülltrennung."
+  ],
+  "errorIndex": 1,
+  "fix": "Verantwortung",
+  "rule": "Portuguese responsabilidade is German Verantwortung.",
+  "expression": "Ein gutes Beispiel für … ist …"
+ },
+ {
+  "id": "F53",
+  "register": "Forumsbeitrag",
+  "errorType": "Word choice / collocation",
+  "segments": [
+   "Dagegen lässt sich anführen, dass man",
+   "an der Regierung",
+   "nicht ständig Kritik machen sollte."
+  ],
+  "errorIndex": 2,
+  "fix": "nicht ständig Kritik üben sollte.",
+  "rule": "Collocation: Kritik üben an + Dativ (never machen).",
+  "expression": "Kritik üben an"
+ },
+ {
+  "id": "F54",
+  "register": "Forumsbeitrag",
+  "errorType": "Word choice / collocation",
+  "segments": [
+   "Die Regierung sollte",
+   "schnell",
+   "Maßnahmen machen,",
+   "um die Umwelt zu schützen."
+  ],
+  "errorIndex": 2,
+  "fix": "Maßnahmen ergreifen,",
+  "rule": "Collocation: Maßnahmen ergreifen (never machen).",
+  "expression": "Maßnahmen ergreifen"
+ },
+ {
+  "id": "F55",
+  "register": "Forumsbeitrag",
+  "errorType": "Word choice / collocation",
+  "segments": [
+   "Letztlich muss jede Familie",
+   "eine Entscheidung machen,",
+   "die zu ihren Möglichkeiten passt."
+  ],
+  "errorIndex": 1,
+  "fix": "eine Entscheidung treffen,",
+  "rule": "Collocation: eine Entscheidung treffen (never machen).",
+  "expression": "eine Entscheidung treffen"
+ },
+ {
+  "id": "F56",
+  "register": "Forumsbeitrag",
+  "errorType": "Word choice / collocation",
+  "segments": [
+   "Politiker und Unternehmen müssen",
+   "Verantwortung nehmen,",
+   "damit sich etwas ändert."
+  ],
+  "errorIndex": 1,
+  "fix": "Verantwortung übernehmen,",
+  "rule": "Collocation: Verantwortung übernehmen.",
+  "expression": "Verantwortung übernehmen"
+ },
+ {
+  "id": "F57",
+  "register": "Forumsbeitrag",
+  "errorType": "Word choice / collocation",
+  "segments": [
+   "Bei dieser Frage",
+   "macht der Preis",
+   "eine große Rolle."
+  ],
+  "errorIndex": 1,
+  "fix": "spielt der Preis",
+  "rule": "Collocation: eine Rolle spielen (never machen).",
+  "expression": "eine Rolle spielen"
+ },
+ {
+  "id": "F58",
+  "register": "Forumsbeitrag",
+  "errorType": "Connector",
+  "segments": [
+   "Plastik ist nicht nur billig,",
+   "aber auch",
+   "sehr vielseitig."
+  ],
+  "errorIndex": 1,
+  "fix": "sondern auch",
+  "rule": "The pair is \"nicht nur … sondern auch\".",
+  "expression": "nicht nur … sondern auch …"
+ },
+ {
+  "id": "F59",
+  "register": "Forumsbeitrag",
+  "errorType": "Connector",
+  "segments": [
+   "Plastik ist sehr praktisch,",
+   "trotz es",
+   "der Umwelt schadet."
+  ],
+  "errorIndex": 1,
+  "fix": "obwohl es",
+  "rule": "\"trotz\" is a preposition and needs a noun (trotz + Genitiv); before a clause with its own verb use \"obwohl\".",
+  "expression": "obwohl …"
+ },
+ {
+  "id": "F60",
+  "register": "Forumsbeitrag",
+  "errorType": "Connector",
+  "segments": [
+   "Je früher Kinder",
+   "eine Fremdsprache lernen,",
+   "als leichter fällt es ihnen."
+  ],
+  "errorIndex": 2,
+  "fix": "desto leichter fällt es ihnen.",
+  "rule": "Comparison pair: je + Komparativ … desto + Komparativ.",
+  "expression": "je … desto …"
+ },
+ {
+  "id": "F61",
+  "register": "Forumsbeitrag",
+  "errorType": "Infinitive with zu / um … zu",
+  "segments": [
+   "Die Stadt sollte mehr Radwege",
+   "zur Verfügung stellen,",
+   "damit den Verkehr zu entlasten."
+  ],
+  "errorIndex": 2,
+  "fix": "um den Verkehr zu entlasten.",
+  "rule": "\"damit\" needs its own subject and a conjugated verb; with the same subject use \"um … zu + Infinitiv\".",
+  "expression": "zur Verfügung stellen"
+ },
+ {
+  "id": "F62",
+  "register": "Forumsbeitrag",
+  "errorType": "Infinitive with zu / um … zu",
+  "segments": [
+   "Es ist wichtig,",
+   "Kinder",
+   "zu nicht überfordern."
+  ],
+  "errorIndex": 2,
+  "fix": "nicht zu überfordern.",
+  "rule": "\"nicht\" stands before \"zu\" + infinitive.",
+  "expression": "Es ist wichtig, … zu …"
+ },
+ {
+  "id": "F63",
+  "register": "Forumsbeitrag",
+  "errorType": "Verb form and agreement",
+  "segments": [
+   "Das Einkommen der Eltern",
+   "haben einen großen Einfluss",
+   "auf die Bildung der Kinder."
+  ],
+  "errorIndex": 1,
+  "fix": "hat einen großen Einfluss",
+  "rule": "The subject \"das Einkommen\" is singular, so the verb is \"hat\".",
+  "expression": "Einfluss auf etwas haben"
+ },
+ {
+  "id": "F64",
+  "register": "Forumsbeitrag",
+  "errorType": "Verb form and agreement",
+  "segments": [
+   "Wenn man",
+   "kein Geld für Nachhilfe hast,",
+   "wachsen Kinder oft ohne Unterstützung auf."
+  ],
+  "errorIndex": 1,
+  "fix": "kein Geld für Nachhilfe hat,",
+  "rule": "\"man\" takes the er / sie / es form: hat.",
+  "expression": "ohne Unterstützung aufwachsen"
+ },
+ {
+  "id": "M01",
+  "register": "Formelle E-Mail",
+  "errorType": "Sie vs. du (formal register)",
+  "segments": [
+   "Sehr geehrte Frau Keller,",
+   "ich bedauere sehr, dass",
+   "dein Sekretär",
+   "uns das Datum falsch mitgeteilt hat."
+  ],
+  "errorIndex": 2,
+  "fix": "Ihr Sekretär",
+  "rule": "In a formal e-mail always use Sie / Ihr, never du / dein.",
+  "expression": "Ich bedauere sehr, dass …"
+ },
+ {
+  "id": "M02",
+  "register": "Formelle E-Mail",
+  "errorType": "Sie vs. du (formal register)",
+  "segments": [
+   "Sehr geehrte Frau Keller,",
+   "ich wäre Ihnen sehr dankbar,",
+   "wenn du mir die Unterlagen bis Freitag schicken könntest."
+  ],
+  "errorIndex": 2,
+  "fix": "wenn Sie mir die Unterlagen bis Freitag schicken könnten.",
+  "rule": "Formal register: Sie (with the matching verb form könnten), never du.",
+  "expression": "Ich wäre Ihnen sehr dankbar, wenn …"
+ },
+ {
+  "id": "M03",
+  "register": "Formelle E-Mail",
+  "errorType": "Sie vs. du (formal register)",
+  "segments": [
+   "Ich habe noch eine Frage",
+   "zu deiner Wohnung:",
+   "Ist Ihre Küche komplett ausgestattet?"
+  ],
+  "errorIndex": 1,
+  "fix": "zu Ihrer Wohnung:",
+  "rule": "Never mix du and Sie in one message: stay with Ihr.",
+  "expression": "Ich habe eine Frage zu …"
+ },
+ {
+  "id": "M04",
+  "register": "Formelle E-Mail",
+  "errorType": "Sie vs. du (formal register)",
+  "segments": [
+   "Sehr geehrte Frau Keller,",
+   "für Rückfragen",
+   "stehe ich",
+   "ihnen",
+   "gern zur Verfügung."
+  ],
+  "errorIndex": 3,
+  "fix": "Ihnen",
+  "rule": "The polite pronoun Sie / Ihnen / Ihr is always capitalised.",
+  "expression": "zur Verfügung stehen"
+ },
+ {
+  "id": "M05",
+  "register": "Formelle E-Mail",
+  "errorType": "Sie vs. du (formal register)",
+  "segments": [
+   "Sehr geehrte Frau Keller,",
+   "könnten",
+   "sie mir bitte",
+   "mitteilen, ob die Frist verlängert wird?"
+  ],
+  "errorIndex": 2,
+  "fix": "Sie mir bitte",
+  "rule": "The polite pronoun Sie is always capitalised.",
+  "expression": "Könnten Sie mir bitte mitteilen, ob …"
+ },
+ {
+  "id": "M06",
+  "register": "Formelle E-Mail",
+  "errorType": "Capitalisation and spelling",
+  "segments": [
+   "Vielen Dank im Voraus.",
+   "Mit Freundlichen grüßen",
+   "Giovanni"
+  ],
+  "errorIndex": 1,
+  "fix": "Mit freundlichen Grüßen",
+  "rule": "\"freundlichen\" is an adjective (lower case); \"Grüßen\" is a noun (capital). No comma after the closing formula.",
+  "expression": "Mit freundlichen Grüßen"
+ },
+ {
+  "id": "M07",
+  "register": "Formelle E-Mail",
+  "errorType": "Capitalisation and spelling",
+  "segments": [
+   "Sehr geehrter herr Ebert,",
+   "ich schreibe Ihnen,",
+   "um mich für die Verspätung zu entschuldigen."
+  ],
+  "errorIndex": 0,
+  "fix": "Sehr geehrter Herr Ebert,",
+  "rule": "\"Herr\" is a noun: capital letter.",
+  "expression": "Ich schreibe Ihnen, um … zu …"
+ },
+ {
+  "id": "M08",
+  "register": "Formelle E-Mail",
+  "errorType": "Sie vs. du (formal register)",
+  "segments": [
+   "Sehr geehrter Herr Ebert,",
+   "ich bitte",
+   "dich um Verständnis,",
+   "da die Antwort leider erst heute kommt."
+  ],
+  "errorIndex": 2,
+  "fix": "Sie um Verständnis,",
+  "rule": "Formal register: Sie, never dich.",
+  "expression": "um Verständnis bitten"
+ },
+ {
+  "id": "M09",
+  "register": "Formelle E-Mail",
+  "errorType": "Sie vs. du (formal register)",
+  "segments": [
+   "Sollten Sie noch Fragen haben,",
+   "kannst du mich",
+   "jederzeit anrufen."
+  ],
+  "errorIndex": 1,
+  "fix": "können Sie mich",
+  "rule": "Formal register: Sie with the matching verb form (können).",
+  "expression": "Sollten Sie noch Fragen haben, …"
+ },
+ {
+  "id": "M10",
+  "register": "Formelle E-Mail",
+  "errorType": "Passive: werden, not sein",
+  "segments": [
+   "Ich möchte Sie darüber informieren,",
+   "dass die Dateien",
+   "gestern an die Kliniken geschickt waren."
+  ],
+  "errorIndex": 2,
+  "fix": "gestern an die Kliniken geschickt wurden.",
+  "rule": "Past passive: wurden + Partizip II, not waren.",
+  "expression": "Ich möchte Sie darüber informieren, dass …"
+ },
+ {
+  "id": "M11",
+  "register": "Formelle E-Mail",
+  "errorType": "Passive: werden, not sein",
+  "segments": [
+   "Es stellt sich die Frage,",
+   "wie die Arbeit",
+   "in Zukunft jede Woche neu organisiert ist."
+  ],
+  "errorIndex": 2,
+  "fix": "in Zukunft jede Woche neu organisiert wird.",
+  "rule": "\"jede Woche\" marks a repeated action: werden + Partizip II.",
+  "expression": "Es stellt sich die Frage, wie …"
+ },
+ {
+  "id": "M12",
+  "register": "Formelle E-Mail",
+  "errorType": "Passive: werden, not sein",
+  "segments": [
+   "Ihr Vorschlag",
+   "ist zurzeit von der Geschäftsführung in Betracht gezogen,",
+   "und Sie erhalten bis Freitag eine Antwort."
+  ],
+  "errorIndex": 1,
+  "fix": "wird zurzeit von der Geschäftsführung in Betracht gezogen,",
+  "rule": "\"zurzeit\" describes an ongoing action: werden + Partizip II.",
+  "expression": "in Betracht ziehen"
+ },
+ {
+  "id": "M13",
+  "register": "Formelle E-Mail",
+  "errorType": "Word order: verb position",
+  "segments": [
+   "Zu meinem Bedauern",
+   "ich konnte",
+   "an der Besprechung nicht teilnehmen."
+  ],
+  "errorIndex": 1,
+  "fix": "konnte ich",
+  "rule": "After an introductory phrase the verb is in position 2, before the subject.",
+  "expression": "Zu meinem Bedauern"
+ },
+ {
+  "id": "M14",
+  "register": "Formelle E-Mail",
+  "errorType": "Word order: verb position",
+  "segments": [
+   "Ich hoffe,",
+   "dass Sie",
+   "haben Verständnis für die Situation."
+  ],
+  "errorIndex": 2,
+  "fix": "Verständnis für die Situation haben.",
+  "rule": "After \"dass\" the conjugated verb goes to the end.",
+  "expression": "Verständnis haben für …"
+ },
+ {
+  "id": "M15",
+  "register": "Formelle E-Mail",
+  "errorType": "Word order: verb position",
+  "segments": [
+   "Aus diesem Grund",
+   "ich bin",
+   "leider nicht erreichbar gewesen."
+  ],
+  "errorIndex": 1,
+  "fix": "bin ich",
+  "rule": "\"Aus diesem Grund\" fills position 1, so the verb comes next.",
+  "expression": "Aus diesem Grund"
+ },
+ {
+  "id": "M16",
+  "register": "Formelle E-Mail",
+  "errorType": "Word order: verb position",
+  "segments": [
+   "Ich wollte Sie fragen,",
+   "ob Ihre Küche",
+   "ist komplett ausgestattet."
+  ],
+  "errorIndex": 2,
+  "fix": "komplett ausgestattet ist.",
+  "rule": "In an indirect question the conjugated verb is last.",
+  "expression": "Ich wollte Sie fragen, ob …"
+ },
+ {
+  "id": "M17",
+  "register": "Formelle E-Mail",
+  "errorType": "Word order: verb position",
+  "segments": [
+   "Falls Sie Interesse haben,",
+   "ich schicke Ihnen",
+   "gern weitere Fotos."
+  ],
+  "errorIndex": 1,
+  "fix": "schicke ich Ihnen",
+  "rule": "After a \"falls …\" clause the main clause starts with the verb.",
+  "expression": "Falls Sie Interesse haben, …"
+ },
+ {
+  "id": "M18",
+  "register": "Formelle E-Mail",
+  "errorType": "Word order: verb position",
+  "segments": [
+   "Ich möchte Ihnen zusichern,",
+   "dass ich den versäumten Beitrag",
+   "reiche bis Freitag nach."
+  ],
+  "errorIndex": 2,
+  "fix": "bis Freitag nachreiche.",
+  "rule": "After \"dass\" the conjugated verb goes to the end, joined to its prefix: nachreiche.",
+  "expression": "einen Beitrag nachreichen"
+ },
+ {
+  "id": "M19",
+  "register": "Formelle E-Mail",
+  "errorType": "Word order: verb position",
+  "segments": [
+   "Die Unterlagen fehlen noch,",
+   "deshalb ich möchte",
+   "Sie um eine kurze Rückmeldung bitten."
+  ],
+  "errorIndex": 1,
+  "fix": "deshalb möchte ich",
+  "rule": "\"deshalb\" fills position 1, so the verb comes next.",
+  "expression": "um eine Rückmeldung bitten"
+ },
+ {
+  "id": "M20",
+  "register": "Formelle E-Mail",
+  "errorType": "Infinitive with zu / um … zu",
+  "segments": [
+   "Ich schreibe Ihnen,",
+   "um mich für die Verspätung",
+   "entschuldigen zu."
+  ],
+  "errorIndex": 2,
+  "fix": "zu entschuldigen.",
+  "rule": "\"zu\" stands directly before the infinitive: zu entschuldigen.",
+  "expression": "Ich schreibe Ihnen, um … zu …"
+ },
+ {
+  "id": "M21",
+  "register": "Formelle E-Mail",
+  "errorType": "Article / adjective ending",
+  "segments": [
+   "Wenn es zu teuer ist,",
+   "würde ich Ihnen empfehlen,",
+   "ein neuer Praktikant zu suchen."
+  ],
+  "errorIndex": 2,
+  "fix": "einen neuen Praktikanten zu suchen.",
+  "rule": "The object is Akkusativ: \"einen neuen Praktikanten\" (masculine n-declension).",
+  "expression": "Ich würde Ihnen empfehlen, … zu …"
+ },
+ {
+  "id": "M22",
+  "register": "Formelle E-Mail",
+  "errorType": "Article / adjective ending",
+  "segments": [
+   "Es ist für",
+   "einen einzigen Mensch",
+   "schlicht nicht zu schaffen."
+  ],
+  "errorIndex": 1,
+  "fix": "einen einzigen Menschen",
+  "rule": "Masculine n-declension: der Mensch → einen Menschen.",
+  "expression": "nicht zu schaffen sein"
+ },
+ {
+  "id": "M23",
+  "register": "Formelle E-Mail",
+  "errorType": "Article / adjective ending",
+  "segments": [
+   "Ich würde mich freuen, wenn Sie",
+   "unser Vorschlag",
+   "in Erwägung ziehen würden."
+  ],
+  "errorIndex": 1,
+  "fix": "unseren Vorschlag",
+  "rule": "Masculine Akkusativ: unseren Vorschlag.",
+  "expression": "in Erwägung ziehen"
+ },
+ {
+  "id": "M24",
+  "register": "Formelle E-Mail",
+  "errorType": "Article / adjective ending",
+  "segments": [
+   "Ich möchte Ihnen",
+   "meinem Haus",
+   "in Südfrankreich anbieten."
+  ],
+  "errorIndex": 1,
+  "fix": "mein Haus",
+  "rule": "The thing offered is the Akkusativ object; the person is already \"Ihnen\".",
+  "expression": "Ich möchte Ihnen … anbieten"
+ },
+ {
+  "id": "M25",
+  "register": "Formelle E-Mail",
+  "errorType": "Article / adjective ending",
+  "segments": [
+   "Sehr geehrter Herr Baum,",
+   "vielen Dank für",
+   "Ihr Hilfe",
+   "und Ihre schnelle Antwort."
+  ],
+  "errorIndex": 2,
+  "fix": "Ihre Hilfe",
+  "rule": "\"Hilfe\" is feminine: Ihre Hilfe.",
+  "expression": "Vielen Dank für …"
+ },
+ {
+  "id": "M26",
+  "register": "Formelle E-Mail",
+  "errorType": "Preposition and case",
+  "segments": [
+   "Außer",
+   "das Missverständnis",
+   "verlief das Projekt wie geplant."
+  ],
+  "errorIndex": 1,
+  "fix": "dem Missverständnis",
+  "rule": "\"außer\" always takes the Dativ.",
+  "expression": "außer + Dativ"
+ },
+ {
+  "id": "M27",
+  "register": "Formelle E-Mail",
+  "errorType": "Preposition and case",
+  "segments": [
+   "Wie vereinbart",
+   "schicke ich die Dateien",
+   "nach den Kliniken."
+  ],
+  "errorIndex": 2,
+  "fix": "an die Kliniken.",
+  "rule": "Recipients take \"an + Akkusativ\"; \"nach\" is for cities, countries and compass points.",
+  "expression": "Wie vereinbart"
+ },
+ {
+  "id": "M28",
+  "register": "Formelle E-Mail",
+  "errorType": "Preposition and case",
+  "segments": [
+   "Ich bedauere sehr, dass ich",
+   "in Mittwoch",
+   "nicht anwesend war."
+  ],
+  "errorIndex": 1,
+  "fix": "am Mittwoch",
+  "rule": "Days of the week take \"am\": am Mittwoch.",
+  "expression": "Ich bedauere sehr, dass …"
+ },
+ {
+  "id": "M29",
+  "register": "Formelle E-Mail",
+  "errorType": "Preposition and case",
+  "segments": [
+   "Sehr geehrte Frau Keller,",
+   "bezugnehmend",
+   "an Ihre E-Mail vom 12. Oktober",
+   "möchte ich Ihnen Folgendes mitteilen."
+  ],
+  "errorIndex": 2,
+  "fix": "auf Ihre E-Mail vom 12. Oktober",
+  "rule": "Bezug nehmen auf + Akkusativ.",
+  "expression": "Bezug nehmen auf"
+ },
+ {
+  "id": "M30",
+  "register": "Formelle E-Mail",
+  "errorType": "Preposition and case",
+  "segments": [
+   "Aufgrund",
+   "dem technischen Ausfall",
+   "konnte ich nicht teilnehmen."
+  ],
+  "errorIndex": 1,
+  "fix": "des technischen Ausfalls",
+  "rule": "\"aufgrund\" takes the Genitiv.",
+  "expression": "aufgrund + Genitiv"
+ },
+ {
+  "id": "M31",
+  "register": "Formelle E-Mail",
+  "errorType": "Preposition and case",
+  "segments": [
+   "Trotz",
+   "meine Bemühungen",
+   "konnte ich die Frist nicht einhalten."
+  ],
+  "errorIndex": 1,
+  "fix": "meiner Bemühungen",
+  "rule": "\"trotz\" takes the Genitiv.",
+  "expression": "Trotz meiner Bemühungen"
+ },
+ {
+  "id": "M32",
+  "register": "Formelle E-Mail",
+  "errorType": "Verb or noun + preposition / case",
+  "segments": [
+   "Sehr geehrter Herr Ebert,",
+   "ich schreibe",
+   "Sie diese E-Mail,",
+   "um verschiedene Punkte zu erklären."
+  ],
+  "errorIndex": 2,
+  "fix": "Ihnen diese E-Mail,",
+  "rule": "schreiben takes the person in the Dativ and the thing in the Akkusativ: \"Ihnen diese E-Mail\".",
+  "expression": "Ich schreibe Ihnen … , um … zu …"
+ },
+ {
+  "id": "M33",
+  "register": "Formelle E-Mail",
+  "errorType": "Verb or noun + preposition / case",
+  "segments": [
+   "Entschuldigen Sie bitte, wenn diese Nachricht plötzlich kommt,",
+   "aber ich bitte Sie",
+   "für Verständnis."
+  ],
+  "errorIndex": 2,
+  "fix": "um Verständnis.",
+  "rule": "bitten um + Akkusativ.",
+  "expression": "um Verständnis bitten"
+ },
+ {
+  "id": "M34",
+  "register": "Formelle E-Mail",
+  "errorType": "Verb or noun + preposition / case",
+  "segments": [
+   "Sehr geehrte Damen und Herren,",
+   "wir interessieren uns",
+   "an Ihrem Angebot."
+  ],
+  "errorIndex": 2,
+  "fix": "für Ihr Angebot.",
+  "rule": "sich interessieren für + Akkusativ.",
+  "expression": "sich interessieren für"
+ },
+ {
+  "id": "M35",
+  "register": "Formelle E-Mail",
+  "errorType": "Verb or noun + preposition / case",
+  "segments": [
+   "Ich schreibe Ihnen,",
+   "um den Vorfall zu erklären",
+   "und",
+   "Sie bitte zu verzeihen."
+  ],
+  "errorIndex": 3,
+  "fix": "Sie um Verzeihung zu bitten.",
+  "rule": "Use the fixed phrase um Verzeihung bitten; \"verzeihen\" takes a Dativ object.",
+  "expression": "um Verzeihung bitten"
+ },
+ {
+  "id": "M36",
+  "register": "Formelle E-Mail",
+  "errorType": "Verb or noun + preposition / case",
+  "segments": [
+   "Sehr geehrte Damen und Herren,",
+   "ich möchte mich",
+   "über den Stand der Bewerbung",
+   "erkundigen."
+  ],
+  "errorIndex": 2,
+  "fix": "nach dem Stand der Bewerbung",
+  "rule": "sich erkundigen nach + Dativ.",
+  "expression": "sich erkundigen nach"
+ },
+ {
+  "id": "M37",
+  "register": "Formelle E-Mail",
+  "errorType": "Verb or noun + preposition / case",
+  "segments": [
+   "Sehr geehrter Herr Kurz,",
+   "ich möchte",
+   "mich Ihnen für die Verspätung entschuldigen."
+  ],
+  "errorIndex": 2,
+  "fix": "mich bei Ihnen für die Verspätung entschuldigen.",
+  "rule": "sich entschuldigen takes bei + Dativ for the person and für + Akkusativ for the reason.",
+  "expression": "sich bei jemandem für etwas entschuldigen"
+ },
+ {
+  "id": "M38",
+  "register": "Formelle E-Mail",
+  "errorType": "Verb or noun + preposition / case",
+  "segments": [
+   "Sehr geehrte Damen und Herren,",
+   "wir legen großen Wert",
+   "über pünktliche Lieferung."
+  ],
+  "errorIndex": 2,
+  "fix": "auf pünktliche Lieferung.",
+  "rule": "Wert legen auf + Akkusativ.",
+  "expression": "Wert legen auf"
+ },
+ {
+  "id": "M39",
+  "register": "Formelle E-Mail",
+  "errorType": "Plural and gender",
+  "segments": [
+   "Ich schreibe Ihnen,",
+   "um mich durch",
+   "diesen E-Mail",
+   "für die Verspätung zu entschuldigen."
+  ],
+  "errorIndex": 2,
+  "fix": "diese E-Mail",
+  "rule": "\"E-Mail\" is feminine: diese E-Mail.",
+  "expression": "sich entschuldigen für"
+ },
+ {
+  "id": "M40",
+  "register": "Formelle E-Mail",
+  "errorType": "Plural and gender",
+  "segments": [
+   "Wir haben bereits zwanzig",
+   "Artikeln",
+   "gesammelt, und es stellt sich die Frage,",
+   "ob das ausreicht."
+  ],
+  "errorIndex": 1,
+  "fix": "Artikel",
+  "rule": "Plural of der Artikel: die Artikel (no -n in Nominativ or Akkusativ).",
+  "expression": "Es stellt sich die Frage, ob …"
+ },
+ {
+  "id": "M41",
+  "register": "Formelle E-Mail",
+  "errorType": "Plural and gender",
+  "segments": [
+   "Theoretisch ist das kein Problem,",
+   "aber meistens sind diese Patienten",
+   "für mehrere Jahren",
+   "in Behandlung."
+  ],
+  "errorIndex": 2,
+  "fix": "für mehrere Jahre",
+  "rule": "After \"mehrere\" the plural has no -n in the Akkusativ: mehrere Jahre.",
+  "expression": "in Behandlung sein"
+ },
+ {
+  "id": "M42",
+  "register": "Formelle E-Mail",
+  "errorType": "Plural and gender",
+  "segments": [
+   "Wie Sie wissen,",
+   "enthält",
+   "jedes Krankenakt",
+   "mindestens viertausend Wörter."
+  ],
+  "errorIndex": 2,
+  "fix": "jede Krankenakte",
+  "rule": "\"Krankenakte\" is feminine: jede Krankenakte.",
+  "expression": "Wie Sie wissen"
+ },
+ {
+  "id": "M43",
+  "register": "Formelle E-Mail",
+  "errorType": "Word choice / collocation",
+  "segments": [
+   "Die Dokumente,",
+   "die Sie mir letzte Woche",
+   "geboten haben,",
+   "sind leider noch nicht fertig."
+  ],
+  "errorIndex": 2,
+  "fix": "zur Verfügung gestellt haben,",
+  "rule": "bieten does not mean \"to hand over\"; use zur Verfügung stellen.",
+  "expression": "zur Verfügung stellen"
+ },
+ {
+  "id": "M44",
+  "register": "Formelle E-Mail",
+  "errorType": "Word choice / collocation",
+  "segments": [
+   "Möglicherweise liegt ein Missverständnis vor,",
+   "denn unser digitaler",
+   "Datumsplan",
+   "zeigt das Treffen erst für nächste Woche an."
+  ],
+  "errorIndex": 2,
+  "fix": "Terminkalender",
+  "rule": "\"Datumsplan\" does not exist; a calendar of appointments is der Terminkalender.",
+  "expression": "Möglicherweise liegt ein Missverständnis vor"
+ },
+ {
+  "id": "M45",
+  "register": "Formelle E-Mail",
+  "errorType": "Word choice / collocation",
+  "segments": [
+   "Sehr geehrte Frau Keller,",
+   "ich möchte Ihnen",
+   "mein Bedauern machen."
+  ],
+  "errorIndex": 2,
+  "fix": "mein Bedauern ausdrücken.",
+  "rule": "Collocation: sein Bedauern ausdrücken (never machen).",
+  "expression": "Bedauern ausdrücken"
+ },
+ {
+  "id": "M46",
+  "register": "Formelle E-Mail",
+  "errorType": "Word choice / collocation",
+  "segments": [
+   "Ich habe Ihre Hinweise",
+   "zur Kenntnis gemacht",
+   "und werde sie berücksichtigen."
+  ],
+  "errorIndex": 1,
+  "fix": "zur Kenntnis genommen",
+  "rule": "Collocation: zur Kenntnis nehmen.",
+  "expression": "zur Kenntnis nehmen"
+ },
+ {
+  "id": "M47",
+  "register": "Formelle E-Mail",
+  "errorType": "Word choice / collocation",
+  "segments": [
+   "Gern möchte ich",
+   "Stellung machen",
+   "zu Ihrem Vorwurf."
+  ],
+  "errorIndex": 1,
+  "fix": "Stellung nehmen",
+  "rule": "Collocation: Stellung nehmen zu.",
+  "expression": "Stellung nehmen zu"
+ },
+ {
+  "id": "M48",
+  "register": "Formelle E-Mail",
+  "errorType": "Word choice / collocation",
+  "segments": [
+   "Wir bitten Sie,",
+   "auf die Kollegen",
+   "Rücksicht zu machen."
+  ],
+  "errorIndex": 2,
+  "fix": "Rücksicht zu nehmen.",
+  "rule": "Collocation: Rücksicht nehmen auf.",
+  "expression": "Rücksicht nehmen auf"
+ },
+ {
+  "id": "M49",
+  "register": "Formelle E-Mail",
+  "errorType": "Word choice / collocation",
+  "segments": [
+   "Sehr geehrte Frau Keller,",
+   "falls Sie Fragen haben,",
+   "machen Sie bitte Kontakt mit Herrn Baum."
+  ],
+  "errorIndex": 2,
+  "fix": "nehmen Sie bitte mit Herrn Baum Kontakt auf.",
+  "rule": "Collocation: Kontakt aufnehmen (separable verb).",
+  "expression": "Kontakt aufnehmen"
+ },
+ {
+  "id": "M50",
+  "register": "Formelle E-Mail",
+  "errorType": "Word choice / collocation",
+  "segments": [
+   "Ich möchte Ihr Angebot",
+   "gern",
+   "in Anspruch bekommen."
+  ],
+  "errorIndex": 2,
+  "fix": "in Anspruch nehmen.",
+  "rule": "Collocation: in Anspruch nehmen.",
+  "expression": "in Anspruch nehmen"
+ },
+ {
+  "id": "M51",
+  "register": "Formelle E-Mail",
+  "errorType": "Word choice / collocation",
+  "segments": [
+   "Sehr geehrter Herr Ebert,",
+   "wir werden",
+   "Ihrem Wunsch gern Rechnung geben."
+  ],
+  "errorIndex": 2,
+  "fix": "Ihrem Wunsch gern Rechnung tragen.",
+  "rule": "Collocation: einer Sache Rechnung tragen.",
+  "expression": "Rechnung tragen"
+ },
+ {
+  "id": "M52",
+  "register": "Formelle E-Mail",
+  "errorType": "Connector",
+  "segments": [
+   "Wir bieten Ihnen",
+   "nicht nur eine Unterkunft,",
+   "aber auch",
+   "einen Koch für Ihre Familie."
+  ],
+  "errorIndex": 2,
+  "fix": "sondern auch",
+  "rule": "The pair is \"nicht nur … sondern auch\".",
+  "expression": "nicht nur … sondern auch …"
+ },
+ {
+  "id": "M53",
+  "register": "Formelle E-Mail",
+  "errorType": "Connector",
+  "segments": [
+   "Sehr geehrte Frau Keller,",
+   "ich frage mich,",
+   "dass",
+   "die Frist verlängert wird."
+  ],
+  "errorIndex": 2,
+  "fix": "ob",
+  "rule": "An indirect yes/no question takes \"ob\", not \"dass\".",
+  "expression": "Ich frage mich, ob …"
+ },
+ {
+  "id": "M54",
+  "register": "Formelle E-Mail",
+  "errorType": "Connector",
+  "segments": [
+   "Ich habe Herrn Baum angerufen,",
+   "trotz er",
+   "im Urlaub ist."
+  ],
+  "errorIndex": 1,
+  "fix": "obwohl er",
+  "rule": "\"trotz\" is a preposition and needs a noun (trotz + Genitiv); before a clause with its own verb use \"obwohl\".",
+  "expression": "obwohl …"
+ },
+ {
+  "id": "M55",
+  "register": "Formelle E-Mail",
+  "errorType": "Verb form and agreement",
+  "segments": [
+   "Ich möchte Sie darüber informieren, dass",
+   "die Lieferung",
+   "gestern angekommen hat."
+  ],
+  "errorIndex": 2,
+  "fix": "gestern angekommen ist.",
+  "rule": "ankommen forms the Perfekt with sein: ist angekommen.",
+  "expression": "Ich möchte Sie darüber informieren, dass …"
+ },
+ {
+  "id": "M56",
+  "register": "Formelle E-Mail",
+  "errorType": "Verb form and agreement",
+  "segments": [
+   "Ich wäre Ihnen dankbar,",
+   "wenn Sie mir bis Montag",
+   "antworten werden."
+  ],
+  "errorIndex": 2,
+  "fix": "antworten würden.",
+  "rule": "Konjunktiv II needs würden, not werden.",
+  "expression": "Ich wäre Ihnen dankbar, wenn …"
+ },
+ {
+  "id": "M57",
+  "register": "Formelle E-Mail",
+  "errorType": "Verb form and agreement",
+  "segments": [
+   "Herr Baum hat mir noch nicht",
+   "antwortet,",
+   "deshalb bitte ich Sie um Unterstützung."
+  ],
+  "errorIndex": 1,
+  "fix": "geantwortet,",
+  "rule": "Partizip II of antworten is geantwortet (ge- + stem + -et).",
+  "expression": "um Unterstützung bitten"
+ }
+]
