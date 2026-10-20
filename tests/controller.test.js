@@ -1,3 +1,4 @@
+// REQ PE-1 PE-3 PE-4 DG-1 MG-1 QU-2 SE-3 WB-1
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { StudyController, createMemoryStore } from '../src/controller.js';
@@ -21,11 +22,13 @@ test('answers persist and survive a restart', () => {
   assert.equal(again.progress['a1'].repetitions, 1);
   assert.equal(again.dailyProgress().answered, 1);
 });
-test('graduated cards come back as reviews the next day; reset clears them', () => {
+test('answered cards come back as reviews after three days; reset clears them', () => {
   const { c, clock } = make();
   let s = c.startSession('article');
   for (let i = 0; i < 6 && s.queue.length; i++) { s = c.answer(s, 'a'); clock.t += 11 * 60_000; s = c.advance(s); }
   clock.t += 2 * DAY_MILLIS;
+  assert.equal(c.overview()[0].stats.reviewsDue, 0);
+  clock.t += DAY_MILLIS;
   assert.ok(c.overview()[0].stats.reviewsDue > 0);
   c.resetAllProgress();
   assert.equal(c.overview()[0].stats.newAvailable, 3);

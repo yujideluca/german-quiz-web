@@ -26,10 +26,10 @@ export function screenScaleFor(heightPx) {
 }
 
 export const SCHEDULER = {
-  learningStepsMinutes: [1, 10],
+  learningStepsMinutes: [10],
   relearningStepsMinutes: [10],
-  graduatingIntervalDays: 1,
-  easyIntervalDays: 4,
+  graduatingIntervalDays: 3,
+  easyIntervalDays: 5,
   startingEase: 2.5,
   minimumEase: 1.3,
   easyBonus: 1.3,
@@ -37,7 +37,7 @@ export const SCHEDULER = {
   intervalModifier: 1.0,
   lapseIntervalFactor: 0.0,
   maximumIntervalDays: 36_500,
-  learnAheadMinutes: 20,
+  learnAheadMinutes: 0,
 };
 export const GRADER = { easyMaxMillis: 2_500, hardMinMillis: 10_000 };
 export const LIMITS = { maxReviewsPerSession: 100, reviewsPerNewCard: 3 };
@@ -54,7 +54,7 @@ export function freshProgress(cardId, config = SCHEDULER) {
 
 export function gradeAnswer(correct, responseMillis, phase, config = GRADER) {
   if (!correct) return 'AGAIN';
-  if (responseMillis >= config.hardMinMillis) return 'HARD';
+  if (phase === 'REVIEW' && responseMillis >= config.hardMinMillis) return 'HARD';
   if (responseMillis <= config.easyMaxMillis && phase === 'REVIEW') return 'EASY';
   return 'GOOD';
 }

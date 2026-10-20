@@ -1,3 +1,4 @@
+// REQ SP-1 SP-2 SP-3 SP-4 SP-5 SP-6 GR-1 QU-1 QU-2 SE-1 SE-2 MG-1 DG-1 CA-1 UI-1 WB-1
 import { screenScaleFor } from '../src/domain.js';
 import test from 'node:test';
 import assert from 'node:assert/strict';
@@ -17,19 +18,23 @@ const near = (a, b) => assert.ok(Math.abs(a - b) < 1e-9, `${a} != ${b}`);
 test('new card AGAIN starts learning at step 0', () => {
   const p = next(fresh(), 'AGAIN');
   assert.equal(p.phase, 'LEARNING'); assert.equal(p.learningStep, 0);
-  assert.equal(p.dueAtMillis, now + MINUTE_MILLIS);
+  assert.equal(p.dueAtMillis, now + 10 * MINUTE_MILLIS);
 });
-test('two GOODs graduate to one day', () => {
-  const a = next(fresh(), 'GOOD');
+test('first GOOD graduates to three days', () => {
+  const p = next(fresh(), 'GOOD');
+  assert.equal(p.phase, 'REVIEW'); assert.equal(p.intervalDays, 3); assert.equal(p.dueAtMillis, now + 3 * DAY_MILLIS);
+});
+test('AGAIN on new repeats after ten minutes, then GOOD graduates to three days', () => {
+  const a = next(fresh(), 'AGAIN');
   assert.equal(a.phase, 'LEARNING'); assert.equal(a.dueAtMillis, now + 10 * MINUTE_MILLIS);
   const b = next(a, 'GOOD');
-  assert.equal(b.phase, 'REVIEW'); assert.equal(b.intervalDays, 1); assert.equal(b.dueAtMillis, now + DAY_MILLIS);
+  assert.equal(b.phase, 'REVIEW'); assert.equal(b.intervalDays, 3);
 });
 test('EASY on new graduates to the easy interval', () => {
   const p = next(fresh(), 'EASY');
   assert.equal(p.phase, 'REVIEW'); assert.equal(p.intervalDays, SCHEDULER.easyIntervalDays);
 });
-test('HARD keeps the learning step', () => assert.equal(next(next(fresh(), 'GOOD'), 'HARD').learningStep, 1));
+test('HARD keeps the card in learning', () => assert.equal(next(next(fresh(), 'AGAIN'), 'HARD').phase, 'LEARNING'));
 test('review GOOD multiplies by ease', () => {
   const p = next(review(10), 'GOOD'); assert.equal(p.intervalDays, 25); near(p.easeFactor, 2.5);
 });
@@ -97,9 +102,9 @@ test('due reviews overdue-first, future excluded, suspended skipped', () => {
   const q = buildQueue(cards, prog, now);
   assert.deepEqual(q.cards.map((c) => c.id), ['y', 'x']);
 });
-test('learning cards come first and the learn-ahead window applies', () => {
+test('learning cards come first once their wait is over; waiting ones are not offered', () => {
   const lrn = (id, due) => ({ ...freshProgress(id), phase: 'LEARNING', dueAtMillis: due });
-  const prog = { x: lrn('x', now + 19 * MINUTE_MILLIS), y: lrn('y', now + 21 * MINUTE_MILLIS) };
+  const prog = { x: lrn('x', now - 1), y: lrn('y', now + 5 * MINUTE_MILLIS) };
   const q = buildQueue(cards, prog, now);
   assert.equal(q.cards[0].id, 'x'); assert.ok(!q.cards.some((c) => c.id === 'y'));
 });
@@ -110,10 +115,11 @@ test('interleave slots extras after every N main items', () => {
 });
 
 const start = (list = cards, prog = {}, seed = 1) => startSession('article', buildQueue(list, prog, now), prog, now, seed);
-test('correct answer scores and schedules learning; learning card is requeued', () => {
+test('correct answer scores and schedules three days out; a missed card waits and is not requeued', () => {
   const s = answer(start(), 'a', now + 3000);
   assert.equal(s.correctCount, 1); assert.equal(s.lastAnswer.grade, 'GOOD');
-  assert.equal(s.queue.length, 5);
+  assert.equal(s.queue.length, 4);
+  assert.equal(answer(start(), 'b', now + 3000).queue.length, 4);
 });
 test('wrong answer counts and is AGAIN', () => {
   const s = answer(start(), 'b', now + 3000);
@@ -125,7 +131,7 @@ test('duplicate or invalid answers are ignored; advance needs an answer', () => 
   const a = answer(s, 'a', now);
   assert.equal(answer(a, 'b', now), a);
   assert.equal(advance(s, now), s);
-  assert.equal(advance(a, now).queue.length, 4);
+  assert.equal(advance(a, now).queue.length, 3);
 });
 test('mature card leaves the session after a GOOD answer', () => {
   const prog = { x: { ...freshProgress('x'), phase: 'REVIEW', intervalDays: 5, dueAtMillis: now - 1 } };

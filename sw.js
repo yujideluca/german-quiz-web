@@ -1,5 +1,5 @@
 // Offline cache. Bump VERSION when any cached file changes so installed copies pick it up.
-const VERSION = 'v8';
+const VERSION = 'v9';
 const CACHE = `german-quiz-${VERSION}`;
 const FILES = [
   './', 'index.html', 'style.css', 'manifest.webmanifest',
