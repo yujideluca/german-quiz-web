@@ -4,12 +4,13 @@ export const MINUTE_MILLIS = 60_000;
 export const DAY_MILLIS = 86_400_000;
 
 export const MODES = [
-  { id: 'article', title: 'Der · Die · Das', instruction: 'Choose the correct article' },
-  { id: 'preposition', title: 'Prepositions', instruction: 'Fill in the missing preposition' },
-  { id: 'plural', title: 'Plural forms', instruction: 'Choose the correct plural form' },
-  { id: 'preterite', title: 'Präteritum', instruction: 'Choose the correct Präteritum form' },
+  // Display names and instruction lines are translated: see strings.js (mode_<id>_title / mode_<id>_instruction).
+  { id: 'article' },
+  { id: 'preposition' },
+  { id: 'plural' },
+  { id: 'preterite' },
   // autoAdvances false: the explanation (corrected sentence + rule) needs reading time, so the player taps Next.
-  { id: 'errors', title: 'Fehler finden', instruction: 'Tap the part of the sentence that is wrong', autoAdvances: false },
+  { id: 'errors', autoAdvances: false },
 ];
 
 /**

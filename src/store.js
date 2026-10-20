@@ -1,6 +1,6 @@
 // Browser storage (localStorage). Every access is guarded: Safari private mode can throw, and then
 // the app keeps working from memory for the session.
-const KEYS = { progress: 'quiz.progress', history: 'quiz.history', goal: 'quiz.goal', theme: 'quiz.theme' };
+const KEYS = { progress: 'quiz.progress', history: 'quiz.history', goal: 'quiz.goal', theme: 'quiz.theme', language: 'quiz.language' };
 
 export function createLocalStore(storage = globalThis.localStorage) {
   const memory = {};
@@ -26,6 +26,11 @@ export function createLocalStore(storage = globalThis.localStorage) {
     saveGoal: (g) => write(KEYS.goal, String(g)),
     loadTheme: () => read(KEYS.theme) ?? 'SYSTEM',
     saveTheme: (t) => write(KEYS.theme, t),
+    loadLanguage: () => {
+      const choice = read(KEYS.language);
+      return ['SYSTEM', 'en', 'de', 'pt', 'es'].includes(choice) ? choice : 'SYSTEM';
+    },
+    saveLanguage: (l) => write(KEYS.language, l),
     clearProgress: () => {
       delete memory[KEYS.progress];
       try { storage.removeItem(KEYS.progress); } catch { /* nothing to clear */ }

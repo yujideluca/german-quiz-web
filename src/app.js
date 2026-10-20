@@ -2,12 +2,11 @@
 import { buildDeck } from './content.js';
 import { StudyController } from './controller.js';
 import { createLocalStore } from './store.js';
+import { LANGUAGE_CHOICES, NO_CONTENT_TRANSLATIONS, createTranslator, monthShort, resolveLanguage, translateExplanation, translateHint, weekdayLetters, localeOf } from './i18n.js';
 import { screenScaleFor, heatColorCss, HEAT_FULL_ANSWERS, MIN_DAILY_GOAL, MAX_DAILY_GOAL, DAILY_GOAL_STEP, MODES } from './domain.js';
 
 const AUTO_ADVANCE_MILLIS = 500;
 const MAX_RESULTS = 40;
-const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-const WEEKDAYS = ['M', 'T', 'W', 'T', 'F', 'S', 'S'];
 
 const root = document.getElementById('app');
 const store = createLocalStore();
@@ -18,6 +17,10 @@ let calendarMonth = null;
 let query = '';
 let menuOpen = false;
 let advanceTimer = null;
+let language = 'en';                       // the language on screen (the choice resolved against the browser)
+let t = createTranslator(language);
+let content = NO_CONTENT_TRANSLATIONS;     // translations of the English text inside the vocabulary data
+const contentCache = {};
 
 const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
@@ -46,29 +49,29 @@ function homeHtml() {
   return `
     <section class="card">
       <div class="row cal-head">
-        <button class="link" data-action="prev-month" aria-label="Previous month">‹</button>
-        <span class="title">${MONTHS[month.month]} ${month.year}</span>
-        <button class="link" data-action="next-month" aria-label="Next month" ${cal.canGoNext ? '' : 'disabled'}>›</button>
+        <button class="link" data-action="prev-month" aria-label="${t('aria_prev_month')}">‹</button>
+        <span class="title">${monthShort(language, month.month)} ${month.year}</span>
+        <button class="link" data-action="next-month" aria-label="${t('aria_next_month')}" ${cal.canGoNext ? '' : 'disabled'}>›</button>
         <span class="grow"></span>
-        <button class="link" data-action="settings">Settings</button>
+        <button class="link" data-action="settings">${t('calendar_settings')}</button>
       </div>
-      <p class="small">Streak ${cal.currentStreak} · longest ${cal.longestStreak} · ${days} ${days === 1 ? 'day' : 'days'} this month</p>
-      <div class="cal-grid" style="margin-top:6px">${WEEKDAYS.map((w) => `<div class="cal-dow">${w}</div>`).join('')}${cells}</div>
-      <div class="legend"><span>1</span><div class="bar" style="background:linear-gradient(90deg,${gradient})"></div><span>${HEAT_FULL_ANSWERS}+ answers</span></div>
+      <p class="small">${t('calendar_streak', cal.currentStreak, cal.longestStreak, t.plural('calendar_days', days))}</p>
+      <div class="cal-grid" style="margin-top:6px">${weekdayLetters(language).map((w) => `<div class="cal-dow">${w}</div>`).join('')}${cells}</div>
+      <div class="legend"><span>1</span><div class="bar" style="background:linear-gradient(90deg,${gradient})"></div><span>${t('calendar_legend', HEAT_FULL_ANSWERS)}</span></div>
     </section>
     <section class="card">
-      <p class="title">${daily.reached ? `Daily goal reached ✓  ${daily.answered} / ${daily.goal}` : `Today: ${daily.answered} / ${daily.goal} questions`}</p>
+      <p class="title">${daily.reached ? t('daily_reached', daily.answered, daily.goal) : t('daily_progress', daily.answered, daily.goal)}</p>
       <div class="progress"><div style="width:${Math.round(daily.fraction * 100)}%"></div></div>
     </section>
     ${controller.overview().map((m) => {
       const due = m.stats.learningDue + m.stats.reviewsDue + m.stats.newAvailable;
       return `<section class="card row">
         <div class="grow">
-          <p class="title">${esc(m.mode.title)}</p>
-          <p class="small mode-instruction">${esc(m.mode.instruction)}</p>
-          <p class="small">New ${m.stats.newAvailable} · Learning ${m.stats.learningDue} · Review ${m.stats.reviewsDue} · Deck ${m.totalCards}</p>
+          <p class="title">${esc(t(`mode_${m.mode.id}_title`))}</p>
+          <p class="small mode-instruction">${esc(t(`mode_${m.mode.id}_instruction`))}</p>
+          <p class="small">${t('home_stats', m.stats.newAvailable, m.stats.learningDue, m.stats.reviewsDue, m.totalCards)}</p>
         </div>
-        <button class="btn" data-action="study" data-mode="${m.mode.id}" ${due > 0 ? '' : 'disabled'}>${due > 0 ? `Study (${due})` : 'Done'}</button>
+        <button class="btn" data-action="study" data-mode="${m.mode.id}" ${due > 0 ? '' : 'disabled'}>${due > 0 ? t('home_study', due) : t('common_done')}</button>
       </section>`;
     }).join('')}`;
 }
@@ -85,31 +88,31 @@ function studyHtml() {
     return `<button class="${errorSpot ? 'chunk' : 'choice'}${cls}" data-action="choose" data-choice="${esc(option)}" ${answer ? 'disabled' : ''}>${esc(option)}</button>`;
   }).join('');
   const menu = menuOpen && !answer ? `<div class="menu-pop">
-      <button data-action="suspend" data-duration="ONE_WEEK">Remove for 1 week</button>
-      <button data-action="suspend" data-duration="ONE_MONTH">Remove for 1 month</button>
-      <button data-action="suspend" data-duration="PERMANENT">Remove permanently</button></div>` : '';
+      <button data-action="suspend" data-duration="ONE_WEEK">${t('card_remove_week')}</button>
+      <button data-action="suspend" data-duration="ONE_MONTH">${t('card_remove_month')}</button>
+      <button data-action="suspend" data-duration="PERMANENT">${t('card_remove_permanent')}</button></div>` : '';
   return `
     <div class="row between">
-      <span class="small">${esc(mode.title)} · ${session.queue.length} left · today ${daily.answered}/${daily.goal}</span>
-      <span class="row"><button class="link" data-action="quit">Quit</button>
-        <span class="menu"><button class="link dots" data-action="menu" ${answer ? 'disabled' : ''} aria-label="More">⋮</button>${menu}</span></span>
+      <span class="small">${esc(t('study_header', t(`mode_${mode.id}_title`), session.queue.length, daily.answered, daily.goal))}</span>
+      <span class="row"><button class="link" data-action="quit">${t('study_quit')}</button>
+        <span class="menu"><button class="link dots" data-action="menu" ${answer ? 'disabled' : ''} aria-label="${t('aria_more')}">⋮</button>${menu}</span></span>
     </div>
     <div class="study col" style="display:flex;flex-direction:column;gap:calc(12px * var(--layout))">
       <h1 class="prompt${errorSpot ? ' prompt-small' : ''}">${esc(card.prompt)}</h1>
-      ${errorSpot ? '<p class="hint">Tap the part that is wrong</p>' : ''}
-      ${card.hint ? `<p class="hint">Hint: ${esc(card.hint)}</p>` : ''}
+      ${errorSpot ? `<p class="hint">${t('errors_tap_wrong')}</p>` : ''}
+      ${card.hint ? `<p class="hint">${esc(t('study_hint', translateHint(content, card.hint)))}</p>` : ''}
       ${card.context && !errorSpot ? `<p class="context">${esc(card.context)}</p>` : ''}
       ${errorSpot ? `<div class="chunks">${choices}</div>` : choices}
-      ${answer ? `<p class="explanation">${esc(card.explanation)}</p>` : ''}
-      ${answer && !mode.autoAdvances ? '<button class="btn next" data-action="next">Next</button>' : ''}
+      ${answer ? `<p class="explanation">${esc(translateExplanation(content, card.explanation))}</p>` : ''}
+      ${answer && !mode.autoAdvances ? `<button class="btn next" data-action="next">${t('study_next')}</button>` : ''}
     </div>`;
 }
 
 function finishedHtml() {
   return `<div class="section center">
-    <h1>Session complete</h1>
-    <p class="title">${session.correctCount} correct · ${session.wrongCount} wrong</p>
-    <button class="btn outline" data-action="home">Back to modes</button></div>`;
+    <h1>${t('finished_title')}</h1>
+    <p class="title">${t('finished_score', session.correctCount, session.wrongCount)}</p>
+    <button class="btn outline" data-action="home">${t('finished_back')}</button></div>`;
 }
 
 function settingsHtml() {
@@ -118,56 +121,63 @@ function settingsHtml() {
   const counts = controller.managedCounts();
   const radio = (value, label) =>
     `<label class="radio"><input type="radio" name="theme" value="${value}" ${theme === value ? 'checked' : ''}>${label}</label>`;
+  const choice = store.loadLanguage();
+  const languageName = (value) => value === 'SYSTEM' ? t('use_system_default') : t(`language_name_${LANGUAGE_KEYS[value]}`);
+  const languageRadio = (value) =>
+    `<label class="radio"><input type="radio" name="language" value="${value}" ${choice === value ? 'checked' : ''}>${languageName(value)}</label>`;
   return `<div class="section">
-    <div class="row between"><h1>Settings</h1><button class="link" data-action="home">Done</button></div>
-    <h3>Appearance</h3>
-    ${radio('SYSTEM', 'Use system default')}${radio('LIGHT', 'Light mode')}${radio('DARK', 'Night mode')}
+    <div class="row between"><h1>${t('settings_title')}</h1><button class="link" data-action="home">${t('common_done')}</button></div>
+    <h3>${t('settings_appearance')}</h3>
+    ${radio('SYSTEM', t('use_system_default'))}${radio('LIGHT', t('theme_light'))}${radio('DARK', t('theme_dark'))}
     <hr>
-    <h3>Daily goal</h3>
-    <p id="goal-label">${goal} questions per day (any quiz)</p>
+    <h3>${t('settings_language')}</h3>
+    ${LANGUAGE_CHOICES.map(languageRadio).join('')}
+    <hr>
+    <h3>${t('settings_daily_goal')}</h3>
+    <p id="goal-label">${t('settings_daily_goal_value', goal)}</p>
     <input id="goal" type="range" min="${MIN_DAILY_GOAL}" max="${MAX_DAILY_GOAL}" step="${DAILY_GOAL_STEP}" value="${goal}">
     <hr>
-    <h3>Removed questions</h3>
-    <p>Suspended: ${counts.suspended}  ·  Removed: ${counts.removed}</p>
-    <button class="btn outline" data-action="removed">Manage suspended and removed questions</button>
+    <h3>${t('settings_removed_title')}</h3>
+    <p>${t('settings_removed_counts', counts.suspended, counts.removed)}</p>
+    <button class="btn outline" data-action="removed">${t('settings_manage_removed')}</button>
     <hr>
-    <h3>Backup</h3>
-    <p class="small">Progress is stored on this device only. Save a backup file to move it to another device or keep it safe.</p>
-    <button class="btn outline" data-action="export">Save backup file</button>
-    <label class="btn outline" style="text-align:center;display:block">Restore from backup file
+    <h3>${t('backup_title')}</h3>
+    <p class="small">${t('web_backup_explain')}</p>
+    <button class="btn outline" data-action="export">${t('web_backup_save')}</button>
+    <label class="btn outline" style="text-align:center;display:block">${t('web_backup_restore')}
       <input id="import" type="file" accept="application/json,.json" hidden></label>
     <hr>
-    <h3>Progress</h3>
-    <button class="btn outline danger" data-action="reset-all">Reset all progress</button>
+    <h3>${t('settings_progress')}</h3>
+    <button class="btn outline danger" data-action="reset-all">${t('settings_reset_all')}</button>
   </div>`;
 }
 
 function removedHtml() {
   const counts = controller.managedCounts();
   const results = controller.managedCards(query);
-  const fmt = (ms) => new Date(ms).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+  const fmt = (ms) => new Date(ms).toLocaleDateString(localeOf(language), { day: 'numeric', month: 'short', year: 'numeric' });
   const rows = results.slice(0, MAX_RESULTS).map((m) => `
     <div class="card row">
       <div class="grow"><p class="title">${esc(m.card.prompt)}</p>
         ${m.card.context ? `<p class="small">${esc(m.card.context)}</p>` : ''}
-        <p class="small">${esc(MODES.find((x) => x.id === m.card.mode).title)} · ${m.status === 'REMOVED' ? 'Removed' : `Suspended until ${fmt(m.suspendedUntilMillis)}`}</p></div>
-      <button class="link" data-action="restore" data-id="${esc(m.card.id)}">Restore</button>
+        <p class="small">${esc(t(`mode_${m.card.mode}_title`))} · ${m.status === 'REMOVED' ? t('card_status_removed') : t('card_status_suspended', fmt(m.suspendedUntilMillis))}</p></div>
+      <button class="link" data-action="restore" data-id="${esc(m.card.id)}">${t('common_restore')}</button>
     </div>`).join('');
-  const empty = results.length ? '' : `<p>${counts.suspended + counts.removed === 0 ? 'No suspended or removed cards.' : `No card matches “${esc(query)}”.`}</p>`;
+  const empty = results.length ? '' : `<p>${counts.suspended + counts.removed === 0 ? t('removed_none') : t('removed_no_match', esc(query))}</p>`;
   return `<div class="section">
-    <div class="row between"><h1>Removed questions</h1><button class="link" data-action="settings">Back</button></div>
-    <p>Suspended: ${counts.suspended}  ·  Removed: ${counts.removed}</p>
-    <button class="btn outline" data-action="restore-suspended" ${counts.suspended ? '' : 'disabled'}>Reset all suspended cards</button>
-    <button class="btn outline" data-action="restore-removed" ${counts.removed ? '' : 'disabled'}>Reset all removed cards</button>
-    <input id="search" type="search" placeholder="Search suspended or removed cards" value="${esc(query)}" autocomplete="off">
+    <div class="row between"><h1>${t('settings_removed_title')}</h1><button class="link" data-action="settings">${t('common_back')}</button></div>
+    <p>${t('settings_removed_counts', counts.suspended, counts.removed)}</p>
+    <button class="btn outline" data-action="restore-suspended" ${counts.suspended ? '' : 'disabled'}>${t('removed_reset_suspended')}</button>
+    <button class="btn outline" data-action="restore-removed" ${counts.removed ? '' : 'disabled'}>${t('removed_reset_removed')}</button>
+    <input id="search" type="search" placeholder="${t('removed_search')}" value="${esc(query)}" autocomplete="off">
     ${empty}${rows}
-    ${results.length > MAX_RESULTS ? `<p class="small">Showing ${MAX_RESULTS} of ${results.length}. Refine the search to see more.</p>` : ''}
+    ${results.length > MAX_RESULTS ? `<p class="small">${t('removed_showing', MAX_RESULTS, results.length)}</p>` : ''}
   </div>`;
 }
 
 function render() {
   clearTimeout(advanceTimer);
-  if (!controller) { root.innerHTML = '<p class="card">Could not load the vocabulary. Check your connection and reload.</p>'; return; }
+  if (!controller) { root.innerHTML = `<p class="card">${t('web_load_failed')}</p>`; return; }
   let html;
   switch (view.name) {
     case 'study': html = session.queue.length ? studyHtml() : finishedHtml(); break;
@@ -212,10 +222,10 @@ const actions = {
   settings() { show('settings'); },
   removed() { query = ''; show('removed'); },
   restore(el) { controller.restoreCard(el.dataset.id); render(); },
-  'restore-suspended'() { if (confirm('Reset suspended cards?\nAll suspended questions return to the pool.')) { controller.restoreAll('SUSPENDED'); render(); } },
-  'restore-removed'() { if (confirm('Reset removed cards?\nAll permanently removed questions return to the pool.')) { controller.restoreAll('REMOVED'); render(); } },
+  'restore-suspended'() { if (confirm(`${t('confirm_suspended_title')}\n${t('confirm_suspended_body')}`)) { controller.restoreAll('SUSPENDED'); render(); } },
+  'restore-removed'() { if (confirm(`${t('confirm_removed_title')}\n${t('confirm_removed_body')}`)) { controller.restoreAll('REMOVED'); render(); } },
   'reset-all'() {
-    if (confirm('Reset all progress?\nThis erases every learning state, suspension and removal. It cannot be undone.')) {
+    if (confirm(`${t('confirm_all_title')}\n${t('confirm_all_body')}`)) {
       controller.resetAllProgress(); render();
     }
   },
@@ -245,17 +255,18 @@ root.addEventListener('click', (e) => {
 
 root.addEventListener('change', async (e) => {
   if (e.target.name === 'theme') { store.saveTheme(e.target.value); applyTheme(e.target.value); }
+  else if (e.target.name === 'language') { store.saveLanguage(e.target.value); await applyLanguage(); render(); }
   else if (e.target.id === 'goal') { controller.setDailyGoal(Number(e.target.value)); render(); }
   else if (e.target.id === 'import' && e.target.files[0]) {
     try {
       controller.importData(JSON.parse(await e.target.files[0].text()));
-      render(); toast('Backup restored.');
-    } catch (err) { toast(err.message || 'Could not read that file.'); }
+      render(); toast(t('web_backup_restored'));
+    } catch (err) { toast(err.message || t('web_read_failed')); }
   }
 });
 
 root.addEventListener('input', (e) => {
-  if (e.target.id === 'goal') document.getElementById('goal-label').textContent = `${e.target.value} questions per day (any quiz)`;
+  if (e.target.id === 'goal') document.getElementById('goal-label').textContent = t('settings_daily_goal_value', e.target.value);
   else if (e.target.id === 'search') { query = e.target.value; render(); }
 });
 
@@ -268,10 +279,25 @@ function applyScreenScale() {
   document.documentElement.style.setProperty('--text', text);
 }
 
+const LANGUAGE_KEYS = { en: 'english', de: 'german', pt: 'portuguese', es: 'spanish' };
+
+/** Resolves the stored choice against the browser, loads the translated vocabulary text and updates <html lang>. */
+async function applyLanguage() {
+  language = resolveLanguage(store.loadLanguage(), navigator.languages?.length ? navigator.languages : [navigator.language]);
+  t = createTranslator(language);
+  document.documentElement.lang = language;
+  if (language === 'en') { content = NO_CONTENT_TRANSLATIONS; return; }
+  try {
+    contentCache[language] ??= await fetch(`i18n/${language}.json`).then((r) => { if (!r.ok) throw new Error(String(r.status)); return r.json(); });
+    content = contentCache[language];
+  } catch { content = NO_CONTENT_TRANSLATIONS; }                    // shown in English rather than not at all
+}
+
 async function boot() {
   applyScreenScale();
   window.addEventListener('resize', applyScreenScale);
   applyTheme(store.loadTheme());
+  await applyLanguage();
   try {
     const [nouns, preps, verbs, errors] = await Promise.all(['vocab/nouns.json', 'vocab/prepositions.json', 'vocab/verbs.json', 'vocab/errors.json'].map((u) => fetch(u).then((r) => {
       if (!r.ok) throw new Error(`${u}: ${r.status}`);
