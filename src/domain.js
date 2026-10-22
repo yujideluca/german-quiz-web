@@ -317,6 +317,9 @@ export function dailyProgress(history, today, goal) {
   return { answered, goal, reached: answered >= goal, fraction: clamp(answered / goal, 0, 1) };
 }
 
+/** Width of the filled part of the bar in whole percent, 0..100. */
+export const barPercent = (daily) => Math.round(daily.fraction * 100);
+
 export function currentStreak(history, today) {
   let day = answeredOn(history, today) > 0 ? today : today - 1;
   let streak = 0;

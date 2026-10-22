@@ -3,7 +3,7 @@ import { buildDeck } from './content.js';
 import { StudyController } from './controller.js';
 import { createLocalStore } from './store.js';
 import { LANGUAGE_CHOICES, NO_CONTENT_TRANSLATIONS, createTranslator, monthShort, resolveLanguage, translateExplanation, translateHint, weekdayLetters, localeOf } from './i18n.js';
-import { screenScaleFor, heatColorCss, HEAT_FULL_ANSWERS, MIN_DAILY_GOAL, MAX_DAILY_GOAL, DAILY_GOAL_STEP, MODES } from './domain.js';
+import { barPercent, screenScaleFor, heatColorCss, HEAT_FULL_ANSWERS, MIN_DAILY_GOAL, MAX_DAILY_GOAL, DAILY_GOAL_STEP, MODES } from './domain.js';
 
 const AUTO_ADVANCE_MILLIS = 500;
 const MAX_RESULTS = 40;
@@ -61,7 +61,7 @@ function homeHtml() {
     </section>
     <section class="card">
       <p class="title">${daily.reached ? t('daily_reached', daily.answered, daily.goal) : t('daily_progress', daily.answered, daily.goal)}</p>
-      <div class="progress"><div style="width:${Math.round(daily.fraction * 100)}%"></div></div>
+      <div class="progress"><div style="width:${barPercent(daily)}%"></div></div>
     </section>
     ${controller.overview().map((m) => {
       const due = m.stats.learningDue + m.stats.reviewsDue + m.stats.newAvailable;
