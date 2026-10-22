@@ -10,7 +10,11 @@ No build step and no dependencies: plain ES modules.
 - `src/controller.js` application service; `src/store.js` localStorage; `src/app.js` UI
 - `vocab/` word lists (same files as the Android app; `errors.json` is built from its `tools/data/errors.tsv`); `sw.js` offline cache
 
-Run tests: `npm test` (Node 22+). Run locally: `python3 -m http.server` and open http://localhost:8000.
+Run tests: `npm test` (Node 22+); GitHub Actions runs them on every push (`.github/workflows/test.yml`).
+`tests/architecture.test.js` holds the dependency rules above (who may import whom; only `app.js` and `store.js`
+touch the browser): a new module needs an entry there. A port of an app version that is still in beta waits on a
+branch `web-<version>` (for example `web-2.6`) and is merged into `main`, which GitHub Pages serves, when the app is promoted.
+Run locally: `python3 -m http.server` and open http://localhost:8000.
 
 Install on iPhone: open the page in Safari, Share, "Add to Home Screen". Progress lives in the browser's
 storage on that device; use Settings > Backup to save or restore it. It is separate from the Android app.
