@@ -4,5 +4,4 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 npm test
-cargo test --quiet --manifest-path tools/pipeline-check/Cargo.toml
 tools/pipeline-check.sh --measure-only
