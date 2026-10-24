@@ -1,0 +1,32 @@
+# Limits for tools/pipeline-check. Changed only by Giovanni, in a commit that says why.
+# The architecture rules of the web twin (who may import whom, only app.js and store.js touch the browser)
+# stay in tests/architecture.test.js, which the gate runs; the Kotlin import check does not apply to JavaScript.
+projeto = "german-quiz-web"
+aviso_a = 0.8
+
+[gate]
+command = "tools/quality_gate.sh"
+required = true
+
+[architecture]
+pure_dirs = []
+
+[[fitness]]
+id = "arquivo-maior"
+kind = "max_file_lines"
+limit = 600
+dirs = ["src"]
+extensions = ["js"]
+
+[[fitness]]
+id = "gate-segundos"
+kind = "gate_seconds"
+limit = 300
+
+[github]
+repo = "yujideluca/german-quiz-web"
+branch = "main"
+required_check = "test"
+
+[pre_push]
+guard = ["src/", "tests/", "tools/", "i18n/", "vocab/", "sw.js", "index.html", "package.json", "pipeline-check", ".github/"]   # path prefixes whose change makes a push of main worth checking; [] = every push

@@ -21,3 +21,5 @@ storage on that device; use Settings > Backup to save or restore it. It is separ
 
 When a cached file changes, bump `VERSION` in `sw.js` so installed copies update. The service worker is network first (cache only
 as the offline fallback) and the page reloads once when a new worker takes over, so a deploy shows up on the next open, not the one after.
+
+Maintenance: `tools/pipeline-check.sh` (the program is `yujideluca/pipeline-check`, pinned in `pipeline-check.version`) runs the tests and the fitness checks and writes `build/pipeline-check/report.json`; limits are in `pipeline-check.toml`, changed only by Giovanni. CI runs it on every push.
