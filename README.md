@@ -14,6 +14,7 @@ Run tests: `npm test` (Node 22+); GitHub Actions runs them on every push (`.gith
 `tests/architecture.test.js` holds the dependency rules above (who may import whom; only `app.js` and `store.js`
 touch the browser): a new module needs an entry there. A port of an app version that is still in beta waits on a
 branch `web-<version>` (for example `web-2.6`) and is merged into `main`, which GitHub Pages serves, when the app is promoted.
+The web has no version of its own: it ports the latest *released* (promoted) version of the Android app and nothing newer. `VERSION` in `sw.js` is only a cache key, not a release number.
 Run locally: `python3 -m http.server` and open http://localhost:8000.
 
 Install on iPhone: open the page in Safari, Share, "Add to Home Screen". Progress lives in the browser's
