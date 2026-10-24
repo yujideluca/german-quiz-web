@@ -19,3 +19,40 @@ test('stored goals snap to 10..100 even for absurd values', () => {
   assert.equal(clampDailyGoal(-1e12), MIN_DAILY_GOAL);
   assert.equal(clampDailyGoal(15), 20);
 });
+
+// ---- backup import must behave like the app's decodeBackup (PE-3, WB-1) ----
+import { StudyController, createMemoryStore } from '../src/controller.js';
+
+const card = (id) => ({ id, mode: 'article', prompt: id, context: null, choices: ['a', 'b'], correctChoice: 'a', explanation: '', shuffleChoices: false, hint: null });
+const deck = { article: [card('a1'), card('a2')], preposition: [card('p1')], plural: [card('l1')], preterite: [card('v1')], errors: [card('e1')] };
+const fresh = () => new StudyController(deck, createMemoryStore(), () => new Date(2026, 9, 24, 10).getTime());
+const good = (extra = {}) => ({ app: 'german-quiz-web', version: 1, progress: {}, history: {}, dailyGoal: 20, ...extra });
+
+test('a backup whose progress or history is null or a list is refused, not half-imported', () => {
+  for (const bad of [{ progress: null }, { history: null }, { progress: [] }, { history: [1, 2] }, { progress: 'x' }]) {
+    const c = fresh();
+    assert.throws(() => c.importData(good(bad)), /not a German Quiz backup/, JSON.stringify(bad));
+    assert.deepEqual(c.progress, {}, 'nothing was replaced');
+  }
+});
+
+test('import drops progress entries whose key differs from the card id and history counts that are not positive', () => {
+  const c = fresh();
+  const p = (id) => ({ cardId: id, phase: 'NEW', repetitions: 0 });
+  c.importData(good({ progress: { a1: p('a1'), a2: p('zzz') }, history: { 20000: 5, 20001: 0, 20002: -3, 20003: 'x' } }));
+  assert.deepEqual(Object.keys(c.progress), ['a1']);
+  assert.deepEqual(c.history, { 20000: 5 });
+});
+
+test('a backup from a newer format is refused', () => {
+  const c = fresh();
+  assert.throws(() => c.importData(good({ version: 2 })), /newer|not a German Quiz backup/);
+});
+
+test('the imported goal is snapped onto the grid, and a missing goal keeps the current one', () => {
+  const c = fresh();
+  c.importData(good({ dailyGoal: 47 }));
+  assert.equal(c.store.loadGoal(), 50);
+  c.importData(good({ dailyGoal: undefined }));
+  assert.equal(c.store.loadGoal(), 50);
+});

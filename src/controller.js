@@ -124,12 +124,17 @@ export class StudyController {
     };
   }
 
+  /** Like the app's decodeBackup: entries that cannot be trusted are dropped instead of failing the whole import. */
   importData(data) {
-    if (!data || data.app !== 'german-quiz-web' || typeof data.progress !== 'object' || typeof data.history !== 'object') {
+    const isMap = (x) => x !== null && typeof x === 'object' && !Array.isArray(x);
+    if (!data || data.app !== 'german-quiz-web' || !isMap(data.progress) || !isMap(data.history)) {
       throw new Error('This is not a German Quiz backup file.');
     }
-    this.progress = data.progress;
-    this.history = data.history;
+    if (typeof data.version === 'number' && data.version > 1) {
+      throw new Error('This file was made by a newer version of the app. Update the app first.');
+    }
+    this.progress = Object.fromEntries(Object.entries(data.progress).filter(([id, p]) => isMap(p) && p.cardId === id));
+    this.history = Object.fromEntries(Object.entries(data.history).filter(([, n]) => Number.isInteger(n) && n > 0));
     this.store.saveProgress(this.progress);
     this.store.saveHistory(this.history);
     if (data.dailyGoal) this.store.saveGoal(clampDailyGoal(data.dailyGoal));
