@@ -10,10 +10,16 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - run: npm test
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: tools/pipeline-check
+      # pipeline-check runs tools/quality_gate.sh (npm test + its own tests) once and then the fitness checks;
+      # a `falha` fails this job.
+      - run: tools/pipeline-check.sh --mode ci
