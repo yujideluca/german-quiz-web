@@ -1,6 +1,6 @@
 # Automated bug-finding tests: German Quiz (web)
 
-Last reviewed: 957be90 2026-10-24 (branch `first-maintenance-review`)
+Last reviewed: 39b77ce 2026-10-24 (branch `first-maintenance-review`)
 Created by the skill `gerar-teste-automatizado` (create mode). Requirements live in the app's catalogue (`~/dev/QuizApp/docs/REQUIREMENTS.md`); the web twin must behave like the app (WB-1).
 
 ## Analysis summary
