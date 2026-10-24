@@ -146,7 +146,7 @@ export function withSuspension(p, duration, now) {
 export const restored = (p) => ({ ...p, removed: false, suspendedUntilMillis: 0 });
 
 /** Lower-cases and strips diacritics so "stuhle" finds "Stühle". */
-export const foldForSearch = (text) => text.normalize('NFD').replace(/\p{M}+/gu, '').toLowerCase().trim();
+export const foldForSearch = (text) => text.normalize('NFD').replace(/\p{M}+/gu, '').toLowerCase().replace(/ß/g, 'ss').trim();
 
 export function searchManagedCards(items, query) {
   const q = foldForSearch(query);
@@ -314,7 +314,7 @@ export const plusAnswer = (history, day) => ({ ...history, [day]: answeredOn(his
 
 export function dailyProgress(history, today, goal) {
   const answered = answeredOn(history, today);
-  return { answered, goal, reached: answered >= goal, fraction: clamp(answered / goal, 0, 1) };
+  return { answered, goal, reached: answered >= goal, fraction: goal > 0 ? clamp(answered / goal, 0, 1) : (answered > 0 ? 1 : 0) };
 }
 
 /** Width of the filled part of the bar in whole percent, 0..100. */
