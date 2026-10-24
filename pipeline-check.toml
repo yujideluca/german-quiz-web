@@ -27,3 +27,6 @@ limit = 300
 repo = "yujideluca/german-quiz-web"
 branch = "main"
 required_check = "test"
+
+[pre_push]
+guard = ["src/", "tests/", "tools/", "i18n/", "vocab/", "sw.js", "index.html", "package.json", "pipeline-check", ".github/"]   # path prefixes whose change makes a push of main worth checking; [] = every push

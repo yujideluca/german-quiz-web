@@ -1,18 +1,6 @@
 #!/usr/bin/env bash
 # Local stand-in for branch protection (a private repository on the free GitHub plan cannot require the CI job):
-# before main is pushed, run the gate and the local checks; a `falha` stops the push.
+# before main is pushed, the pipeline-check program runs the gate and the local checks; a `falha` stops the push.
+# The logic and its tests live in the program (PC-13); which paths are worth checking is `[pre_push] guard` in pipeline-check.toml.
 # Enable once per clone:  git config core.hooksPath tools/hooks      Bypass on purpose:  git push --no-verify
-# GUARD: pushes that change only paths NOT matching this regular expression are not checked (data pushes etc.).
-GUARD='^(src|tests|tools|i18n|vocab|sw\.js|index\.html|package|pipeline-check|\.github)'
-zero=0000000000000000000000000000000000000000
-while read -r local_ref local_sha remote_ref remote_sha; do
-  [ "$remote_ref" = refs/heads/main ] || continue
-  [ "$local_sha" = "$zero" ] && continue                     # deleting main is not our business here
-  if [ "$remote_sha" = "$zero" ]; then range="$local_sha"; else range="$remote_sha..$local_sha"; fi
-  git cat-file -e "$remote_sha" 2>/dev/null || range="$local_sha"   # remote commit unknown locally: check everything
-  if ! git diff --name-only "$range" 2>/dev/null | grep -qE "$GUARD"; then continue; fi
-  echo "pre-push: running pipeline-check before pushing main (skip with --no-verify)"
-  cd "$(git rev-parse --show-toplevel)"
-  tools/pipeline-check.sh --mode local --no-github || { echo "pre-push: pipeline-check found a failure; main was not pushed"; exit 1; }
-done
-exit 0
+exec "$(git rev-parse --show-toplevel)/tools/pipeline-check.sh" --pre-push
