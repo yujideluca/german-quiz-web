@@ -1725,5 +1725,346 @@
   "fix": "geantwortet,",
   "rule": "Partizip II of antworten is geantwortet (ge- + stem + -et).",
   "expression": "um Unterstützung bitten"
+ },
+ {
+  "id": "F65",
+  "register": "Forumsbeitrag",
+  "errorType": "Verb form and agreement",
+  "segments": [
+   "Studien zeigen, dass",
+   "die Aufmerksamkeit der Schüler",
+   "in den letzten Jahren gesunken hat."
+  ],
+  "errorIndex": 2,
+  "fix": "in den letzten Jahren gesunken ist.",
+  "rule": "sinken forms the Perfekt with sein: ist gesunken.",
+  "expression": "Studien zeigen, dass …"
+ },
+ {
+  "id": "F66",
+  "register": "Forumsbeitrag",
+  "errorType": "Article / adjective ending",
+  "segments": [
+   "Meiner Ansicht nach sollten",
+   "digitalen Medien",
+   "im Unterricht",
+   "nur vorsichtig genutzt werden."
+  ],
+  "errorIndex": 1,
+  "fix": "digitale Medien",
+  "rule": "Without an article the adjective takes the strong plural ending: digitale Medien.",
+  "expression": "Meiner Ansicht nach"
+ },
+ {
+  "id": "F67",
+  "register": "Forumsbeitrag",
+  "errorType": "Plural and gender",
+  "segments": [
+   "Einerseits bieten sie viele Informationen,",
+   "andererseits sind",
+   "die Berichten",
+   "im Internet nicht immer zuverlässig."
+  ],
+  "errorIndex": 2,
+  "fix": "die Berichte",
+  "rule": "Plural of der Bericht: die Berichte. The -n appears only in the Dativ plural.",
+  "expression": "Einerseits … andererseits …"
+ },
+ {
+  "id": "F68",
+  "register": "Forumsbeitrag",
+  "errorType": "Capitalisation and spelling",
+  "segments": [
+   "Beim Carsharing",
+   "spart man",
+   "möglicher weise",
+   "auch Geld."
+  ],
+  "errorIndex": 2,
+  "fix": "möglicherweise",
+  "rule": "\"möglicherweise\" is written as one word.",
+  "expression": "möglicherweise"
+ },
+ {
+  "id": "F69",
+  "register": "Forumsbeitrag",
+  "errorType": "Capitalisation and spelling",
+  "segments": [
+   "Zusammenfassend kann man sagen,",
+   "dass",
+   "dieses thema",
+   "keine einfache Lösung hat."
+  ],
+  "errorIndex": 2,
+  "fix": "dieses Thema",
+  "rule": "Nouns are capitalised: \"Thema\".",
+  "expression": "Zusammenfassend kann man sagen, dass …"
+ },
+ {
+  "id": "F70",
+  "register": "Forumsbeitrag",
+  "errorType": "Plural and gender",
+  "segments": [
+   "In diesem Beitrag möchte ich",
+   "über die Zukunft",
+   "der Innenstädten",
+   "schreiben."
+  ],
+  "errorIndex": 2,
+  "fix": "der Innenstädte",
+  "rule": "The Genitiv plural has no -n: der Innenstädte. The -n appears only in the Dativ plural.",
+  "expression": "In diesem Beitrag möchte ich über … schreiben"
+ },
+ {
+  "id": "F71",
+  "register": "Forumsbeitrag",
+  "errorType": "Verb form and agreement",
+  "segments": [
+   "Es gibt mehrere Lösungen, zum Beispiel Carsharing:",
+   "dabei",
+   "kann mehrere Leute",
+   "im selben Auto fahren."
+  ],
+  "errorIndex": 2,
+  "fix": "können mehrere Leute",
+  "rule": "\"mehrere Leute\" is plural, so the verb is können.",
+  "expression": "zum Beispiel"
+ },
+ {
+  "id": "F72",
+  "register": "Forumsbeitrag",
+  "errorType": "Plural and gender",
+  "segments": [
+   "Eine weitere Möglichkeit ist",
+   "ein elektrisches Scooter,",
+   "der auch",
+   "auf dem Fahrradweg fahren darf."
+  ],
+  "errorIndex": 1,
+  "fix": "ein elektrischer Scooter,",
+  "rule": "\"Scooter\" is masculine: ein elektrischer Scooter.",
+  "expression": "Eine andere Möglichkeit wäre …"
+ },
+ {
+  "id": "F73",
+  "register": "Forumsbeitrag",
+  "errorType": "Infinitive with zu / um … zu",
+  "segments": [
+   "Die Regierung",
+   "soll Maßnahmen ergreifen,",
+   "um diese Situation lösen."
+  ],
+  "errorIndex": 2,
+  "fix": "um diese Situation zu lösen.",
+  "rule": "\"zu\" stands directly before the infinitive: zu lösen.",
+  "expression": "Maßnahmen ergreifen"
+ },
+ {
+  "id": "F74",
+  "register": "Forumsbeitrag",
+  "errorType": "Capitalisation and spelling",
+  "segments": [
+   "In diesem",
+   "Forum beitrag",
+   "möchte ich",
+   "meine Meinung äußern."
+  ],
+  "errorIndex": 1,
+  "fix": "Forumsbeitrag",
+  "rule": "A compound noun is written as one word, here with the linking s: Forumsbeitrag.",
+  "expression": "meine Meinung äußern"
+ },
+ {
+  "id": "F75",
+  "register": "Forumsbeitrag",
+  "errorType": "Article / adjective ending",
+  "segments": [
+   "Meine Meinung nach",
+   "sollte die Nutzung",
+   "digitaler Geräte",
+   "streng kontrolliert werden."
+  ],
+  "errorIndex": 0,
+  "fix": "Meiner Meinung nach",
+  "rule": "The fixed phrase takes the Dativ: meiner Meinung nach.",
+  "expression": "meiner Meinung nach"
+ },
+ {
+  "id": "M58",
+  "register": "Formelle E-Mail",
+  "errorType": "Word order: verb position",
+  "segments": [
+   "Wenn das nicht möglich wäre,",
+   "ich könnte nächste Woche",
+   "eine Doppelschicht übernehmen."
+  ],
+  "errorIndex": 1,
+  "fix": "könnte ich nächste Woche",
+  "rule": "After a \"wenn\" clause the main clause starts with the verb.",
+  "expression": "Wenn es möglich wäre, …"
+ },
+ {
+  "id": "M59",
+  "register": "Formelle E-Mail",
+  "errorType": "Article / adjective ending",
+  "segments": [
+   "Ich schreibe Ihnen bezüglich der Präsentation.",
+   "Meine Abteilung braucht",
+   "mein komplettes Fokus",
+   "für ein internationales Projekt."
+  ],
+  "errorIndex": 2,
+  "fix": "meinen kompletten Fokus",
+  "rule": "\"Fokus\" is masculine; Akkusativ: meinen kompletten Fokus.",
+  "expression": "Ich schreibe Ihnen bezüglich …"
+ },
+ {
+  "id": "M60",
+  "register": "Formelle E-Mail",
+  "errorType": "Plural and gender",
+  "segments": [
+   "Ich befürchte, dass",
+   "ein schlechtes Bericht",
+   "dem Unternehmen",
+   "schaden würde."
+  ],
+  "errorIndex": 1,
+  "fix": "ein schlechter Bericht",
+  "rule": "\"Bericht\" is masculine: ein schlechter Bericht.",
+  "expression": "Ich befürchte, dass …"
+ },
+ {
+  "id": "M61",
+  "register": "Formelle E-Mail",
+  "errorType": "Verb or noun + preposition / case",
+  "segments": [
+   "Ich verstehe die Überlastung,",
+   "die diese Änderung führen würde,",
+   "und bitte Sie dennoch",
+   "um Verständnis."
+  ],
+  "errorIndex": 1,
+  "fix": "zu der diese Änderung führen würde,",
+  "rule": "führen zu + Dativ: the relative pronoun needs the preposition (zu der).",
+  "expression": "führen zu"
+ },
+ {
+  "id": "M62",
+  "register": "Formelle E-Mail",
+  "errorType": "Word choice / collocation",
+  "segments": [
+   "Leider",
+   "befürchte ich mich",
+   "um die Präsentation",
+   "am Freitag."
+  ],
+  "errorIndex": 1,
+  "fix": "mache ich mir Sorgen",
+  "rule": "\"befürchten\" is not reflexive; use sich Sorgen machen um + Akkusativ.",
+  "expression": "sich Sorgen machen um"
+ },
+ {
+  "id": "M63",
+  "register": "Formelle E-Mail",
+  "errorType": "Capitalisation and spelling",
+  "segments": [
+   "Entschuldigen Sie bitte,",
+   "aber am Mittwoch kann ich",
+   "leider nicht Arbeiten."
+  ],
+  "errorIndex": 2,
+  "fix": "leider nicht arbeiten.",
+  "rule": "A verb after \"nicht\" is not a noun: lower case \"arbeiten\".",
+  "expression": "Entschuldigen Sie bitte"
+ },
+ {
+  "id": "M64",
+  "register": "Formelle E-Mail",
+  "errorType": "Word order: verb position",
+  "segments": [
+   "Ich verstehe,",
+   "wie schwierig für Sie es ist,",
+   "den Dienstplan",
+   "zu organisieren."
+  ],
+  "errorIndex": 1,
+  "fix": "wie schwierig es für Sie ist,",
+  "rule": "In the Mittelfeld the pronoun \"es\" comes before the prepositional phrase \"für Sie\".",
+  "expression": "Ich verstehe, wie schwierig …"
+ },
+ {
+  "id": "M65",
+  "register": "Formelle E-Mail",
+  "errorType": "Article / adjective ending",
+  "segments": [
+   "Könnten Sie",
+   "mein Dienst",
+   "am Mittwoch",
+   "übernehmen?"
+  ],
+  "errorIndex": 1,
+  "fix": "meinen Dienst",
+  "rule": "\"Dienst\" is masculine; Akkusativ: meinen Dienst.",
+  "expression": "Könnten Sie …?"
+ },
+ {
+  "id": "M66",
+  "register": "Formelle E-Mail",
+  "errorType": "Word choice / collocation",
+  "segments": [
+   "Könnten wir",
+   "unsere Dienste",
+   "umtauschen,",
+   "wenn es für Sie möglich ist?"
+  ],
+  "errorIndex": 2,
+  "fix": "tauschen,",
+  "rule": "Shifts are swapped with tauschen; umtauschen means to exchange goods in a shop.",
+  "expression": "Dienste tauschen"
+ },
+ {
+  "id": "M67",
+  "register": "Formelle E-Mail",
+  "errorType": "Word choice / collocation",
+  "segments": [
+   "Die Behörde",
+   "hat mir",
+   "einen Termin erstellt,",
+   "den ich nicht verschieben kann."
+  ],
+  "errorIndex": 2,
+  "fix": "einen Termin vergeben,",
+  "rule": "Collocation: einen Termin vergeben (never erstellen).",
+  "expression": "einen Termin vergeben"
+ },
+ {
+  "id": "M68",
+  "register": "Formelle E-Mail",
+  "errorType": "Verb or noun + preposition / case",
+  "segments": [
+   "Leider kann ich",
+   "am Mittwoch nicht länger arbeiten.",
+   "Bitte entschuldigen Sie für",
+   "diese Situation."
+  ],
+  "errorIndex": 2,
+  "fix": "Bitte entschuldigen Sie",
+  "rule": "entschuldigen takes the thing in the Akkusativ, without \"für\": Bitte entschuldigen Sie diese Situation.",
+  "expression": "Bitte entschuldigen Sie …"
+ },
+ {
+  "id": "M69",
+  "register": "Formelle E-Mail",
+  "errorType": "Capitalisation and spelling",
+  "segments": [
+   "Ich habe versucht,",
+   "den Termin zu ändern,",
+   "aber das war leider",
+   "umöglich."
+  ],
+  "errorIndex": 3,
+  "fix": "unmöglich.",
+  "rule": "Spelling: unmöglich (un- + möglich).",
+  "expression": "aber das war leider unmöglich"
  }
 ]

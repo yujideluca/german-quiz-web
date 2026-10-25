@@ -65,8 +65,8 @@ test('weak preterite follows the regular pattern', () => {
   assert.equal(weakPreterite('kommen'), 'kommte'); assert.equal(weakPreterite('machen'), 'machte');
 });
 
-test('Fehler finden: 121 sentences, chunks stay in order and the wrong chunk is the answer', () => {
-  assert.equal(deck.errors.length, 121);
+test('Fehler finden: at least 140 sentences, chunks stay in order and the wrong chunk is the answer', () => {
+  assert.ok(deck.errors.length >= 140);
   deck.errors.forEach((c) => {
     const entry = errors.find((e) => `error:${e.id}` === c.id);
     assert.deepEqual(c.choices, entry.segments);
