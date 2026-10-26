@@ -26,7 +26,7 @@ Before the fixes 3 of the new tests failed (import) and the search and bar tests
 ## Coverage
 Not measured.
 
-## Defects found (fixed on branch `first-maintenance-review`, waiting to ship with the next app version)
+## Defects found (included in the standalone web maintenance release, 2026-10-26)
 1. **Backup import accepted garbage.** `importData` only checked `typeof ... === 'object'`, which is also true for `null` and arrays, and copied the data unfiltered. A damaged file could crash the app later or replace good progress with entries under the wrong card id or with non-positive history counts; the app's `decodeBackup` drops them. Fix: same filtering and a refusal of a newer format.
 2. **Search did not fold the sharp s** ("strasse" did not find "Straße"), as in the app (decided by Giovanni). Fix in `foldForSearch`.
 3. **The daily bar fraction was NaN for a goal of 0** (`0/0`). Fix: empty without answers, full with any.
