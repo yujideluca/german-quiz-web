@@ -2,7 +2,7 @@
 import {
   MODES, SCHEDULER, buildQueue, startSession, choicesFor, answer, advance, withoutCard,
   freshProgress, withSuspension, restored, statusAt, searchManagedCards,
-  epochDayOf, plusAnswer, dailyProgress, buildCalendar, clampDailyGoal,
+  DAY_MILLIS, epochDayOf, plusAnswer, dailyProgress, buildCalendar, clampDailyGoal,
 } from './domain.js';
 
 /** Storage with the shape the controller needs; see store.js for the browser one. */
@@ -66,7 +66,7 @@ export class StudyController {
   setDailyGoal(goal) { this.store.saveGoal(clampDailyGoal(goal)); }
 
   currentMonth() {
-    const t = new Date(this.today() * 86_400_000);
+    const t = new Date(this.today() * DAY_MILLIS);
     return { year: t.getUTCFullYear(), month: t.getUTCMonth() };
   }
 

@@ -2,6 +2,7 @@
 
 export const MINUTE_MILLIS = 60_000;
 export const DAY_MILLIS = 86_400_000;
+const clamp = (v, lo, hi) => Math.min(hi, Math.max(lo, v));
 
 export const MODES = [
   // Display names and instruction lines are translated: see strings.js (mode_<id>_title / mode_<id>_instruction).
@@ -21,7 +22,6 @@ export const SCREEN_SCALE = { referenceHeight: 880, minLayout: 0.8, maxLayout: 1
 export function screenScaleFor(heightPx) {
   const { referenceHeight, minLayout, maxLayout, minText, maxText } = SCREEN_SCALE;
   const ratio = heightPx / referenceHeight;
-  const clamp = (v, lo, hi) => Math.min(hi, Math.max(lo, v));
   return { layout: clamp(ratio, minLayout, maxLayout), text: clamp(ratio, minText, maxText) };
 }
 
@@ -63,7 +63,6 @@ const inStep = (p, phase, step, now, steps) =>
   ({ ...p, phase, learningStep: step, dueAtMillis: now + steps[step] * MINUTE_MILLIS });
 const due = (p, days, now) =>
   ({ ...p, phase: 'REVIEW', learningStep: 0, intervalDays: days, dueAtMillis: now + days * DAY_MILLIS });
-const clamp = (v, lo, hi) => Math.min(hi, Math.max(lo, v));
 
 function learn(p, grade, now, c) {
   const steps = c.learningStepsMinutes;
