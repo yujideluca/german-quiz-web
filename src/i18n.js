@@ -18,8 +18,7 @@ export function resolveLanguage(preference, systemLanguages = []) {
 
 export const localeOf = (language) => LOCALES[language] ?? LOCALES.en;
 
-// Android writes a literal % as %% in its string resources; the generated strings keep it, so it is unescaped here.
-const format = (text, args) => text.replace(/%%/g, '%').replace(/\{(\d+)\}/g, (_, i) => String(args[Number(i)]));
+const format = (text, args) => text.replace(/\{(\d+)\}/g, (_, i) => String(args[Number(i)]));
 
 /** t('key', ...args) looks the text up in [language] and falls back to English, then to the key itself. */
 export function createTranslator(language) {
