@@ -139,7 +139,6 @@ test('grading follows the score, never the time (FS-4)', () => {
   assert.ok(fspPassed(0.8));
   assert.ok(!fspPassed(0.7999));
   // 80 % of 34 steps is 27.2, so 28 of 34 is the least that passes; 27 of 34 (79.4 %) and 26 of 34 fail.
-  // (The app's FspCaseTest asserts that 27/34 passes, which contradicts its own 0.8 threshold.)
   assert.ok(fspPassed(28 / 34), '28 of 34 steps is the least that passes');
   assert.ok(!fspPassed(27 / 34));
   assert.ok(!fspPassed(26 / 34));
