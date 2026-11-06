@@ -12,7 +12,7 @@ const make = (store = createMemoryStore(), clock = { t: T0 }) => ({ c: new Study
 
 test('overview lists every mode with new cards', () => {
   const { c } = make();
-  assert.deepEqual(c.overview().map((o) => o.stats.newAvailable), [3, 1, 1, 1, 1]);
+  assert.deepEqual(c.overview().map((o) => o.stats.newAvailable), [3, 1, 1, 1, 1, 0]);
 });
 test('answers persist and survive a restart', () => {
   const { c, store, clock } = make();

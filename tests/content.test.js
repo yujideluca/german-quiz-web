@@ -84,5 +84,5 @@ test('Fehler finden: new sentences are mixed (not one error type in a row) and t
   const types = new Set(deck.errors.slice(0, 10).map((c) => errors.find((e) => `error:${e.id}` === c.id).errorType));
   assert.ok(types.size >= 4, [...types].join());
   assert.equal(MODES.find((m) => m.id === 'errors').autoAdvances, false);
-  assert.ok(MODES.filter((m) => m.id !== 'errors').every((m) => m.autoAdvances !== false));
+  assert.ok(MODES.filter((m) => m.id !== 'errors' && m.id !== 'fsp').every((m) => m.autoAdvances !== false));
 });

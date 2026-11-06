@@ -4,6 +4,7 @@ import { StudyController } from './controller.js';
 import { createLocalStore } from './store.js';
 import { LANGUAGE_CHOICES, NO_CONTENT_TRANSLATIONS, createTranslator, monthShort, resolveLanguage, translateExplanation, translateHint, weekdayLetters, localeOf } from './i18n.js';
 import { barPercent, screenScaleFor, heatColorCss, HEAT_FULL_ANSWERS, MIN_DAILY_GOAL, MAX_DAILY_GOAL, DAILY_GOAL_STEP, MODES } from './domain.js';
+import { fspPassed, isRunFinished, nextStep, partScores, pick, runOrder, runScore, runStep } from './fsp.js';
 
 const AUTO_ADVANCE_MILLIS = 500;
 const MAX_RESULTS = 40;
@@ -17,6 +18,7 @@ let calendarMonth = null;
 let query = '';
 let menuOpen = false;
 let advanceTimer = null;
+let caseRun = null;                        // the FSP case on screen; one run per current card (see syncCaseRun)
 let language = 'en';                       // the language on screen (the choice resolved against the browser)
 let t = createTranslator(language);
 let content = NO_CONTENT_TRANSLATIONS;     // translations of the English text inside the vocabulary data
@@ -76,12 +78,67 @@ function homeHtml() {
     }).join('')}`;
 }
 
+/**
+ * Keeps one case run per current card, like the app's StudyViewModel.render: a new FSP card starts a new run, the same
+ * card keeps its run. A finished run without its answer on screen is stale (the case was left on its result screen and
+ * came back later) and starts afresh, so the player is never stuck on a result without a Next button.
+ */
+function syncCaseRun() {
+  const card = session.queue[0];
+  if (!card || card.mode !== 'fsp') { caseRun = null; return; }
+  const stale = caseRun && isRunFinished(caseRun) && !session.lastAnswer;
+  if (stale || `fsp:${caseRun?.case.id}` !== card.id) caseRun = controller.startCase(session);
+}
+
+const partTitle = (part) => t(`fsp_part_${Math.min(3, Math.max(1, part))}`);
+
+/** One simulated FSP case (ADR-0014): a wrong pick turns red and shows why, the player picks again (FS-3). */
+function caseHtml(run, answer) {
+  const c = run.case;
+  const head = `<p class="hint fsp-area">${esc(c.area)}</p><h1 class="prompt prompt-small">${esc(c.title)}</h1>`;
+  if (isRunFinished(run)) return head + caseResultHtml(run, answer);
+  const step = runStep(run);
+  const options = runOrder(run).map((i) => {
+    const wrong = run.wrongPicks.includes(i);
+    const right = run.solved && i === step.answer;
+    const cls = right ? ' correct' : wrong ? ' wrong' : run.solved ? ' dim' : '';
+    const feedback = wrong || right ? `<p class="fsp-feedback ${right ? 'right' : 'wrong'}">${esc(step.feedback[i])}</p>` : '';
+    return `<button class="choice fsp-option${cls}" data-action="case-pick" data-option="${i}" ${run.solved || wrong ? 'disabled' : ''}>${esc(step.options[i])}</button>${feedback}`;
+  }).join('');
+  const total = c.steps.length;
+  return `${head}
+    ${run.stepIndex === 0 ? `<p class="fsp-italic">${esc(c.patient)}</p>` : ''}
+    <p class="fsp-section">${esc(partTitle(step.part))}  ·  ${esc(step.section)}</p>
+    <div><div class="progress"><div style="width:${Math.round((run.stepIndex / total) * 100)}%"></div></div>
+      <p class="small" style="margin-top:4px">${t('fsp_step', run.stepIndex + 1, total)}</p></div>
+    ${step.situation ? `<p class="fsp-italic">${esc(step.situation)}</p>` : ''}
+    <p class="fsp-question">${esc(step.question)}</p>
+    ${options}
+    ${!run.solved && run.wrongPicks.length ? `<p class="fsp-italic small">${t('fsp_try_again')}</p>` : ''}
+    ${run.solved && step.reply ? `<p class="fsp-italic">${esc(step.reply)}</p>` : ''}
+    ${run.solved ? `<button class="btn next" data-action="case-next">${t('fsp_continue')}</button>` : ''}`;
+}
+
+function caseResultHtml(run, answer) {
+  const score = runScore(run);
+  const passed = fspPassed(score);
+  const percent = Math.round(score * 100);
+  return `<section class="card section">
+      <p class="title">${t('fsp_result_title')}</p>
+      <p class="title ${passed ? 'fsp-passed' : 'fsp-failed'}">${esc(t(passed ? 'fsp_result_passed' : 'fsp_result_failed', percent))}</p>
+      ${partScores(run).map((p) => `<p>${esc(t('fsp_result_part', partTitle(p.part), p.right, p.steps))}</p>`).join('')}
+      <p class="title">${esc(t('fsp_diagnosis', run.case.diagnosis))}</p>
+    </section>
+    ${answer ? `<button class="btn next" data-action="next">${t('study_next')}</button>` : ''}`;
+}
+
 function studyHtml() {
   const card = session.queue[0];
   const answer = session.lastAnswer;
   const daily = controller.dailyProgress();
   const mode = MODES.find((m) => m.id === session.mode);
   const errorSpot = mode.id === 'errors';
+  const fsp = card.mode === 'fsp';
   const choices = controller.choices(session).map((option) => {
     let cls = '';
     if (answer) cls = option === card.correctChoice ? ' correct' : option === answer.chosen ? ' wrong' : ' dim';
@@ -98,13 +155,14 @@ function studyHtml() {
         <span class="menu"><button class="link dots" data-action="menu" ${answer ? 'disabled' : ''} aria-label="${t('aria_more')}">⋮</button>${menu}</span></span>
     </div>
     <div class="study col" style="display:flex;flex-direction:column;gap:calc(12px * var(--layout))">
+      ${fsp ? (caseRun ? caseHtml(caseRun, answer) : '') : `
       <h1 class="prompt${errorSpot ? ' prompt-small' : ''}">${esc(card.prompt)}</h1>
       ${errorSpot ? `<p class="hint">${t('errors_tap_wrong')}</p>` : ''}
       ${card.hint ? `<p class="hint">${esc(t('study_hint', translateHint(content, card.hint)))}</p>` : ''}
       ${card.context && !errorSpot ? `<p class="context">${esc(card.context)}</p>` : ''}
       ${errorSpot ? `<div class="chunks">${choices}</div>` : choices}
       ${answer ? `<p class="explanation">${esc(translateExplanation(content, card.explanation))}</p>` : ''}
-      ${answer && !mode.autoAdvances ? `<button class="btn next" data-action="next">${t('study_next')}</button>` : ''}
+      ${answer && !mode.autoAdvances ? `<button class="btn next" data-action="next">${t('study_next')}</button>` : ''}`}
     </div>`;
 }
 
@@ -180,7 +238,7 @@ function render() {
   if (!controller) { root.innerHTML = `<p class="card">${t('web_load_failed')}</p>`; return; }
   let html;
   switch (view.name) {
-    case 'study': html = session.queue.length ? studyHtml() : finishedHtml(); break;
+    case 'study': syncCaseRun(); html = session.queue.length ? studyHtml() : finishedHtml(); break;
     case 'settings': html = settingsHtml(); break;
     case 'removed': html = removedHtml(); break;
     default: html = homeHtml();
@@ -213,6 +271,13 @@ const actions = {
   study(el) { session = controller.startSession(el.dataset.mode); show('study'); },
   choose(el) { session = controller.answer(session, el.dataset.choice); render(); },
   next() { next(); },
+  'case-pick'(el) { caseRun = pick(caseRun, Number(el.dataset.option)); render(); },
+  // After the last step the case is graded and its result shown (FS-4).
+  'case-next'() {
+    caseRun = nextStep(caseRun);
+    if (isRunFinished(caseRun)) session = controller.finishCase(session, caseRun);
+    render(); window.scrollTo(0, 0);
+  },
   menu() { menuOpen = !menuOpen; render(); },
   suspend(el) { session = controller.suspendCurrentCard(session, el.dataset.duration); menuOpen = false; render(); },
   quit() { clearTimeout(advanceTimer); calendarMonth = null; show('home'); },
@@ -299,11 +364,12 @@ async function boot() {
   applyTheme(store.loadTheme());
   await applyLanguage();
   try {
-    const [nouns, preps, verbs, errors] = await Promise.all(['vocab/nouns.json', 'vocab/prepositions.json', 'vocab/verbs.json', 'vocab/errors.json'].map((u) => fetch(u).then((r) => {
+    const files = ['vocab/nouns.json', 'vocab/prepositions.json', 'vocab/verbs.json', 'vocab/errors.json', 'vocab/fsp_cases.json'];
+    const [nouns, preps, verbs, errors, cases] = await Promise.all(files.map((u) => fetch(u).then((r) => {
       if (!r.ok) throw new Error(`${u}: ${r.status}`);
       return r.json();
     })));
-    controller = new StudyController(buildDeck(nouns, preps, verbs, errors), store);
+    controller = new StudyController(buildDeck(nouns, preps, verbs, errors, cases), store, () => Date.now(), Object.fromEntries(cases.map((c) => [c.id, c])));
   } catch (err) { console.error('failed to initialise', err); }
   render();
   navigator.storage?.persist?.().catch(() => {});

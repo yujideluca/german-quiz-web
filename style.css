@@ -102,3 +102,14 @@ input[type=search] { width: 100%; font: inherit; padding: 12px 14px; border-radi
 .center { flex: 1; justify-content: center; }
 .toast { position: fixed; left: 50%; bottom: calc(env(safe-area-inset-bottom) + 24px); transform: translateX(-50%);
   background: var(--on-surface); color: var(--bg); padding: 10px 16px; border-radius: 12px; font-size: 14px; max-width: 90vw; }
+
+/* FSP case player: long sentences, so smaller left-aligned answers than the one-word choices */
+.fsp-area { font-size: calc(14px * var(--text)); font-style: normal; font-weight: 600; }
+.fsp-section { font-size: calc(15px * var(--text)); font-weight: 600; }
+.fsp-italic { font-size: calc(17px * var(--text)); font-style: italic; }
+.fsp-question { font-size: calc(18px * var(--text)); font-weight: 600; }
+.choice.fsp-option { font-size: calc(17px * var(--text)); text-align: left; min-height: calc(56px * var(--layout));
+  border-radius: 16px; padding: calc(10px * var(--layout)) 14px; overflow-wrap: anywhere; }
+.fsp-feedback { font-size: calc(15px * var(--text)); margin-top: calc(-6px * var(--layout)); }
+.fsp-feedback.right, .fsp-passed { color: var(--correct); }
+.fsp-feedback.wrong, .fsp-failed { color: var(--error); }

@@ -1,9 +1,10 @@
 // Application service: wires deck, storage and clock to the pure domain functions (no DOM).
 import {
-  MODES, SCHEDULER, buildQueue, startSession, choicesFor, answer, advance, withoutCard,
+  MODES, SCHEDULER, GRADER, buildQueue, startSession, choicesFor, answer, advance, withoutCard,
   freshProgress, withSuspension, restored, statusAt, searchManagedCards,
   DAY_MILLIS, epochDayOf, plusAnswer, dailyProgress, buildCalendar, clampDailyGoal,
 } from './domain.js';
+import { FSP_FAILED, FSP_PASSED, fspGrade, fspPassed, isRunFinished, runScore, startRun } from './fsp.js';
 
 /** Storage with the shape the controller needs; see store.js for the browser one. */
 export function createMemoryStore(initial = {}) {
@@ -22,8 +23,10 @@ export function createMemoryStore(initial = {}) {
 }
 
 export class StudyController {
-  constructor(deck, store, clock = () => Date.now()) {
+  /** cases: the FSP cases by id; a card "fsp:<id>" is played from here (ADR-0014). */
+  constructor(deck, store, clock = () => Date.now(), cases = {}) {
     this.deck = deck;
+    this.cases = cases;
     this.store = store;
     this.clock = clock;
     this.progress = store.loadProgress();
@@ -48,9 +51,28 @@ export class StudyController {
 
   choices(session) { return choicesFor(session); }
 
-  answer(session, choice) {
+  answer(session, choice) { return this.record(session, choice, null); }
+
+  /** The case behind the current card, ready to play; null when the card is not an FSP case. */
+  startCase(session) {
     const card = session.queue[0];
-    const updated = answer(session, choice, this.clock());
+    if (!card || card.mode !== 'fsp') return null;
+    const fspCase = this.cases[card.id.slice('fsp:'.length)];
+    return fspCase ? startRun(fspCase, this.clock()) : null;
+  }
+
+  /** FS-4: a finished case is answered with its score; the time it took never changes the grade. */
+  finishCase(session, run) {
+    const card = session.queue[0];
+    if (!card || !isRunFinished(run) || card.id !== `fsp:${run.case.id}`) return session;
+    const phase = (this.progress[card.id] ?? freshProgress(card.id, SCHEDULER)).phase;
+    const score = runScore(run);
+    return this.record(session, fspPassed(score) ? FSP_PASSED : FSP_FAILED, fspGrade(score, phase));
+  }
+
+  record(session, choice, gradeOverride) {
+    const card = session.queue[0];
+    const updated = answer(session, choice, this.clock(), SCHEDULER, GRADER, gradeOverride);
     if (card && updated !== session) {
       this.persist(updated.progressById[card.id]);
       this.history = plusAnswer(this.history, this.today());

@@ -74,3 +74,15 @@ test('text without a translation is shown unchanged', () => {
   assert.equal(translateHint(NO_CONTENT_TRANSLATIONS, 'talk about a topic'), 'talk about a topic');
   assert.equal(translateHint(json('../i18n/de.json'), 'talk about a topic'), 'über ein Thema sprechen');
 });
+test('FSP texts exist in every language and an Android %% shows as one %', () => {
+  for (const lang of ['en', 'de', 'pt', 'es']) {
+    const t = createTranslator(lang);
+    for (const key of ['mode_fsp_title', 'mode_fsp_instruction', 'fsp_part_1', 'fsp_part_2', 'fsp_part_3', 'fsp_step', 'fsp_try_again',
+      'fsp_continue', 'fsp_result_title', 'fsp_result_passed', 'fsp_result_failed', 'fsp_result_part', 'fsp_diagnosis']) {
+      assert.notEqual(t(key), key, `${lang} ${key}`);
+    }
+    assert.ok(!t('fsp_result_failed', 70).includes('%%'), lang);
+  }
+  assert.equal(createTranslator('en')('fsp_result_passed', 85), 'Passed: 85% right at the first try');
+  assert.equal(createTranslator('de')('fsp_result_failed', 70), 'Nicht bestanden: 70 % beim ersten Versuch richtig (80 % nötig)');
+});

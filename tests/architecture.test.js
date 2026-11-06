@@ -14,11 +14,12 @@ const BROWSER = /\b(document|window|navigator|localStorage|sessionStorage|locati
 const ALLOWED = {
   'domain.js': [],
   'strings.js': [],
-  'content.js': ['domain.js'],
+  'content.js': ['domain.js', 'fsp.js'],
   'i18n.js': ['strings.js'],
   'store.js': [],
-  'controller.js': ['domain.js'],
-  'app.js': ['domain.js', 'content.js', 'controller.js', 'store.js', 'i18n.js'],
+  'fsp.js': ['domain.js'],
+  'controller.js': ['domain.js', 'fsp.js'],
+  'app.js': ['domain.js', 'content.js', 'controller.js', 'store.js', 'i18n.js', 'fsp.js'],
 };
 
 test('every module has an entry in the dependency rules', () => {

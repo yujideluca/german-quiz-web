@@ -1,5 +1,6 @@
 // Vocabulary -> cards, ported from the Android app's content/ package.
 import { seededShuffle } from './domain.js';
+import { FSP_FAILED, FSP_PASSED, checkFspCase } from './fsp.js';
 
 const ARTICLES = ['der', 'die', 'das'];
 
@@ -136,11 +137,29 @@ export function errorCard(entry) {
   });
 }
 
-export const buildDeck = (nouns, prepositions, verbs = [], errorSentences = []) => ({
+/**
+ * A whole FSP case as one card (FS-4): the player plays the case, and the result is answered as bestanden or
+ * nicht bestanden. The prompt is the complaint, never the diagnosis (FS-5); the diagnosis is the explanation.
+ */
+export const fspCaseCard = (fspCase) => makeCard({
+  id: `fsp:${checkFspCase(fspCase).id}`,
+  mode: 'fsp',
+  prompt: fspCase.title,
+  context: fspCase.patient,
+  choices: [FSP_PASSED, FSP_FAILED],
+  correctChoice: FSP_PASSED,
+  explanation: fspCase.diagnosis,
+  shuffleChoices: false,
+  hint: fspCase.area,
+});
+
+export const buildDeck = (nouns, prepositions, verbs = [], errorSentences = [], fspCases = []) => ({
   article: nouns.map(articleCard),
   plural: nouns.map(pluralCard),
   preposition: prepositions.map(prepositionCard),
   preterite: verbs.map(preteriteCard),
   // Shuffled once with a fixed seed so new sentences do not arrive grouped by error type or register.
   errors: seededShuffle(errorSentences, 'errors-deck').map(errorCard),
+  // Kept in file order: the build writes the cases ordered by area of medicine (FS-2).
+  fsp: fspCases.map(fspCaseCard),
 });

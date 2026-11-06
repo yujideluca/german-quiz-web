@@ -12,6 +12,8 @@ export const MODES = [
   { id: 'preterite' },
   // autoAdvances false: the explanation (corrected sentence + rule) needs reading time, so the player taps Next.
   { id: 'errors', autoAdvances: false },
+  // One card per simulated Fachsprachprüfung case; the case is played step by step and graded from its score (fsp.js).
+  { id: 'fsp', autoAdvances: false },
 ];
 
 /**
@@ -257,14 +259,16 @@ export function choicesFor(session) {
   return seededShuffle(card.choices, `${session.choiceSeed}|${card.id}|${reps}`);
 }
 
-export function answer(session, choice, now, schedulerConfig = SCHEDULER, graderConfig = GRADER) {
+/** gradeOverride is set by modes that grade from a score instead of the response time (FSP cases, FS-4). */
+export function answer(session, choice, now, schedulerConfig = SCHEDULER, graderConfig = GRADER, gradeOverride = null) {
   const card = currentCard(session);
   if (!card || isAwaitingAdvance(session) || !card.choices.includes(choice)) return session;
 
   const before = session.progressById[card.id] ?? freshProgress(card.id, schedulerConfig);
   const correct = choice === card.correctChoice;
   const responseMillis = Math.max(0, now - session.shownAtMillis);
-  const grade = gradeAnswer(correct, responseMillis, before.phase, graderConfig);
+  const grade = gradeOverride ?? gradeAnswer(correct, responseMillis, before.phase, graderConfig);
+  if ((grade === 'AGAIN') !== !correct) throw new Error(`grade ${grade} contradicts correct=${correct}`);
   const after = scheduleNext(before, grade, now, schedulerConfig);
 
   const comesBack = (after.phase === 'LEARNING' || after.phase === 'RELEARNING') &&
