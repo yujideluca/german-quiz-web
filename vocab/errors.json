@@ -2066,5 +2066,478 @@
   "fix": "unmöglich.",
   "rule": "Spelling: unmöglich (un- + möglich).",
   "expression": "aber das war leider unmöglich"
+ },
+ {
+  "id": "F76",
+  "register": "Forumsbeitrag",
+  "errorType": "Infinitive with zu / um … zu",
+  "segments": [
+   "In diesem Beitrag möchte ich",
+   "meine Ansicht zur Fleischsteuer",
+   "zu äußern."
+  ],
+  "errorIndex": 2,
+  "fix": "äußern.",
+  "rule": "After a modal verb (möchte) the infinitive stands without \"zu\": äußern.",
+  "expression": "In diesem Beitrag möchte ich …"
+ },
+ {
+  "id": "F77",
+  "register": "Forumsbeitrag",
+  "errorType": "Capitalisation and spelling",
+  "segments": [
+   "Wenn man genug verdient,",
+   "ändert auch",
+   "die Preise Steigerung",
+   "nichts am Einkaufsverhalten."
+  ],
+  "errorIndex": 2,
+  "fix": "die Preissteigerung",
+  "rule": "A compound noun is written as one word: die Preissteigerung.",
+  "expression": "etwas ändert nichts an …"
+ },
+ {
+  "id": "F78",
+  "register": "Forumsbeitrag",
+  "errorType": "Word choice / collocation",
+  "segments": [
+   "Je höher der Zuckerkonsum ist,",
+   "desto mehrere Menschen",
+   "erkranken an Diabetes."
+  ],
+  "errorIndex": 1,
+  "fix": "desto mehr Menschen",
+  "rule": "\"mehrere\" means \"several\"; for \"more\" use \"mehr\": je …, desto mehr Menschen.",
+  "expression": "Je …, desto …"
+ },
+ {
+  "id": "F79",
+  "register": "Forumsbeitrag",
+  "errorType": "Article / adjective ending",
+  "segments": [
+   "Die Regierung sollte Maßnahmen ergreifen,",
+   "um Kinder",
+   "über gesunde Essen",
+   "aufzuklären."
+  ],
+  "errorIndex": 2,
+  "fix": "über gesundes Essen",
+  "rule": "\"Essen\" is neuter, so the adjective ends in -es: über gesundes Essen.",
+  "expression": "Maßnahmen ergreifen"
+ },
+ {
+  "id": "F80",
+  "register": "Forumsbeitrag",
+  "errorType": "Word choice / collocation",
+  "segments": [
+   "Es fällt vielen Menschen schwer,",
+   "Zucker in der Ernährung",
+   "zu bilanzieren."
+  ],
+  "errorIndex": 2,
+  "fix": "zu reduzieren.",
+  "rule": "\"bilanzieren\" means to balance accounts; to cut down on sugar use reduzieren.",
+  "expression": "Es fällt jemandem schwer, … zu …"
+ },
+ {
+  "id": "F81",
+  "register": "Forumsbeitrag",
+  "errorType": "Word choice / collocation",
+  "segments": [
+   "Manche Ärzte sagen, dass",
+   "in vielen Ländern",
+   "eine Epidemie von Übergewicht",
+   "passiert ist."
+  ],
+  "errorIndex": 3,
+  "fix": "entstanden ist.",
+  "rule": "\"passieren\" is for an event that happens to someone (ein Unfall passiert); something that develops over time is entstanden.",
+  "expression": "Manche Ärzte sagen, dass …"
+ },
+ {
+  "id": "F82",
+  "register": "Forumsbeitrag",
+  "errorType": "Capitalisation and spelling",
+  "segments": [
+   "Ärzte warnen vor",
+   "einer Adipositas Epidemie",
+   "in vielen Ländern."
+  ],
+  "errorIndex": 1,
+  "fix": "einer Adipositas-Epidemie",
+  "rule": "A compound that contains a foreign word is joined with a hyphen: Adipositas-Epidemie.",
+  "expression": "Ärzte warnen vor …"
+ },
+ {
+  "id": "M70",
+  "register": "Formelle E-Mail",
+  "errorType": "Word choice / collocation",
+  "segments": [
+   "Ich habe zuerst die Heizung kontrolliert",
+   "und endlich",
+   "im Hausmeisterbüro angerufen,",
+   "aber niemand hat sich gemeldet."
+  ],
+  "errorIndex": 1,
+  "fix": "und danach",
+  "rule": "\"endlich\" means \"at last\" after a long wait; the next step in a sequence is danach or dann.",
+  "expression": "zuerst … danach …"
+ },
+ {
+  "id": "M71",
+  "register": "Formelle E-Mail",
+  "errorType": "Article / adjective ending",
+  "segments": [
+   "Wegen der Kälte kann ich nicht duschen,",
+   "deshalb möchte ich",
+   "dieser Monat",
+   "weniger Miete bezahlen."
+  ],
+  "errorIndex": 2,
+  "fix": "diesen Monat",
+  "rule": "A point in time without a preposition is Akkusativ: diesen Monat.",
+  "expression": "weniger Miete bezahlen"
+ },
+ {
+  "id": "M72",
+  "register": "Formelle E-Mail",
+  "errorType": "Word choice / collocation",
+  "segments": [
+   "Weil es sehr kalt ist,",
+   "brauche ich die Reparatur",
+   "am schnellsten."
+  ],
+  "errorIndex": 2,
+  "fix": "so schnell wie möglich.",
+  "rule": "\"am schnellsten\" is a superlative and needs a comparison; \"as soon as possible\" is so schnell wie möglich.",
+  "expression": "so schnell wie möglich"
+ },
+ {
+  "id": "M73",
+  "register": "Formelle E-Mail",
+  "errorType": "Capitalisation and spelling",
+  "segments": [
+   "Sehr geehrte Frau Neumann",
+   "ich schreibe Ihnen",
+   "wegen der Heizung",
+   "in meiner Wohnung."
+  ],
+  "errorIndex": 0,
+  "fix": "Sehr geehrte Frau Neumann,",
+  "rule": "A formal e-mail has a comma after the salutation, and the text then continues in lower case.",
+  "expression": "Sehr geehrte Frau Neumann,"
+ },
+ {
+  "id": "F83",
+  "register": "Forumsbeitrag",
+  "errorType": "Passive: werden, not sein",
+  "segments": [
+   "Damit alle fair bewertet werden,",
+   "sollten klare Regeln",
+   "vorher festgelegt."
+  ],
+  "errorIndex": 2,
+  "fix": "vorher festgelegt werden.",
+  "rule": "With a modal verb the passive needs \"werden\" at the end: festgelegt werden.",
+  "expression": "Regeln festlegen"
+ },
+ {
+  "id": "F84",
+  "register": "Forumsbeitrag",
+  "errorType": "Word order: verb position",
+  "segments": [
+   "Viele Eltern fragen sich,",
+   "warum Kinder so lange",
+   "am Handy können sitzen."
+  ],
+  "errorIndex": 2,
+  "fix": "am Handy sitzen können.",
+  "rule": "In an indirect question (warum, wie …) the conjugated verb stands at the end: sitzen können.",
+  "expression": "Viele fragen sich, warum …"
+ },
+ {
+  "id": "F85",
+  "register": "Forumsbeitrag",
+  "errorType": "Word choice / collocation",
+  "segments": [
+   "Die KI kann Lernenden",
+   "passende Übungen anbieten und",
+   "Fragen machen."
+  ],
+  "errorIndex": 2,
+  "fix": "Fragen stellen.",
+  "rule": "Collocation: Fragen stellen (never machen).",
+  "expression": "Fragen stellen"
+ },
+ {
+  "id": "F86",
+  "register": "Forumsbeitrag",
+  "errorType": "Word choice / collocation",
+  "segments": [
+   "Zuerst sollten Studierende",
+   "ihre Hausarbeit",
+   "selbst antworten."
+  ],
+  "errorIndex": 2,
+  "fix": "selbst schreiben.",
+  "rule": "Collocation: eine Hausarbeit schreiben; antworten means to reply to someone.",
+  "expression": "eine Hausarbeit schreiben"
+ },
+ {
+  "id": "F87",
+  "register": "Forumsbeitrag",
+  "errorType": "Word choice / collocation",
+  "segments": [
+   "Viele Eltern",
+   "besorgen sich",
+   "wegen der Sucht ihrer Kinder."
+  ],
+  "errorIndex": 1,
+  "fix": "machen sich Sorgen",
+  "rule": "\"besorgen\" means to get something; to worry is sich Sorgen machen.",
+  "expression": "sich Sorgen machen wegen …"
+ },
+ {
+  "id": "F88",
+  "register": "Forumsbeitrag",
+  "errorType": "Word choice / collocation",
+  "segments": [
+   "Die Universität sollte den Studierenden",
+   "klare Einrichtungen",
+   "zum Umgang mit KI geben."
+  ],
+  "errorIndex": 1,
+  "fix": "klare Vorgaben",
+  "rule": "\"Einrichtung\" means an institution or furnishing; instructions are Vorgaben or Anweisungen.",
+  "expression": "klare Vorgaben geben"
+ },
+ {
+  "id": "F89",
+  "register": "Forumsbeitrag",
+  "errorType": "Article / adjective ending",
+  "segments": [
+   "Die KI kann",
+   "dem Student",
+   "jede Aufgabe Schritt für Schritt erklären."
+  ],
+  "errorIndex": 1,
+  "fix": "dem Studenten",
+  "rule": "\"Student\" belongs to the n-declension: every case except the nominative singular ends in -en: dem Studenten.",
+  "expression": "jemandem etwas erklären"
+ },
+ {
+  "id": "F90",
+  "register": "Forumsbeitrag",
+  "errorType": "Article / adjective ending",
+  "segments": [
+   "Wenn",
+   "der Programm",
+   "einen Fehler bemerkt,",
+   "sollte der Chef eine Nachricht bekommen."
+  ],
+  "errorIndex": 1,
+  "fix": "das Programm",
+  "rule": "\"Programm\" is neuter: das Programm.",
+  "expression": "eine Nachricht bekommen"
+ },
+ {
+  "id": "F91",
+  "register": "Forumsbeitrag",
+  "errorType": "Preposition and case",
+  "segments": [
+   "Homeoffice sollte möglich sein,",
+   "wenn man seine Arbeit",
+   "im Computer",
+   "erledigen kann."
+  ],
+  "errorIndex": 2,
+  "fix": "am Computer",
+  "rule": "Work on a device takes \"an\": am Computer arbeiten, not \"im Computer\".",
+  "expression": "am Computer arbeiten"
+ },
+ {
+  "id": "F92",
+  "register": "Forumsbeitrag",
+  "errorType": "Article / adjective ending",
+  "segments": [
+   "Eltern sollten",
+   "ihre Kinder",
+   "vor soziale Medien",
+   "besser schützen."
+  ],
+  "errorIndex": 2,
+  "fix": "vor sozialen Medien",
+  "rule": "\"schützen vor\" takes the Dativ: vor sozialen Medien.",
+  "expression": "jemanden vor etwas schützen"
+ },
+ {
+  "id": "F93",
+  "register": "Forumsbeitrag",
+  "errorType": "Plural and gender",
+  "segments": [
+   "Es gibt",
+   "mehrere Artikeln",
+   "über die Gefahren von Spielen."
+  ],
+  "errorIndex": 1,
+  "fix": "mehrere Artikel",
+  "rule": "\"Artikel\" has the same plural form (die Artikel); the -n appears only in the Dativ plural (mit den Artikeln).",
+  "expression": "Es gibt mehrere … über …"
+ },
+ {
+  "id": "F94",
+  "register": "Forumsbeitrag",
+  "errorType": "Article / adjective ending",
+  "segments": [
+   "Aus Langeweile nutzen",
+   "die Jugendliche",
+   "täglich soziale Medien."
+  ],
+  "errorIndex": 1,
+  "fix": "die Jugendlichen",
+  "rule": "\"Jugendliche\" is an adjective used as a noun; after \"die\" in the plural it ends in -n: die Jugendlichen.",
+  "expression": "soziale Medien nutzen"
+ },
+ {
+  "id": "F95",
+  "register": "Forumsbeitrag",
+  "errorType": "Word order: verb position",
+  "segments": [
+   "Ich finde, dass das Thema wichtig ist",
+   "und die Gesellschaft",
+   "soll mehr darüber sprechen."
+  ],
+  "errorIndex": 2,
+  "fix": "mehr darüber sprechen soll.",
+  "rule": "After \"und\" the dass-clause continues, so the conjugated verb also goes to the end: sprechen soll.",
+  "expression": "Ich finde, dass …"
+ },
+ {
+  "id": "F96",
+  "register": "Forumsbeitrag",
+  "errorType": "Verb or noun + preposition / case",
+  "segments": [
+   "Die Bürger sollten die Regierung",
+   "überzeugen, dass",
+   "mehr Geld in Bildung fließt."
+  ],
+  "errorIndex": 1,
+  "fix": "davon überzeugen, dass",
+  "rule": "\"überzeugen\" needs \"davon\" before a dass-clause: jemanden davon überzeugen, dass …",
+  "expression": "jemanden davon überzeugen, dass …"
+ },
+ {
+  "id": "F97",
+  "register": "Forumsbeitrag",
+  "errorType": "Connector",
+  "segments": [
+   "Die Firma sollte",
+   "beide Modelle anbieten,",
+   "um die Mitarbeiter zu wählen."
+  ],
+  "errorIndex": 2,
+  "fix": "damit die Mitarbeiter wählen können.",
+  "rule": "\"um … zu\" needs the same subject in both parts; with a new subject use \"damit\".",
+  "expression": "damit die Mitarbeiter … können"
+ },
+ {
+  "id": "F98",
+  "register": "Forumsbeitrag",
+  "errorType": "Word choice / collocation",
+  "segments": [
+   "Wenn ein Mitarbeiter",
+   "seine Verpflichtungen",
+   "nicht erledigt hat,",
+   "sollte der Chef ihn ansprechen."
+  ],
+  "errorIndex": 1,
+  "fix": "seine Aufgaben",
+  "rule": "One fulfils Verpflichtungen (erfüllen) but does Aufgaben (erledigen).",
+  "expression": "Aufgaben erledigen"
+ },
+ {
+  "id": "F99",
+  "register": "Forumsbeitrag",
+  "errorType": "Capitalisation and spelling",
+  "segments": [
+   "Viele Jugendliche",
+   "sind suchtig",
+   "nach sozialen Medien."
+  ],
+  "errorIndex": 1,
+  "fix": "sind süchtig",
+  "rule": "Spelling: süchtig (from die Sucht, with an umlaut).",
+  "expression": "süchtig sein nach …"
+ },
+ {
+  "id": "F100",
+  "register": "Forumsbeitrag",
+  "errorType": "Word choice / collocation",
+  "segments": [
+   "Zu den Gefahren zählen",
+   "Sucht, Gewalt und",
+   "Cyber Bulling."
+  ],
+  "errorIndex": 2,
+  "fix": "Cybermobbing.",
+  "rule": "The German word for bullying is Mobbing; Cybermobbing is written as one word.",
+  "expression": "Zu den Gefahren zählen …"
+ },
+ {
+  "id": "F101",
+  "register": "Forumsbeitrag",
+  "errorType": "Capitalisation and spelling",
+  "segments": [
+   "Eine andere Möglichkeit wäre",
+   "eine App",
+   "zur Fernbeobactung."
+  ],
+  "errorIndex": 2,
+  "fix": "zur Fernbeobachtung.",
+  "rule": "Spelling: Beobachtung (beobachten + -ung).",
+  "expression": "Eine andere Möglichkeit wäre …"
+ },
+ {
+  "id": "F102",
+  "register": "Forumsbeitrag",
+  "errorType": "Article / adjective ending",
+  "segments": [
+   "Eltern können",
+   "den Handy",
+   "ihres Kindes von fern kontrollieren."
+  ],
+  "errorIndex": 1,
+  "fix": "das Handy",
+  "rule": "\"Handy\" is neuter: das Handy.",
+  "expression": "etwas von fern kontrollieren"
+ },
+ {
+  "id": "F103",
+  "register": "Forumsbeitrag",
+  "errorType": "Capitalisation and spelling",
+  "segments": [
+   "Ich stime",
+   "Thomas nicht zu,",
+   "weil Kinder",
+   "nicht immer einen Weg finden."
+  ],
+  "errorIndex": 0,
+  "fix": "Ich stimme",
+  "rule": "Spelling: stimmen with double m; zustimmen takes the Dativ.",
+  "expression": "jemandem zustimmen"
+ },
+ {
+  "id": "F104",
+  "register": "Forumsbeitrag",
+  "errorType": "Article / adjective ending",
+  "segments": [
+   "Wir müssen",
+   "unsere Kinder",
+   "beibringen, wie sie die Zeit offline genießen."
+  ],
+  "errorIndex": 1,
+  "fix": "unseren Kindern",
+  "rule": "\"beibringen\" takes the Dativ for the person; in the Dativ plural the noun ends in -n: unseren Kindern.",
+  "expression": "jemandem etwas beibringen"
  }
 ]
