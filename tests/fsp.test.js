@@ -65,6 +65,8 @@ test('a step with the wrong shape is refused', () => {
   const broken = { ...fileCase, steps: [{ ...fileCase.steps[0], options: ['a', 'b', 'c'] }] };
   assert.throws(() => fspCaseCard(broken), /4 options/);
   assert.throws(() => checkFspCase({ ...fileCase, steps: [{ ...fileCase.steps[0], answer: 4 }] }), /out of range/);
+  assert.throws(() => checkFspCase({ ...fileCase, steps: [{ ...fileCase.steps[0], situation: null }] }), /needs a situation/);
+  assert.throws(() => checkFspCase({ ...fileCase, steps: [{ ...fileCase.steps[0], situation: ' ' }] }), /needs a situation/);
 });
 
 test('the title never names the diagnosis; the diagnosis is the explanation (FS-5)', () => {
@@ -157,12 +159,22 @@ test('answer takes a grade override and refuses one that contradicts right/wrong
   assert.throws(() => answer(s, FSP_FAILED, 0, undefined, undefined, 'GOOD'), /contradicts/);
 });
 
+test('a case reads like a script and never asks the player (FS-6)', () => {
+  for (const c of cases) {
+    c.steps.forEach((s, i) => {
+      assert.ok(!s.situation.replace(/„[^“]*“/g, '').includes('?'), `${c.id} step ${i + 1} asks the player`);
+      const closesPart = i === c.steps.length - 1 || c.steps[i + 1].part !== s.part;
+      if (!closesPart) assert.equal(s.reply, null, `${c.id} step ${i + 1}: the reply is the next scene`);
+    });
+  }
+});
+
 // ---- controller (FspCaseControllerTest) ------------------------------------------------------------------------
 
 const makeCase = (id, area, steps = 10) => ({
   id, area, title: `Beschwerde ${id}`, diagnosis: `Diagnose ${id}`, source: 'common_FSP', bwReports: 0, patient: `Patient ${id}`,
   steps: Array.from({ length: steps }, (_, i) => ({
-    part: 1 + Math.floor((i * 3) / steps), section: `S${i}`, situation: null, question: `Frage ${i}?`,
+    part: 1 + Math.floor((i * 3) / steps), section: `S${i}`, situation: `Szene ${i}`,
     options: ['a', 'b', 'c', 'd'].map((x) => `${x}${i}`), answer: i % 4,
     feedback: [0, 1, 2, 3].map((j) => (j === i % 4 ? 'Richtig.' : 'Falsch.')), reply: null,
   })),
@@ -200,7 +212,27 @@ test('a passed case returns exactly three days later, however long it took', () 
   assert.equal(a.grade, 'GOOD');
   assert.equal(a.after.dueAtMillis, clock.t + 3 * DAY_MILLIS);
   assert.deepEqual(store.loadProgress()['fsp:k1'], a.after);
-  assert.equal(c.dailyProgress().answered, 1, 'a case counts once toward the daily goal');
+  assert.equal(c.dailyProgress().answered, 0, 'the graded case adds no answer of its own (FS-7)');
+});
+
+test('every solved step counts for the day while the case stays one card (FS-7)', () => {
+  const { c, store } = setup();
+  let s = c.startSession('fsp');
+  let r = c.startCase(s);
+  const s0 = r.case.steps[0];
+  r = c.pickInCase(r, wrongOf(s0));
+  assert.equal(c.dailyProgress().answered, 0, 'a wrong pick is no answered question yet');
+  r = c.pickInCase(r, s0.answer);
+  assert.equal(c.dailyProgress().answered, 1);
+  r = c.pickInCase(r, s0.answer);
+  assert.equal(c.dailyProgress().answered, 1, 'picking again after solving counts nothing');
+  r = nextStep(r);
+  while (!isRunFinished(r)) r = nextStep(c.pickInCase(r, r.case.steps[r.stepIndex].answer));
+  assert.equal(c.dailyProgress().answered, 10);
+  s = c.finishCase(s, r);
+  assert.equal(c.dailyProgress().answered, 10, 'the graded case adds no answer of its own');
+  assert.deepEqual(Object.keys(store.loadProgress()), ['fsp:k1'], 'the scheduler saw one card');
+  assert.equal(c.calendar(c.currentMonth()).currentStreak, 1);
 });
 
 test('a failed case returns after ten minutes and not in the same session', () => {

@@ -4,7 +4,7 @@ import {
   freshProgress, withSuspension, restored, statusAt, searchManagedCards,
   DAY_MILLIS, epochDayOf, plusAnswer, dailyProgress, buildCalendar, clampDailyGoal,
 } from './domain.js';
-import { FSP_FAILED, FSP_PASSED, fspGrade, fspPassed, isRunFinished, runScore, startRun } from './fsp.js';
+import { FSP_FAILED, FSP_PASSED, fspGrade, fspPassed, isRunFinished, pick, runScore, startRun } from './fsp.js';
 
 /** Storage with the shape the controller needs; see store.js for the browser one. */
 export function createMemoryStore(initial = {}) {
@@ -51,7 +51,20 @@ export class StudyController {
 
   choices(session) { return choicesFor(session); }
 
-  answer(session, choice) { return this.record(session, choice, null); }
+  answer(session, choice) { return this.record(session, choice, null, true); }
+
+  /**
+   * Picks an option in the case being played. FS-7: the pick that solves a step counts as one answered question for
+   * the daily goal and the streak calendar, while the scheduler sees the whole case as one card (finishCase).
+   */
+  pickInCase(run, option) {
+    const after = pick(run, option);
+    if (after.solved && !run.solved) {
+      this.history = plusAnswer(this.history, this.today());
+      this.store.saveHistory(this.history);
+    }
+    return after;
+  }
 
   /** The case behind the current card, ready to play; null when the card is not an FSP case. */
   startCase(session) {
@@ -67,16 +80,19 @@ export class StudyController {
     if (!card || !isRunFinished(run) || card.id !== `fsp:${run.case.id}`) return session;
     const phase = (this.progress[card.id] ?? freshProgress(card.id, SCHEDULER)).phase;
     const score = runScore(run);
-    return this.record(session, fspPassed(score) ? FSP_PASSED : FSP_FAILED, fspGrade(score, phase));
+    // Its steps were already counted one by one (FS-7), so the case itself adds no answer to the day.
+    return this.record(session, fspPassed(score) ? FSP_PASSED : FSP_FAILED, fspGrade(score, phase), false);
   }
 
-  record(session, choice, gradeOverride) {
+  record(session, choice, gradeOverride, countsAnswer) {
     const card = session.queue[0];
     const updated = answer(session, choice, this.clock(), SCHEDULER, GRADER, gradeOverride);
     if (card && updated !== session) {
       this.persist(updated.progressById[card.id]);
-      this.history = plusAnswer(this.history, this.today());
-      this.store.saveHistory(this.history);
+      if (countsAnswer) {
+        this.history = plusAnswer(this.history, this.today());
+        this.store.saveHistory(this.history);
+      }
     }
     return updated;
   }

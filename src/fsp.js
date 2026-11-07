@@ -17,6 +17,8 @@ export function checkFspCase(fspCase) {
   for (const s of fspCase.steps) {
     if (s.options?.length !== 4 || s.feedback?.length !== 4) throw new Error(`step '${s.section}' needs 4 options and 4 feedback texts`);
     if (!Number.isInteger(s.answer) || s.answer < 0 || s.answer > 3) throw new Error(`step '${s.section}': answer ${s.answer} out of range`);
+    // FS-6: every step shows a scene; there is no separate question any more.
+    if (typeof s.situation !== 'string' || !s.situation.trim()) throw new Error(`step '${s.section}' needs a situation`);
   }
   return fspCase;
 }

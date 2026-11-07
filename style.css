@@ -108,6 +108,7 @@ input[type=search] { width: 100%; font: inherit; padding: 12px 14px; border-radi
 .fsp-section { font-size: calc(15px * var(--text)); font-weight: 600; }
 .fsp-italic { font-size: calc(17px * var(--text)); font-style: italic; }
 .fsp-question { font-size: calc(18px * var(--text)); font-weight: 600; }
+.fsp-said { color: var(--on-var); }
 .choice.fsp-option { font-size: calc(17px * var(--text)); text-align: left; min-height: calc(56px * var(--layout));
   border-radius: 16px; padding: calc(10px * var(--layout)) 14px; overflow-wrap: anywhere; }
 .fsp-feedback { font-size: calc(15px * var(--text)); margin-top: calc(-6px * var(--layout)); }

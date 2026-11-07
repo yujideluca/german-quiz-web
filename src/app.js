@@ -4,7 +4,7 @@ import { StudyController } from './controller.js';
 import { createLocalStore } from './store.js';
 import { LANGUAGE_CHOICES, NO_CONTENT_TRANSLATIONS, createTranslator, monthShort, resolveLanguage, translateExplanation, translateHint, weekdayLetters, localeOf } from './i18n.js';
 import { barPercent, screenScaleFor, heatColorCss, HEAT_FULL_ANSWERS, MIN_DAILY_GOAL, MAX_DAILY_GOAL, DAILY_GOAL_STEP, MODES } from './domain.js';
-import { fspPassed, isRunFinished, nextStep, partScores, pick, runOrder, runScore, runStep } from './fsp.js';
+import { fspPassed, isRunFinished, nextStep, partScores, runOrder, runScore, runStep } from './fsp.js';
 
 const AUTO_ADVANCE_MILLIS = 500;
 const MAX_RESULTS = 40;
@@ -92,7 +92,10 @@ function syncCaseRun() {
 
 const partTitle = (part) => t(`fsp_part_${Math.min(3, Math.max(1, part))}`);
 
-/** One simulated FSP case (ADR-0014): a wrong pick turns red and shows why, the player picks again (FS-3). */
+/**
+ * One simulated FSP case (ADR-0014), read like a script (FS-6): the player's last line, what the patient or the
+ * Oberarzt answers and does, then four things to say or write. A wrong pick turns red and shows why (FS-3).
+ */
 function caseHtml(run, answer) {
   const c = run.case;
   const head = `<p class="hint fsp-area">${esc(c.area)}</p><h1 class="prompt prompt-small">${esc(c.title)}</h1>`;
@@ -106,13 +109,14 @@ function caseHtml(run, answer) {
     return `<button class="choice fsp-option${cls}" data-action="case-pick" data-option="${i}" ${run.solved || wrong ? 'disabled' : ''}>${esc(step.options[i])}</button>${feedback}`;
   }).join('');
   const total = c.steps.length;
+  const prev = c.steps[run.stepIndex - 1];
   return `${head}
     ${run.stepIndex === 0 ? `<p class="fsp-italic">${esc(c.patient)}</p>` : ''}
     <p class="fsp-section">${esc(partTitle(step.part))}  ·  ${esc(step.section)}</p>
     <div><div class="progress"><div style="width:${Math.round((run.stepIndex / total) * 100)}%"></div></div>
       <p class="small" style="margin-top:4px">${t('fsp_step', run.stepIndex + 1, total)}</p></div>
-    ${step.situation ? `<p class="fsp-italic">${esc(step.situation)}</p>` : ''}
-    <p class="fsp-question">${esc(step.question)}</p>
+    ${prev && prev.part === step.part && prev.part !== 2 ? `<p class="small fsp-said">${esc(t('fsp_you_said', prev.options[prev.answer]))}</p>` : ''}
+    <p class="fsp-question">${esc(step.situation)}</p>
     ${options}
     ${!run.solved && run.wrongPicks.length ? `<p class="fsp-italic small">${t('fsp_try_again')}</p>` : ''}
     ${run.solved && step.reply ? `<p class="fsp-italic">${esc(step.reply)}</p>` : ''}
@@ -271,7 +275,7 @@ const actions = {
   study(el) { session = controller.startSession(el.dataset.mode); show('study'); },
   choose(el) { session = controller.answer(session, el.dataset.choice); render(); },
   next() { next(); },
-  'case-pick'(el) { caseRun = pick(caseRun, Number(el.dataset.option)); render(); },
+  'case-pick'(el) { caseRun = controller.pickInCase(caseRun, Number(el.dataset.option)); render(); },
   // After the last step the case is graded and its result shown (FS-4).
   'case-next'() {
     caseRun = nextStep(caseRun);
